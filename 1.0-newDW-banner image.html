@@ -1,0 +1,110 @@
+<style>
+    .topImageBanner {
+        width: 100%;
+        margin: auto;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .the-img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        margin-bottom: 2em;
+        background: url('https://content-eu-4.content-cms.com/a1fd41ce-6a62-46be-bba4-1c93e351ebf4/dxdam/b6/b6a788cf-0eb0-475a-807f-8546b7ad7716/DW-PPC-Hero2.16.24.png') no-repeat center center;
+        background-size: cover;
+        margin-top: -20px;
+    }
+    
+    .the-top-image {
+        width: 100%;
+        height: auto;
+    }
+    
+    .the-title-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        margin: auto;
+        transform: translate(-50%, -50%);
+        word-wrap: break-word;
+    }
+    
+    .top-title {
+        font-size: 69px;
+        color: #fff;
+        text-align: left;
+        font-weight: 500;
+        width: 100%;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+    }
+    
+    .bottom-title {
+        font-size: 89px;
+        color: #fff;
+        text-align: left;
+        font-weight: 500;
+        width: 100%;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+    }
+    
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+    
+    @media screen and (max-width: 726px) {
+        .the-title-overlay {
+            width: 80%;
+        }
+    }
+    
+    @media screen and (max-width: 636px) {
+        .the-title-overlay {
+            width: 88%;
+        }
+    }
+    
+    @media screen and (max-width: 580px) {
+        .the-title-overlay {
+            width: 100%;
+            padding: 0em 1em;
+        }
+        .top-title {
+            font-size: 49px;
+        }
+        .bottom-title {
+            font-size: 69px;
+        }
+    }
+    
+    @media screen and (max-width: 390px) {
+        .top-title {
+            font-size: 45px;
+        }
+        .bottom-title {
+            font-size: 60px;
+        }
+    }
+</style>
+
+<section class="topImageBanner">
+    <div class="the-img-wrapper" role="img" aria-label="">
+        <p class="visually-hidden"></p>
+    </div>
+    <div class="the-title-overlay">
+        <h1 class="top-title"><strong></strong></h1>
+        <h2 class="bottom-title"><strong></strong></h2>
+    </div>
+</section>
