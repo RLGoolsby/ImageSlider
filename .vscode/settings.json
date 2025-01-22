@@ -1,3 +1,5 @@
 {
-    "notebook.defaultFormatter": "tusaeff.vscode-iterm2-theme-sync"
+    "notebook.defaultFormatter": "tusaeff.vscode-iterm2-theme-sync",
+    "simpleBrowser.focusLockIndicator.enabled": false,
+    "openInDefaultBrowser.run.openWithLocalHttpServer": true
 }
