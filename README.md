@@ -1,3 +1,3 @@
 # ImagesSlider
-3D image Slider
-I have created an image slider with accessibility standards applied to the code structure
+image Slider 
+I have created an image slider with accessibility standards applied to the code structure. 
