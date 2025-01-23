@@ -4,6 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "Attach to Kubernetes Pod (Go)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "Go",
+            "debugPort": 2345,
+            "podSelector": {
+                "app": "deployment-name"
+            },
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "Path to the Remote Directory Containing the Program"
+        },
+
         
         {
             "name": "Cloud Run: Run/Debug Locally",
