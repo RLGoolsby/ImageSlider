@@ -2,114 +2,95 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>banner image</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- add for google fonts -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <title>image slider</title>
 </head>
+
 
 <body>
 
-    <style>
-        .topImageBanner {
-            width: 100%;
-            margin: auto;
-            display: inline-flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .the-img-wrapper {
-            position: relative;
-            width: 100%;
-            height: 350px;
-            margin-bottom: 2em;
-            background: url('css/images/IMG_7047.JPG') no-repeat center center;
-            background-size: cover;
-            margin-top: -20px;
-        }
-        
-        .the-top-image {
-            width: 100%;
-            height: auto;
-        }
-        
-        .the-title-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 70%;
-            margin: auto;
-            transform: translate(-50%, -50%);
-            word-wrap: break-word;
-        }
-        
-        .top-title {
-            font-size: 69px;
-            color: #fff;
-            text-align: left;
-            font-weight: 500;
-            width: 100%;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
-        }
-        
-        .bottom-title {
-            font-size: 89px;
-            color: #fff;
-            text-align: left;
-            font-weight: 500;
-            width: 100%;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
-        }
-        
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            padding: 0;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-        
-        @media screen and (max-width: 726px) {
-            .the-title-overlay {
-                width: 80%;
-            }
-        }
-        
-        @media screen and (max-width: 636px) {
-            .the-title-overlay {
-                width: 88%;
-            }
-        }
-        
-        @media screen and (max-width: 580px) {
-            .the-title-overlay {
-                width: 100%;
-                padding: 0em 1em;
-            }
-            .top-title {
-                font-size: 49px;
-            }
-            .bottom-title {
-                font-size: 69px;
-            }
-        }
-        
-        @media screen and (max-width: 390px) {
-            .top-title {
-                font-size: 45px;
-            }
-            .bottom-title {
-                font-size: 60px;
-            }
-        }
-    </style>
+    <div class="slider-wrapper" aria-labelledby="slider-title">
+        <h2 id="slider-title" class="visually-hidden"></h2>
+        <section id="slider" aria-roledescription="carousel" aria-label="Fabric Image Slider">
+            <input class="imgCheck" type="radio" name="slider" id="s1" aria-hidden="true">
+            <input class="imgCheck" type="radio" name="slider" id="s2" aria-hidden="true">
+            <input class="imgCheck" type="radio" name="slider" id="s3" aria-hidden="true" checked>
+            <input class="imgCheck" type="radio" name="slider" id="s4" aria-hidden="true">
+            <input class="imgCheck" type="radio" name="slider" id="s5" aria-hidden="true">
 
+            <label for="s1" id="slide1" class="slider" tabindex="0" aria-labelledby="slide1-title">
+      <h3 class="slide-text" id="slide1-title"></h3>
+      <img class="eachimg" src="" alt="">
+      <div class="slide-number-container linear" aria-hidden="true">
+        <p class="slider-number">01</p>
+        <hr>
+        <p class="slider-number">05</p>
+      </div>
+    </label>
+
+            <label for="s2" id="slide2" class="slider" tabindex="0" aria-labelledby="slide2-title">
+      <h3 class="slide-text" id="slide2-title"></h3>
+      <img class="eachimg" src="" alt="">
+      <div class="slide-number-container linear" aria-hidden="true">
+        <p class="slider-number">02</p>
+        <hr>
+        <p class="slider-number">05</p>
+      </div>
+    </label>
+
+            <label for="s3" id="slide3" class="slider" tabindex="0" aria-labelledby="slide3-title">
+      <h3 class="slide-text" id="slide3-title"></h3>
+      <img class="eachimg" src="" alt="">
+      <div class="slide-number-container linear" aria-hidden="true">
+        <p class="slider-number">03</p>
+        <hr>
+        <p class="slider-number">05</p>
+      </div>
+    </label>
+            <label for="s4" id="slide4" class="slider" tabindex="0" aria-labelledby="slide4-title">
+      <h3 class="slide-text" id="slide4-title"></h3>
+      <img class="eachimg" src="" alt="">
+      <div class="slide-number-container linear" aria-hidden="true">
+        <p class="slider-number">04</p>
+        <hr>
+        <p class="slider-number">05</p>
+      </div>
+    </label>
+            <label for="s5" id="slide5" class="slider" tabindex="0" aria-labelledby="slide5-title">
+      <h3 class="slide-text" id="slide5-title"></h3>
+      <img class="eachimg" src="" alt="">
+      <div class="slide-number-container linear" aria-hidden="true">
+        <p class="slider-number">05</p>
+        <hr>
+        <p class="slider-number">05</p>
+      </div>
+    </label>
+            <ul id='slider-controls'>
+                <li id='previous-button' title="Previous Slider"> <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+                    <span class="sr-only">Previous slides</span>
+                </li>
+                <li id='play' title="Play Slider"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                    <span class="sr-only">Play</span>
+                </li>
+                <li id='pause' title="Pause Slider"><i class="fa fa-pause" aria-hidden="true"></i>
+                    <span class="sr-only">Pause</span>
+                </li>
+                <li id='next-button' title="Next Slide"><i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+                    <span class="sr-only">Next slides</span>
+                </li>
+            </ul>
+        </section>
+    </div>
     <section class="topImageBanner">
         <div class="the-img-wrapper" role="img" aria-label="">
             <p class="visually-hidden"></p>
@@ -120,6 +101,10 @@
         </div>
     </section>
 
+    <!---END DIV 'CONTENT-WRAPPER' -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
