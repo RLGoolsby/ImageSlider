@@ -99,6 +99,126 @@
     }
 }
 
+.content-wrap {
+    width: 85%;
+    height: auto;
+    margin: 2% auto;
+}
+
+.the-content {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+/*.top {
+    border: 1px dashed #000;
+    width: 370pt;
+    height: 245pt;
+    max-width: 100%;
+    margin: 1% auto;
+    text-align: center;
+  }*/
+
+.pictures {
+    border: 2px solid red;
+    width: 300pt;
+    height: 200pt;
+    max-width: 100%;
+}
+
+.the-words {
+    max-width: 100%;
+    margin: auto;
+    padding: 0em 0em 0em 2.5em;
+}
+
+.the-word-title {
+    font-size: 19pt;
+    width: 146%;
+    word-wrap: break-word;
+    padding: 0em 0.2em;
+}
+
+.the-content-bullets {
+    font-size: 16pt;
+    padding: 0.5em 0em 0.5em 3em;
+}
+
+.bottom-button {
+    width: 30%;
+    margin: 0 auto 4%;
+}
+
+.button_primary_ppc {
+    font-family: inherit;
+    display: block;
+    position: relative;
+    background: #036FED;
+    /* border-radius: 4px; */
+    border: none;
+    width: 107pt;
+    /* height: 28pt; */
+    margin: auto;
+    font-size: 18pt;
+    color: #fff;
+    text-align: center;
+    padding: 0.2em;
+}
+
+@media screen and (max-width: 1162px) {
+    .content-wrap {
+        width: 95%;
+    }
+    .bottom-button {
+        width: 70%;
+        margin: 0% auto 3%;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .the-content-bullets {
+        padding: 0.5em 0em 0.5em 1.5em;
+    }
+}
+
+@media screen and (max-width: 1063px) {
+    .the-words {
+        padding: 0em 0em 0em 2em;
+    }
+}
+
+@media screen and (max-width: 955px) {
+    .the-content {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .the-words {
+        padding: 2em 1em 0.5em;
+    }
+    .the-word-title {
+        width: 100%;
+        word-wrap: break-word;
+        padding: 0em 2em;
+        text-align: center;
+    }
+    .the-content-bullets {
+        padding: 0em;
+        margin: auto;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .the-words {
+        padding: 2em 0em;
+        margin: auto;
+    }
+}
+
 .slider-wrapper {
     position: relative;
     box-sizing: border-box;
