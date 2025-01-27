@@ -14,11 +14,11 @@
 .the-img-wrapper {
     position: relative;
     width: 100%;
-    height: 350px;
-    margin-bottom: 2em;
+    height: auto;
+    margin-bottom: 10px;
     background: url('css/images/IMG_7047.JPG') no-repeat center center;
     background-size: cover;
-    margin-top: -20px;
+    margin-top: 10px;
 }
 
 .the-top-image {
@@ -26,7 +26,8 @@
     height: auto;
 }
 
-.the-title-overlay {
+
+/* .the-title-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -34,25 +35,27 @@
     margin: auto;
     transform: translate(-50%, -50%);
     word-wrap: break-word;
-}
+} */
 
-.top-title {
+
+/* .top-title {
     font-size: 69px;
     color: #fff;
     text-align: left;
     font-weight: 500;
     width: 100%;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
-}
+} */
 
-.bottom-title {
+
+/* .bottom-title {
     font-size: 89px;
     color: #fff;
     text-align: left;
     font-weight: 500;
     width: 100%;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
-}
+} */
 
 .visually-hidden {
     position: absolute;
@@ -65,7 +68,8 @@
     border: 0;
 }
 
-@media screen and (max-width: 726px) {
+
+/* @media screen and (max-width: 726px) {
     .the-title-overlay {
         width: 80%;
     }
@@ -97,9 +101,10 @@
     .bottom-title {
         font-size: 60px;
     }
-}
+} */
 
-.content-wrap {
+
+/* .content-wrap {
     width: 85%;
     height: auto;
     margin: 2% auto;
@@ -110,7 +115,7 @@
     align-items: flex-end;
     flex-wrap: nowrap;
     flex-direction: row;
-}
+} */
 
 
 /*.top {
@@ -122,7 +127,8 @@
     text-align: center;
   }*/
 
-.pictures {
+
+/* .pictures {
     border: 2px solid red;
     width: 300pt;
     height: 200pt;
@@ -157,18 +163,17 @@
     display: block;
     position: relative;
     background: #036FED;
-    /* border-radius: 4px; */
     border: none;
     width: 107pt;
-    /* height: 28pt; */
     margin: auto;
     font-size: 18pt;
     color: #fff;
     text-align: center;
     padding: 0.2em;
-}
+} */
 
-@media screen and (max-width: 1162px) {
+
+/* @media screen and (max-width: 1162px) {
     .content-wrap {
         width: 95%;
     }
@@ -217,7 +222,7 @@
         padding: 2em 0em;
         margin: auto;
     }
-}
+} */
 
 .slider-wrapper {
     position: relative;
