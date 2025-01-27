@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "sumitnalavade.vscode-readme-editor"
+        "sumitnalavade.vscode-readme-editor",
+        "ms-vscode-remote.remote-ssh"
     ]
 }
