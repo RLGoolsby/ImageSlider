@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "sumitnalavade.vscode-readme-editor",
-        "ms-vscode-remote.remote-ssh"
+        "n3rds-inc.image"
     ]
 }
