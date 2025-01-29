@@ -382,9 +382,10 @@ input[type="radio"]:checked {
     color: #000;
 }
 
-.linear {
+
+/* .linear {
     background: linear-gradient(to right, transparent 1%, rgb(255, 255, 255, .5) 50%, transparent 100%, rgb(255, 255, 255, .5) 99%);
-}
+} */
 
 .slide-number-container hr {
     width: .8em;
@@ -422,8 +423,9 @@ img.eachimg {
 #s4:checked~#slide4,
 #s5:checked~#slide5 {
     opacity: 1;
-    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 17px rgba(0, 0, 0, 0.2), 0 5px 6px rgba(0, 0, 0, 0.2);
     transform: translate3d(0%, 0, 0px);
+    filter: brightness(50%);
 }
 
 
@@ -437,7 +439,7 @@ img.eachimg {
     opacity: 0.7;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
     transform: translate3d(105%, 0, -150px) scale(.9);
-    filter: brightness(50%);
+    /* filter: brightness(50%); */
 }
 
 
@@ -451,7 +453,7 @@ img.eachimg {
     opacity: 0.3;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     transform: translate3d(213%, 0, -350px) scale(.8);
-    filter: brightness(50%);
+    /* filter: brightness(50%); */
 }
 
 
@@ -465,7 +467,7 @@ img.eachimg {
     opacity: 0.3;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     transform: translate3d(-213%, 0, -350px) scale(0.8);
-    filter: brightness(50%);
+    /* filter: brightness(50%); */
 }
 
 
@@ -479,14 +481,14 @@ img.eachimg {
     opacity: 0.7;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
     transform: translate3d(-105%, 0, -150px) scale(.9);
-    filter: brightness(50%);
+    /* filter: brightness(50%); */
 }
 
 @media screen and (max-width:1177px) {
     #slider {
-        perspective: 1290px;
+        perspective: 1250px;
     }
-    .slider-wrapper {
+    #content-wrapper {
         margin: 13% auto;
     }
 }
