@@ -3,7 +3,6 @@
 .topImageBanner {
     width: 100%;
     margin: auto;
-    height: 300px;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -15,7 +14,7 @@
 .the-img-wrapper {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 300px;
     margin-bottom: 10px;
     background: no-repeat center center;
     background-size: cover;
