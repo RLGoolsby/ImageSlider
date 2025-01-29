@@ -3,6 +3,7 @@
 .topImageBanner {
     width: 100%;
     margin: auto;
+    height: 300px;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
