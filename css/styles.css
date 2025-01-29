@@ -224,14 +224,15 @@
     }
 } */
 
-.slider-wrapper {
+
+/* .slider-wrapper {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
     height: auto;
     width: 100%;
     margin: 7% auto;
-}
+} */
 
 .visually-hidden {
     position: absolute;
