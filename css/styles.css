@@ -227,10 +227,12 @@
 #content-wrapper {
     position: relative;
     box-sizing: border-box;
-    overflow: visible;
-    height: auto;
+    height: 100%;
     width: 100%;
-    margin: 7% auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
 }
 
 .visually-hidden {
@@ -248,10 +250,14 @@
     position: relative;
     width: 300px;
     height: 300px;
-    margin: 2% auto;
+    margin: 7% auto;
     perspective: 1300px;
     transition: transform 400ms ease;
     transform-style: preserve-3d;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    object-fit: cover;
 }
 
 #slider .slider,
