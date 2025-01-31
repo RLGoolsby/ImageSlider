@@ -229,10 +229,10 @@
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    position: relative;
     overflow: hidden;
     min-height: 100vh;
     display: flex;
+    margin: 4em auto 4em;
 }
 
 .visually-hidden {
@@ -248,9 +248,9 @@
 
 #slider {
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 7% auto;
+    width: 350px;
+    height: 350px;
+    margin: auto;
     perspective: 1300px;
     transition: transform 400ms ease;
     transform-style: preserve-3d;
@@ -258,6 +258,7 @@
     left: 0;
     min-height: 100%;
     object-fit: cover;
+    margin: 3em auto 3em;
 }
 
 #slider .slider,
@@ -285,19 +286,24 @@
 /** previous/pause/play/next buttons **/
 
 #slider #slider-controls {
-    position: relative;
+    position: absolute;
     list-style-type: none;
     cursor: pointer;
     top: 100%;
     left: -50%;
     padding: 0;
     width: 100%;
-    transform: translateY(-50%);
+    height: auto;
     transform: translateX(50%);
     z-index: 2000;
-    display: flex;
-    justify-content: space-evenly;
+    display: inline-flex;
     background-color: transparent;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 27px;
 }
 
 #previous-button,
@@ -309,6 +315,7 @@
     border: 1px solid #000;
     background-color: #000;
     color: #fff;
+    border-radius: 50%;
 }
 
 #previous-button:hover,
@@ -317,6 +324,7 @@
 #play:hover {
     background-color: #000;
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .slider {
@@ -325,8 +333,8 @@
 
 input[type="radio"] {
     position: relative;
-    top: 80%;
-    left: 52%;
+    top: 92%;
+    left: 50%;
     z-index: 2000;
     opacity: 0.8;
     transform: translateX(-80px);
