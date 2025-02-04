@@ -315,14 +315,15 @@
 #play {
     display: inline-block;
     padding: 0.5em 1em;
-    color: hwb(0 4% 96%);
+    color: hwb(0 98% 1%);
+    border: 0.5px solid #000;
 }
 
 #previous-button:hover,
 #next-button:hover,
 #pause:hover,
 #play:hover {
-    color: #ff7700;
+    color: #fde7d2;
     opacity: 1;
     cursor: pointer;
 }
