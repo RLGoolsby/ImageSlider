@@ -232,7 +232,10 @@
     overflow: hidden;
     min-height: 100vh;
     display: flex;
-    margin: 4em auto 4em;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .visually-hidden {
