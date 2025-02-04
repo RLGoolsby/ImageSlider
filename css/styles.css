@@ -21,10 +21,11 @@
     margin-top: 10px;
 }
 
-.the-top-image {
+
+/* .the-top-image {
     width: 100%;
     height: auto;
-}
+} */
 
 
 /* .the-title-overlay {
@@ -37,15 +38,14 @@
     word-wrap: break-word;
 } */
 
-
-/* .top-title {
+.top-title {
     font-size: 69px;
     color: #fff;
     text-align: left;
     font-weight: 500;
     width: 100%;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
-} */
+}
 
 
 /* .bottom-title {
