@@ -43,7 +43,7 @@
     width: 100%;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
     margin: 0.2em auto;
-    padding: 0.5em 1em;
+    padding: 0.5em;
 }
 
 
@@ -235,7 +235,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     background: black;
-    padding-bottom: 2em;
+    padding-bottom: 3em;
     margin: auto;
 }
 
@@ -258,7 +258,7 @@
     perspective: 1300px;
     transition: transform 400ms ease;
     transform-style: preserve-3d;
-    bottom: 25px;
+    bottom: 50px;
     left: 0;
     min-height: 100%;
     object-fit: cover;
@@ -308,33 +308,6 @@
     justify-content: center;
     align-content: center;
     grid-column-gap: 1px;
-}
-
-.buttons button#next {
-    position: absolute;
-    top: 40%;
-    right: 15px;
-}
-
-.buttons button#prev {
-    position: absolute;
-    top: 40%;
-    left: 15px;
-}
-
-.buttons button {
-    border: 2px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    padding: 13px 15px;
-    border-radius: 50%;
-    outline: none;
-}
-
-.buttons button:hover {
-    background-color: #fff;
-    color: #333;
 }
 
 #previous-button,
