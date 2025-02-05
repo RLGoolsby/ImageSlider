@@ -362,7 +362,7 @@
 
 input[type="radio"] {
     position: relative;
-    top: 92%;
+    top: 80%;
     left: 50%;
     z-index: 2000;
     opacity: 0.8;
