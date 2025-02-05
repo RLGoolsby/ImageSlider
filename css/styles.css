@@ -235,7 +235,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     background: black;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
     margin: auto;
 }
 
@@ -258,7 +258,7 @@
     perspective: 1300px;
     transition: transform 400ms ease;
     transform-style: preserve-3d;
-    bottom: 50px;
+    bottom: 25px;
     left: 0;
     min-height: 100%;
     object-fit: cover;
@@ -335,10 +335,10 @@
 
 input[type="radio"] {
     position: relative;
-    top: 80%;
+    top: 85%;
     left: 50%;
     z-index: 2000;
-    opacity: 0.8;
+    opacity: 0.5;
     transform: translateX(-80px);
     cursor: pointer;
 }
