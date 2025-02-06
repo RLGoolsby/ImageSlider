@@ -24,76 +24,55 @@
                 <h1 class="top-title"><strong>Luna Rey - The Artist</strong></h1>
             </div>
         </section>
-        <section id="slider" aria-roledescription="carousel" aria-label="">
+        <section id="slider" aria-roledescription="carousel" aria-label="Image Slider">
             <input class="imgCheck" type="radio" name="slider" id="s1" aria-hidden="true">
             <input class="imgCheck" type="radio" name="slider" id="s2" aria-hidden="true">
             <input class="imgCheck" type="radio" name="slider" id="s3" aria-hidden="true" checked>
             <input class="imgCheck" type="radio" name="slider" id="s4" aria-hidden="true">
             <input class="imgCheck" type="radio" name="slider" id="s5" aria-hidden="true">
 
-            <input class="imgCheck" type="radio" name="slider" id="s1" aria-hidden="true">
             <label for="s1" id="slide1" class="slider" tabindex="0" aria-labelledby="slide1-title">
-              <!-- <h3 class="slide-text" id="slide1-title">One</h3> -->
-              <img class="eachimg" src='css/image/IMG_7140.jpeg' atl="Untitled">
-              <!-- <div class="slide-number-container linear" aria-hidden="true">
-                <p class="slider-number">01</p>
-                <hr>
-                <p class="slider-number">05</p>
-              </div> -->
-            </label>
+            <img class="eachimg" src='css/image/IMG_7140.jpeg' alt="Untitled">
+        </label>
 
             <label for="s2" id="slide2" class="slider" tabindex="0" aria-labelledby="slide2-title">
-              <!-- <h3 class="slide-text" id="slide2-title">Two</h3> -->
-              <img class="eachimg" src="css/image/IMG_7142.jpeg" alt="Cicada Evening">
-              <!-- <div class="slide-number-container linear" aria-hidden="true">
-                <p class="slider-number">02</p>
-                <hr>
-                <p class="slider-number">05</p>
-              </div> -->
-            </label>
+            <img class="eachimg" src="css/image/IMG_7142.jpeg" alt="Cicada Evening">
+        </label>
 
             <label for="s3" id="slide3" class="slider" tabindex="0" aria-labelledby="slide3-title">
-              <!-- <h3 class="slide-text" id="slide3-title">Three</h3> -->
-              <img class="eachimg" src="css/image/IMG_7143.jpeg" alt="Spaces in between">
-              <!-- <div class="slide-number-container linear" aria-hidden="true" checked>
-                <p class="slider-number">03</p>
-                <hr>
-                <p class="slider-number">05</p>
-              </div> -->
-            </label>
+            <img class="eachimg" src="css/image/IMG_7143.jpeg" alt="Spaces in between">
+        </label>
 
             <label for="s4" id="slide4" class="slider" tabindex="0" aria-labelledby="slide4-title">
-              <!-- <h3 class="slide-text" id="slide4-title">Four</h3> -->
-              <img class="eachimg" src="css/image/IMG_7138.jpeg" alt="Rising Up">
-              <!-- <div class="slide-number-container linear" aria-hidden="true">
-                <p class="slider-number">04</p>
-                <hr>
-                <p class="slider-number">05</p>
-              </div> -->
-            </label>
+            <img class="eachimg" src="css/image/IMG_7138.jpeg" alt="Rising Up">
+        </label>
 
             <label for="s5" id="slide5" class="slider" tabindex="0" aria-labelledby="slide5-title">
-              <!-- <h3 class="slide-text" id="slide5-title">Five</h3> -->
-              <img class="eachimg" src="css/image/IMG_7139.jpeg" alt="Rain 1">
-              <!-- <div class="slide-number-container linear" aria-hidden="true">
-                <p class="slider-number">05</p>
-                <hr>
-                <p class="slider-number">05</p>
-              </div> -->
-            </label>
-            <ul id='slider-controls'>
-                <li id='previous-button' title="Previous Slider"> <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            <img class="eachimg" src="css/image/IMG_7139.jpeg" alt="Rain 1">
+        </label>
+
+            <div id='slider-controls'>
+                <button id='previous-button' title="Previous Slider" tabindex="0" aria-label="Previous Slide">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i>
                     <span class="sr-only">Previous slides</span>
-                </li>
-                <li id='play' title="Play Slider"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+                <button id='play' title="Play Slider" tabindex="0" aria-label="Play Slider">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                     <span class="sr-only">Play</span>
-                </li>
-                <li id='pause' title="Pause Slider">
-                    <i class="fa 
-                <li id='next-button' title=" Next Slide "><i class="fas fa-arrow-right " aria-hidden="true "></i>
-                    <span class="sr-only ">Next slides</span>
-                </li>
-            </ul>
+                </button>
+                <button id='pause' title="Pause Slider" tabindex="0" aria-label="Pause Slider">
+                    <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                    <span class="sr-only">Pause</span>
+                </button>
+                <button id='next-button' title="Next Slide" tabindex="0" aria-label="Next Slide">
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next slides</span>
+                </button>
+                <button id='next-button' title="Next Slide" tabindex="0" aria-label="Next Slide">
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next slides</span>
+                </button>
+            </div>
         </section>
     </div>
 

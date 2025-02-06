@@ -13,14 +13,23 @@ $(document).ready(function() {
             if (counter > numberOfImages) {
                 counter = 1;
             }
+            announceSlideChange(counter);
         }, 4000);
     }
 
     function stopSlider() {
         clearInterval(interval);
     }
+
+    function announceSlideChange(slideNumber) {
+        $("#slider").attr("aria-live", "polite");
+        $("#slider").attr("aria-atomic", "true");
+        $("#slider").attr("aria-relevant", "additions text");
+        $("#slider").text("Slide " + slideNumber + " of " + numberOfImages);
+    }
+
     // Start the slider initially
-    startSlider(0);
+    startSlider();
 
     // Next button functionality
     $("#next-button").on("click", function(e) {
@@ -31,7 +40,10 @@ $(document).ready(function() {
             counter = 1;
         }
         $("#s" + counter).prop("checked", true);
-        startSlider(); // Restart the slider only if not paused
+        announceSlideChange(counter);
+        if (!isPaused) {
+            startSlider();
+        }
     });
 
     // Previous button functionality
@@ -43,7 +55,10 @@ $(document).ready(function() {
             counter = numberOfImages;
         }
         $("#s" + counter).prop("checked", true);
-        startSlider(); // Restart the slider only if not paused
+        announceSlideChange(counter);
+        if (!isPaused) {
+            startSlider();
+        }
     });
 
     // Pause button functionality

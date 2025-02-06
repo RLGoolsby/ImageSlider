@@ -338,6 +338,15 @@
             cursor: pointer;
         }
         
+        #next-button:focus,
+        #previous-button:focus,
+        #pause:focus,
+        #play:focus {
+            outline: 2px solid #000;
+            /* Customize the outline style as needed */
+            outline-offset: 2px;
+        }
+        
         .slider {
             transition: 0.6s;
         }
