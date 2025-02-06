@@ -1,4 +1,3 @@
-/* THIS IS WHERE YOU PUT YOUR CUSTOM JAVASCRIPT/JQUERY CODE*/
 $(document).ready(function() {
     var counter = 1;
     var numberOfImages = $(".imgCheck").length;
@@ -25,7 +24,7 @@ $(document).ready(function() {
         $("#slider").attr("aria-live", "polite");
         $("#slider").attr("aria-atomic", "true");
         $("#slider").attr("aria-relevant", "additions text");
-        $("#slider").text("Slide " + slideNumber + " of " + numberOfImages);
+        $("#slider").find(".sr-only").text("Slide " + slideNumber + " of " + numberOfImages);
     }
 
     // Start the slider initially
