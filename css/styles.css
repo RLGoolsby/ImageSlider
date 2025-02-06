@@ -272,10 +272,10 @@
         /** previous/pause/play/next buttons **/
         
         #slider #slider-controls {
-            position: absolute;
+            /* position: absolute; */
             list-style-type: none;
-            cursor: pointer;
-            top: 100%;
+            /* cursor: pointer; */
+            /* top: 100%;
             left: -50%;
             padding: 0;
             width: 100%;
@@ -289,10 +289,7 @@
             align-items: flex-start;
             justify-content: center;
             align-content: center;
-            grid-column-gap: 1px;
-        }
-        
-        #slider-controls li {
+            grid-column-gap: 1px; */
             border: 2px solid #fff;
             background-color: transparent;
             color: #fff;
@@ -301,6 +298,15 @@
             border-radius: 50%;
             outline: none;
         }
+        /* #slider-controls li {
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+            padding: 13px 15px;
+            border-radius: 50%;
+            outline: none;
+        } */
         
         #slider-controls li:hover {
             background-color: #fff;
@@ -324,9 +330,8 @@
         }
         
         #previous-button:hover,
-        /* #next-button:hover,
-        #pause:hover, */
-        
+        #next-button:hover,
+        #pause:hover,
         #play:hover {
             color: #fde7d2;
             opacity: 1;
