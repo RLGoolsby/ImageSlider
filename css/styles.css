@@ -291,11 +291,10 @@
             border-radius: 50%;
             outline: none;
         } */
-        
-        #slider #slider-controls:hover {
+        /* #slider #slider-controls:hover {
             background-color: #fff;
             color: #333;
-        }
+        } */
         
         #previous-button {
             position: absolute;
