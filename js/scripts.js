@@ -13,7 +13,7 @@ $(document).ready(function() {
                 counter = 1;
             }
             announceSlideChange(counter);
-        }, 4000);
+        }, 5000);
     }
 
     function stopSlider() {
@@ -28,7 +28,7 @@ $(document).ready(function() {
     }
 
     // Start the slider initially
-    startSlider();
+    startSlider(0);
 
     // Next button functionality
     $("#next-button").on("click", function(e) {
