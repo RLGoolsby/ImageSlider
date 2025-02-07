@@ -269,20 +269,8 @@
             align-content: flex-end;
         }
         /** previous/pause/play/next buttons **/
-        /* #slider #slider-controls {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            cursor: pointer;
-            outline: none;
-        } */
         
-        #slider-controls {
+        #slider #slider-controls {
             position: absolute;
             display: flex;
             align-items: center;
@@ -294,6 +282,20 @@
             cursor: pointer;
             outline: none;
         }
+        
+        #slider-controls {
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+            padding: 13px 15px;
+            border-radius: 50%;
+            outline: none;
+        }
+        /* #slider #slider-controls:hover {
+            background-color: #fff;
+            color: #333;
+        } */
         
         #previous-button {
             position: absolute;
