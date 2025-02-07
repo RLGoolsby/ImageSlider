@@ -344,7 +344,7 @@
         }
         
         .slider {
-            transition: 0.6s;
+            transition: 0.7s;
         }
         
         input[type="radio"] {
@@ -355,6 +355,7 @@
             opacity: 0.5;
             transform: translateX(-80px);
             cursor: pointer;
+            margin: auto 3%;
         }
         
         input[type="radio"]::before {
