@@ -28,7 +28,7 @@ $(document).ready(function() {
     }
 
     // Start the slider initially
-    startSlider(0);
+    startSlider();
 
     // Next button functionality
     $("#next-button").on("click", function(e) {
@@ -94,9 +94,11 @@ $(document).ready(function() {
     });
 
     // Pause slider on mouseover and resume on mouseleave
-    $("#slider").on("mouseover", function() {
+    $("#slider").on("mouseover", function(e) {
+        e.preventDefault();
         stopSlider();
-    }).on("mouseleave", function() {
+    }).on("mouseleave", function(e) {
+        e.preventDefault();
         if (!isPaused) {
             startSlider();
         }
