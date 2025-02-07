@@ -282,16 +282,6 @@
             cursor: pointer;
             outline: none;
         }
-        
-        #slider-controls {
-            border: 2px solid #fff;
-            background-color: transparent;
-            color: #fff;
-            cursor: pointer;
-            padding: 13px 15px;
-            border-radius: 50%;
-            outline: none;
-        }
         /* #slider #slider-controls:hover {
             background-color: #fff;
             color: #333;
@@ -335,9 +325,10 @@
         #next-button:hover,
         #pause:hover,
         #play:hover {
-            color: #f9973b;
+            color: #025966;
             opacity: 1;
             cursor: pointer;
+            background-color: #fff;
         }
         
         #previous-button:focus-visible,
