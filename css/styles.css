@@ -269,8 +269,20 @@
             align-content: flex-end;
         }
         /** previous/pause/play/next buttons **/
+        /* #slider #slider-controls {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            cursor: pointer;
+            outline: none;
+        } */
         
-        #slider #slider-controls {
+        #slider-controls {
             position: absolute;
             display: flex;
             align-items: center;
@@ -283,23 +295,7 @@
             outline: none;
         }
         
-        #slider-controls {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            cursor: pointer;
-            outline: none;
-        }
-        
-        #slider-controls button {
-            display: flex
-        }
-        
-        button #previous-button {
+        #previous-button {
             position: absolute;
             top: 40%;
             left: 15px;
@@ -310,8 +306,8 @@
             color: #fff;
         }
         
-        button #pause,
-        button #play {
+        #pause,
+        #play {
             position: absolute;
             top: 40%;
             left: 50px;
@@ -322,7 +318,7 @@
             color: #fff;
         }
         
-        button #next-button {
+        #next-button {
             position: absolute;
             top: 40%;
             right: 15px;
@@ -333,19 +329,19 @@
             color: #fff;
         }
         
-        button #previous-button:hover,
-        button #next-button:hover,
-        button #pause:hover,
-        button #play:hover {
+        #previous-button:hover,
+        #next-button:hover,
+        #pause:hover,
+        #play:hover {
             color: #f9973b;
             opacity: 1;
             cursor: pointer;
         }
         
-        button #previous-button:focus-visible,
-        button #next-button:focus-visible,
-        button #pause:focus-visible,
-        button #play:focus-visible {
+        #previous-button:focus-visible,
+        #next-button:focus-visible,
+        #pause:focus-visible,
+        #play:focus-visible {
             outline: 2px solid #b403f9;
             /* Customize the outline style as needed */
             outline-offset: 2px;
