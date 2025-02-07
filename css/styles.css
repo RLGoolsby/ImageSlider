@@ -294,11 +294,14 @@
             #next-button:focus-visible,
             #previvous-button:hover,
             #previous-button:focus-visible {
-                opacity: 1;
+                background-color: transparent;
+                color: #fff;
+                opacity: 0.4;
                 /* Fade in on hover */
             }
             #pause,
             #play {
+                opacity: 0;
                 display: none;
             }
         }
