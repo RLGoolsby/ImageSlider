@@ -94,8 +94,7 @@ $(document).ready(function() {
     });
 
     // Pause slider on mouseover and resume on mouseleave
-    $("#slider").on("mouseover", function(e) {
-        e.preventDefault();
+    $("#slider").on("mouseover", function() {
         stopSlider();
     }).on("mouseleave", function(e) {
         e.preventDefault();
