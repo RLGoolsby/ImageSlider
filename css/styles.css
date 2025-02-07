@@ -291,9 +291,7 @@
                 /* Start hidden */
             }
             #next-button:hover,
-            #next-button:focus-visible,
-            #previous-button:hover,
-            #previous-button:focus-visible {
+            #previous-button:hover {
                 background-color: transparent;
                 color: #fff;
                 opacity: 0.7;
