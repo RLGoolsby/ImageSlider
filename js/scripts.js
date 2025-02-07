@@ -28,7 +28,7 @@ $(document).ready(function() {
     }
 
     // Start the slider initially
-    startSlider();
+    startSlider(0);
 
     // Next button functionality
     $("#next-button").on("click", function(e) {
