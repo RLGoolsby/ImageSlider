@@ -452,7 +452,7 @@
         #s4:checked~#slide4:hover,
         #s5:checked~#slide5:hover {
             opacity: 1;
-            transform: scale(2.025);
+            transform: scale(2.015);
         }
         /* Next Slide */
         
