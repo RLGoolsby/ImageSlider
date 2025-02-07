@@ -292,11 +292,11 @@
             }
             #next-button:hover,
             #next-button:focus-visible,
-            #previvous-button:hover,
+            #previous-button:hover,
             #previous-button:focus-visible {
                 background-color: transparent;
                 color: #fff;
-                opacity: 0.4;
+                opacity: 0.7;
                 /* Fade in on hover */
             }
             #pause,
