@@ -350,7 +350,7 @@
         input[type="radio"] {
             position: relative;
             top: 85%;
-            left: 50%;
+            left: 45%;
             z-index: 2000;
             opacity: 0.5;
             transform: translateX(-80px);
@@ -365,8 +365,8 @@
             border-radius: 100%;
             opacity: 1;
             z-index: 5000;
-            width: 13px;
-            height: 13px;
+            width: 15px;
+            height: 15px;
             margin: auto;
             transform: scale(0);
             background-color: #fff;
@@ -452,7 +452,7 @@
         #s4:checked~#slide4:hover,
         #s5:checked~#slide5:hover {
             opacity: 1;
-            transform: scale(2.015);
+            transform: scale(1.6);
         }
         /* Next Slide */
         
