@@ -282,21 +282,24 @@
             cursor: pointer;
             outline: none;
         }
-        /* #slider-controls {
-            border: 2px solid #fff;
-            background-color: transparent;
-            color: #fff;
-            cursor: pointer;
-            padding: 13px 15px;
-            border-radius: 50%;
-            outline: none;
-        } */
-        /* #slider #slider-controls:hover {
-            background-color: #fff;
-            color: #333;
-        } */
         
-        #previous-button {
+        #slider-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        #slider-controls button {
+            display: flex
+        }
+        
+        button #previous-button {
             position: absolute;
             top: 40%;
             left: 15px;
@@ -307,8 +310,8 @@
             color: #fff;
         }
         
-        #pause,
-        #play {
+        button #pause,
+        button #play {
             position: absolute;
             top: 40%;
             left: 50px;
@@ -319,7 +322,7 @@
             color: #fff;
         }
         
-        #next-button {
+        button #next-button {
             position: absolute;
             top: 40%;
             right: 15px;
@@ -330,19 +333,19 @@
             color: #fff;
         }
         
-        #previous-button:hover,
-        #next-button:hover,
-        #pause:hover,
-        #play:hover {
+        button #previous-button:hover,
+        button #next-button:hover,
+        button #pause:hover,
+        button #play:hover {
             color: #f9973b;
             opacity: 1;
             cursor: pointer;
         }
         
-        #previous-button:focus-visible,
-        #next-button:focus-visible,
-        #pause::focus-visible,
-        #play::focus-visible {
+        button #previous-button:focus-visible,
+        button #next-button:focus-visible,
+        button #pause:focus-visible,
+        button #play:focus-visible {
             outline: 2px solid #b403f9;
             /* Customize the outline style as needed */
             outline-offset: 2px;
