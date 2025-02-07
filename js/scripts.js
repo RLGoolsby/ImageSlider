@@ -83,8 +83,12 @@ $(document).ready(function() {
             isPaused = !isPaused;
             if (isPaused) {
                 stopSlider();
+                $('#pause').hide();
+                $('#play').show();
             } else {
                 startSlider();
+                $('#play').hide();
+                $('#pause').show();
             }
         }
     });
@@ -97,4 +101,8 @@ $(document).ready(function() {
             startSlider();
         }
     });
+
+    // Initial state of play/pause buttons
+    $('#play').hide();
+    $('#pause').show();
 });
