@@ -76,6 +76,7 @@
                                                     min-height: 100%;
                                                     object-fit: cover;
                                                     margin: 3em auto 3em;
+                                                    overflow: visible;
                                                 }
                                                 
                                                 #slider .slider {
@@ -297,11 +298,8 @@
                                                     #content-wrapper {
                                                         margin: auto;
                                                     }
-                                                    #slider .slider {
+                                                    #slider {
                                                         overflow: hidden
-                                                    }
-                                                    .wrap:hover img {
-                                                        transform: scale(1.5);
                                                     }
                                                     #slider #slider-controls {
                                                         top: 0%;
@@ -324,21 +322,19 @@
                                                         opacity: 0;
                                                         display: none;
                                                     }
-                                                    #slider .slider #s1:checked~#slide1,
-                                                    #slider .slider #s2:checked~#slide2,
-                                                    #slider .slider #s3:checked~#slide3,
-                                                    #slider .slider #s4:checked~#slide4,
-                                                    #slider .slider #s5:checked~#slide5 {
-                                                        width: 370px;
-                                                        height: auto;
+                                                    #s1:checked~#slide1,
+                                                    #s2:checked~#slide2,
+                                                    #s3:checked~#slide3,
+                                                    #s4:checked~#slide4,
+                                                    #s5:checked~#slide5 {
                                                         -webkit-transition: .3s ease-in-out;
                                                         transition: .3s ease-in-out;
                                                     }
-                                                    #slider .slider #s1:checked~#slide1:hover,
-                                                    #slider .slider #s2:checked~#slide2:hover,
-                                                    #slider .slider #s3:checked~#slide3:hover,
-                                                    #slider .slider #s4:checked~#slide4:hover,
-                                                    #slider .slider #s5:checked~#slide5:hover {
+                                                    #s1:checked~#slide1:hover,
+                                                    #s2:checked~#slide2:hover,
+                                                    #s3:checked~#slide3:hover,
+                                                    #s4:checked~#slide4:hover,
+                                                    #s5:checked~#slide5:hover {
                                                         transform: scale(1.5);
                                                     }
                                                     #s1:checked~#slide1:focus-visible,
