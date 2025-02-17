@@ -100,8 +100,8 @@
                                                     align-content: flex-end;
                                                 }
                                                 
-                                                .img-wrapper {
-                                                    margin: 0;
+                                                figure.img-wrapper {
+                                                    margin: 0 !important;
                                                 }
                                                 
                                                 #slider .slider:focus-visible {
