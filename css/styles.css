@@ -102,6 +102,8 @@
                                                 
                                                 figure.img-wrapper {
                                                     margin: 0 !important;
+                                                    width: 370px;
+                                                    height: 370px;
                                                 }
                                                 
                                                 #slider .slider:focus-visible {
