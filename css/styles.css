@@ -245,7 +245,7 @@
                                             #s3:checked~#slide3:hover,
                                             #s4:checked~#slide4:hover,
                                             #s5:checked~#slide5:hover {
-                                                transform: scale3d(1.35, 1.35, 1.35);
+                                                transform: scale3d(1.3, 1.3, 1.3);
                                                 transition: all 0.75s ease-in-out;
                                             }
                                             /* Next Slide */
