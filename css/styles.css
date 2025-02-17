@@ -100,6 +100,10 @@
                                                     align-content: flex-end;
                                                 }
                                                 
+                                                figure {
+                                                    margin: 0 !important;
+                                                }
+                                                
                                                 #slider .slider:focus-visible {
                                                     outline: 2px solid #fc762d;
                                                     /* Customize the outline style as needed */
