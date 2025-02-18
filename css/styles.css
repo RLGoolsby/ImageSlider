@@ -329,21 +329,6 @@
                                                         opacity: 0;
                                                         display: none;
                                                     }
-                                                    #s1:checked~#slide1,
-                                                    #s2:checked~#slide2,
-                                                    #s3:checked~#slide3,
-                                                    #s4:checked~#slide4,
-                                                    #s5:checked~#slide5 {
-                                                        -webkit-transition: .3s ease-in-out;
-                                                        transition: .3s ease-in-out;
-                                                    }
-                                                    #s1:checked~#slide1:hover,
-                                                    #s2:checked~#slide2:hover,
-                                                    #s3:checked~#slide3:hover,
-                                                    #s4:checked~#slide4:hover,
-                                                    #s5:checked~#slide5:hover {
-                                                        transform: scale(1.5);
-                                                    }
                                                     #s1:checked~#slide1:focus-visible,
                                                     #s2:checked~#slide2:focus-visible,
                                                     #s3:checked~#slide3:focus-visible,
