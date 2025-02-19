@@ -315,13 +315,10 @@
                                                                         max-width: 100%;
                                                                     }
                                                                     .artist-title {
-                                                                        font-size: 50px;
+                                                                        font-size: 40px;
                                                                         font-weight: 500;
                                                                         margin: auto;
-                                                                        padding: 0.5em 1em;
-                                                                    }
-                                                                    #slider .slider {
-                                                                        min-height: 100vh;
+                                                                        padding: 0.5em;
                                                                     }
                                                                     #slider #slider-controls {
                                                                         top: 0%;
