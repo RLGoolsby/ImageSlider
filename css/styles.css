@@ -236,6 +236,7 @@
                                                         opacity: 1;
                                                         box-shadow: 0 3px 17px rgba(0, 0, 0, 0.2), 0 5px 6px rgba(0, 0, 0, 0.2);
                                                         transform: translate3d(0%, 0, 0px);
+                                                        filter: brightness(95%);
                                                     }
                                                     
                                                     #s1:checked~#slide1:hover,
