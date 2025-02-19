@@ -8,11 +8,11 @@
                                                     }
                                                     
                                                     .artistTitleWrapper {
-                                                        width: 100%;
-                                                        height: auto;
-                                                        display: inline-flex;
-                                                        flex-direction: row;
-                                                        background: hsl(0deg 6% 20%);
+                                                        background: hsl(0deg 6% 20% / 63%);
+                                                        /* outline: 6px solid hsl(60deg 14.07% 97.41%); */
+                                                        border-bottom: 1px solid hsl(0deg 27.77% 95.82% / 21%);
+                                                        /* background: hsl(270deg 72.33% 98.99% / 72%); */
+                                                        box-shadow: 0 0 0 10px hsl(0deg 0% 100%), 0 0 0 15px hsl(0deg 0% 91.78%);
                                                     }
                                                     
                                                     .artistTitleContainer {
