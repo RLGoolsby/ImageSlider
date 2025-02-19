@@ -85,7 +85,7 @@
                                                     #slider .slider {
                                                         position: absolute;
                                                         width: 100%;
-                                                        height: auto;
+                                                        height: 100%;
                                                         left: 0;
                                                         bottom: 0;
                                                         color: white;
