@@ -244,14 +244,22 @@
                                                     #s3:checked~#slide3:hover,
                                                     #s4:checked~#slide4:hover,
                                                     #s5:checked~#slide5:hover {
-                                                        transform: scale3d(1.2, 1.2, 1.2);
+                                                        /* transform: scale3d(1.2, 1.2, 1.2);
                                                         transition: all 0.8s ease-in-out;
                                                         filter: brightness(100%);
                                                         outline: 4px solid hsl(60deg 1.26% 55.45% / 45%);
-                                                        border: 2px solid hsl(0deg 0% 40% / 63%);
+                                                        border: 2px solid hsl(0deg 0% 40% / 63%); */
                                                         /* padding: 5px; */
-                                                        background: hsl(270deg 3.17% 24.71%);
-                                                        box-shadow: 0 0 0 10px hsl(0, 0%, 80%), 0 0 0 15px hsl(0, 0%, 90%);
+                                                        /* background: hsl(270deg 3.17% 24.71%);
+                                                        box-shadow: 0 0 0 10px hsl(0, 0%, 80%), 0 0 0 15px hsl(0, 0%, 90%); */
+                                                        transform: scale3d(1.2, 1.2, 1.2);
+                                                        transition: all 0.8sease-in-out;
+                                                        filter: brightness(100%);
+                                                        outline: 6px solid hsl(60deg 14.07% 97.41% / 17%);
+                                                        border: 6px solid hsl(0deg 0.28% 59.6%);
+                                                        padding: 5px;
+                                                        background: hsl(270deg 72.33% 98.99% / 72%);
+                                                        box-shadow: 0 0 0 10px hsl(0deg 2.05% 26.29%), 0 0 0 15px hsl(60deg 1.32% 2.85%);
                                                     }
                                                     /* Next Slide */
                                                     
