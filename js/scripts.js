@@ -20,15 +20,20 @@ $(document).ready(function() {
         clearInterval(interval);
     }
 
-    function announceSlideChange(slideNumber) {
+
+
+    function announceSlideChange(counter) {
         $("#slider").attr("aria-live", "polite");
         $("#slider").attr("aria-atomic", "true");
         $("#slider").attr("aria-relevant", "additions text");
-        $("#slider").find(".sr-only").text("Slide " + slideNumber + " of " + numberOfImages);
+        $("#slider").find(".sr-only").text("Slide " + counter + " of " + numberOfImages);
     }
 
     // Start the slider initially
     startSlider(0);
+    announceSlideChange(counter);
+
+
 
     // Next button functionality
     $("#next-button").on("click", function(e) {
@@ -107,3 +112,9 @@ $(document).ready(function() {
     $('#play').hide();
     $('#pause').show();
 });
+/************************
+ //*> OPTIONAL SETTINGS
+************************/
+function announceSlideChange(counter) {
+    $("#counter").html(counter + 1 + " / " + numberOfImages);
+}
