@@ -176,11 +176,13 @@
                                                                         
                                                                         #counter {
                                                                             display: block;
-                                                                            top: 2em;
+                                                                            top: 4em;
                                                                             right: 1em;
                                                                             width: 5em;
                                                                             position: absolute;
                                                                             color: #fff;
+                                                                            font-size: 30px;
+                                                                            opacity: 1;
                                                                         }
                                                                         
                                                                         .slider {
@@ -326,6 +328,7 @@
                                                                             #slider {
                                                                                 margin: 0;
                                                                                 overflow: hidden;
+                                                                                width: 0px;
                                                                                 width: 100%;
                                                                                 display: flex;
                                                                                 flex-wrap: wrap;
