@@ -111,9 +111,3 @@ $(document).ready(function() {
     $('#play').hide();
     $('#pause').show();
 });
-/************************
- //*> OPTIONAL SETTINGS
-************************/
-function announceSlideChange(counter) {
-    $("#counter").html(counter + 1 + " / " + numberOfImages);
-}
