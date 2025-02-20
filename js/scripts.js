@@ -20,8 +20,7 @@ $(document).ready(function() {
         clearInterval(interval);
     }
 
-
-
+    // Function to announce the slide change to screen reader users
     function announceSlideChange(counter) {
         $("#slider").attr("aria-live", "polite");
         $("#slider").attr("aria-atomic", "true");

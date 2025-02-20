@@ -175,9 +175,10 @@
                                                                     }
                                                                     
                                                                     #counter {
-                                                                        top: 30px;
-                                                                        right: 35px;
-                                                                        width: auto;
+                                                                        display: block;
+                                                                        top: 2em;
+                                                                        right: 1em;
+                                                                        width: 5em;
                                                                         position: absolute;
                                                                         color: #fff;
                                                                     }
