@@ -5,6 +5,7 @@
                                                                             height: 100%;
                                                                             margin: auto;
                                                                             background: #000;
+                                                                            margin: 4em auto;
                                                                         }
                                                                         
                                                                         .artistTitleWrapper {
@@ -81,6 +82,7 @@
                                                                             align-content: center;
                                                                             padding: 0;
                                                                             flex-direction: row;
+                                                                            margin: 4em auto;
                                                                         }
                                                                         
                                                                         #slider .slider {
