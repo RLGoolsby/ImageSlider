@@ -333,12 +333,12 @@
                                                                                 overflow: hidden;
                                                                                 width: 100%;
                                                                                 display: flex;
-                                                                                flex-wrap: wrap;
+                                                                                flex-wrap: nowrap;
                                                                                 justify-content: space-between;
-                                                                                align-items: flex-start;
                                                                                 align-content: center;
                                                                                 padding: 2em 0em 0em;
                                                                                 flex-direction: row;
+                                                                                align-items: center
                                                                             }
                                                                             input[type="radio"] {
                                                                                 position: relative;
