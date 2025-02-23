@@ -260,7 +260,7 @@
                                                                                                                                                         #s4:checked~#slide4:hover,
                                                                                                                                                         #s5:checked~#slide5:hover {
                                                                                                                                                             transform: scale3d(1.2, 1.2, 1.2);
-                                                                                                                                                            transition: all 3s ease-in-out;
+                                                                                                                                                            transition: all 2s ease-in-out;
                                                                                                                                                             filter: brightness(100%);
                                                                                                                                                             outline: 6px solid hsl(60deg 14.07% 97.41% / 17%);
                                                                                                                                                             border: 6px solid hsl(0deg 0.28% 59.6%);
