@@ -176,16 +176,6 @@
         /* Customize the outline style as needed */
         outline-offset: 2px;
     }
-    /* #counter {
-                                                                                                                                                                                                display: block;
-                                                                                                                                                                                                top: 4em;
-                                                                                                                                                                                                right: 1em;
-                                                                                                                                                                                                width: 5em;
-                                                                                                                                                                                                position: absolute;
-                                                                                                                                                                                                color: #fff;
-                                                                                                                                                                                                font-size: 30px;
-                                                                                                                                                                                                opacity: 1;
-                                                                                                                                                                                            } */
     
     .slider {
         transition: 0.7s;
@@ -193,8 +183,8 @@
     
     input[type="radio"] {
         position: relative;
-        top: 40%;
-        left: 0%;
+        top: 32%;
+        left: 32%;
         bottom: 0;
         z-index: 1000;
         opacity: 0.3;
