@@ -344,16 +344,13 @@ img.eachimg {
     }
     input[type="radio"] {
         position: relative;
-        top: 0%;
+        top: 34%;
         left: 0;
         right: 0;
         width: 100%;
         bottom: 0;
         z-index: 30000;
         opacity: 1;
-    }
-    input[type="radio"]::before {
-        box-shadow: inset 23px 23px rgb(253 251 251);
     }
     figure.img-wrapper {
         margin: 0 !important;
