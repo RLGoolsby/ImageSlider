@@ -315,11 +315,12 @@ img.eachimg {
     transform: translate3d(-105%, 0, -150px) scale(.9);
 }
 
-@media screen and (max-width: 900px) {
+
+/* @media screen and (max-width: 900px) {
     .the-whole-thing {
         position: fixed;
     }
-}
+} */
 
 @media screen and (max-width: 768px) {
     .artistTitleContainer {
