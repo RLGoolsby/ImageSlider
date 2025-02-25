@@ -362,15 +362,9 @@
                 flex-wrap: nowrap;
                 flex-direction: column;
             }
-            #next-button {
-                right: 15px;
-            }
-            #previous-button {
-                left: 15px;
-            }
             #previous-button,
             #next-button {
-                transition: opacity 0.3s, color 0.3s;
+                transition: opacity 0.3s;
                 opacity: 0;
             }
             #next-button:hover,
