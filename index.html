@@ -1,190 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link
-			href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
-			rel="stylesheet"
-			type="text/css" />
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-			rel="stylesheet" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet" />
-		<!-- add for google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
-		<title>image slider</title>
-	</head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- add for google fonts -->
 
-	<body>
-		<div class="the-whole-thing">
-			<section class="artistTitleWrapper">
-				<div class="artistTitleContainer">
-					<h1 class="artist-title">
-						Luna Ray
-						<i class="fa-solid fa-paintbrush fa-xs" aria-hidden="true"></i>The
-						Artist
-						<!-- <i class="fa-solid fa-paintbrush" aria-hidden="true"> -->
-						<span class="fa-sr-only">The Fontawesome paintbrush icon</span>
-					</h1>
-				</div>
-			</section>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>image slider</title>
+</head>
 
-			<section
-				id="slider"
-				aria-roledescription="carousel"
-				aria-label="Image Slider">
-				<input
-					class="imgCheck"
-					type="radio"
-					name="slider"
-					id="s1"
-					aria-hidden="true" />
-				<input
-					class="imgCheck"
-					type="radio"
-					name="slider"
-					id="s2"
-					aria-hidden="true" />
-				<input
-					class="imgCheck"
-					type="radio"
-					name="slider"
-					id="s3"
-					aria-hidden="true"
-					checked />
-				<input
-					class="imgCheck"
-					type="radio"
-					name="slider"
-					id="s4"
-					aria-hidden="true" />
-				<input
-					class="imgCheck"
-					type="radio"
-					name="slider"
-					id="s5"
-					aria-hidden="true" />
+<body>
+    <div class="the-whole-thing">
+        <section class="artistTitleWrapper">
+            <div class="artistTitleContainer">
+                <h1 class="artist-title">
+                    Luna Ray
+                    <i class="fa-solid fa-paintbrush fa-xs" aria-hidden="true"></i>The Artist
+                    <!-- <i class="fa-solid fa-paintbrush" aria-hidden="true"> -->
+                    <span class="fa-sr-only">The Fontawesome paintbrush icon</span>
+                </h1>
+            </div>
+        </section>
 
-				<label
-					for="s1"
-					id="slide1"
-					class="slider"
-					tabindex="0"
-					aria-labelledby="slide1-title">
+        <section id="slider" aria-roledescription="carousel" aria-label="Image Slider">
+            <input class="imgCheck" type="radio" name="slider" id="s1" aria-hidden="true" />
+            <input class="imgCheck" type="radio" name="slider" id="s2" aria-hidden="true" />
+            <input class="imgCheck" type="radio" name="slider" id="s3" aria-hidden="true" checked />
+            <input class="imgCheck" type="radio" name="slider" id="s4" aria-hidden="true" />
+            <input class="imgCheck" type="radio" name="slider" id="s5" aria-hidden="true" />
+
+            <label for="s1" id="slide1" class="slider" tabindex="0" aria-labelledby="slide1-title">
 					<figure class="img-wrapper">
 						<img class="eachimg" src="css/image/IMG_7140.jpeg" alt="Untitled" />
-						<figcaption><p class="sr-only">Untitled painting</p></figcaption>
+						<figcaption><p class="vs-hidden">Untitled painting</p><span class="sr-only"></span>
 					</figure>
 				</label>
 
-				<label
-					for="s2"
-					id="slide2"
-					class="slider"
-					tabindex="0"
-					aria-labelledby="slide2-title">
+            <label for="s2" id="slide2" class="slider" tabindex="0" aria-labelledby="slide2-title">
 					<figure class="img-wrapper">
 						<img
 							class="eachimg"
 							src="css/image/IMG_7142.jpeg"
 							alt="Cicada Evening" />
 						<figcaption>
-							<p class="sr-only">Cicada Evening</p>
+							<p class="vs-hidden">Cicada Evening</p><span class="sr-only"></span>
 						</figcaption>
 					</figure>
 				</label>
 
-				<label
-					for="s3"
-					id="slide3"
-					class="slider"
-					tabindex="0"
-					aria-labelledby="slide3-title">
+            <label for="s3" id="slide3" class="slider" tabindex="0" aria-labelledby="slide3-title">
 					<figure class="img-wrapper">
 						<img
 							class="eachimg"
 							src="css/image/IMG_7173.JPG"
 							alt="Spaces in between" />
 						<figcaption>
-							<p class="sr-only">Spaces in between</p>
+							<p class="vs-hidden">Spaces in between</p><span class="sr-only"></span>
 						</figcaption>
 					</figure>
 				</label>
 
-				<label
-					for="s4"
-					id="slide4"
-					class="slider"
-					tabindex="0"
-					aria-labelledby="slide4-title">
+            <label for="s4" id="slide4" class="slider" tabindex="0" aria-labelledby="slide4-title">
 					<figure class="img-wrapper">
 						<img
 							class="eachimg"
 							src="css/image/IMG_7138.jpeg"
 							alt="Rising Up" />
-						<figcaption><p class="sr-only">Rising Up</p></figcaption>
-					</figure>
-				</label>
-
-				<label
-					for="s5"
-					id="slide5"
-					class="slider"
-					tabindex="0"
-					aria-labelledby="slide5-title">
-					<figure class="img-wrapper">
-						<img class="eachimg" src="css/image/IMG_7139.jpeg" alt="Rain 1" />
-						<figcaption>
-							<p class="sr-only">Rain 1</p>
+							<figcaption><p class="vs-hidden">Rising Up</p><span class="sr-only"></span>
 						</figcaption>
 					</figure>
 				</label>
 
-				<nav id="slider-controls">
-					<button
-						id="previous-button"
-						title="Previous Slider"
-						tabindex="0"
-						aria-label="Previous Slide">
-						<i class="fas fa-arrow-left" aria-hidden="true"></i>
-						<span class="sr-only">Previous slides</span>
-					</button>
-					<button
-						id="play"
-						title="Play Slider"
-						tabindex="0"
-						aria-label="Play Slider">
-						<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-						<span class="sr-only">Play</span>
-					</button>
-					<button
-						id="pause"
-						title="Pause Slider"
-						tabindex="0"
-						aria-label="Pause Slider">
-						<i class="fa-solid fa-pause" aria-hidden="true"></i>
-						<span class="sr-only">Pause</span>
-					</button>
-					<button
-						id="next-button"
-						title="Next Slide"
-						tabindex="0"
-						aria-label="Next Slide">
-						<i class="fas fa-arrow-right" aria-hidden="true"></i>
-						<span class="sr-only">Next slides</span>
-					</button>
-				</nav>
-			</section>
-		</div>
-	</body>
-	<!---END DIV 'CONTENT-WRAPPER' -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js "></script>
+            <label for="s5" id="slide5" class="slider" tabindex="0" aria-labelledby="slide5-title">
+					<figure class="img-wrapper">
+						<img class="eachimg" src="css/image/IMG_7139.jpeg" alt="Rain 1" />
+						<figcaption>
+					<p class="vs-hidden">Rain 1</p><span class="sr-only"></span>
+						</figcaption>
+					</figure>
+				</label>
 
-	<script src="js/scripts.js "></script>
+            <nav id="slider-controls">
+                <button id="previous-button" title="Previous Slider" tabindex="0" aria-label="Previous Slide">
+						<i class="fas fa-arrow-left" aria-hidden="true"></i>
+						<span class="vs-hidden">Previous slides</span>
+					</button>
+                <button id="play" title="Play Slider" tabindex="0" aria-label="Play Slider">
+						<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+						<span class="vs-hidden">Play</span>
+					</button>
+                <button id="pause" title="Pause Slider" tabindex="0" aria-label="Pause Slider">
+						<i class="fa-solid fa-pause" aria-hidden="true"></i>
+						<span class="vs-hidden">Pause</span>
+					</button>
+                <button id="next-button" title="Next Slide" tabindex="0" aria-label="Next Slide">
+						<i class="fas fa-arrow-right" aria-hidden="true"></i>
+						<span class="vs-hidden">Next slides</span>
+					</button>
+            </nav>
+        </section>
+    </div>
+</body>
+<!---END DIV 'CONTENT-WRAPPER' -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js "></script>
+
+<script src="js/scripts.js "></script>
+
 </html>
