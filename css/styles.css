@@ -256,7 +256,7 @@
                 #s4:checked~#slide4~#slider-controls,
                 #s5:checked~#slide5#slider-controls {
                     background-color: #000;
-                    opacity: 0;
+                    /* opacity: 0; */
                 }
                 
                 #s1:checked~#slide1:hover~#slider-controls:hover,
@@ -265,7 +265,9 @@
                 #s4:checked~#slide4:hover~#slider-controls:hover,
                 #s5:checked~#slide5:hover~#slider-controls:hover {
                     background-color: #000;
-                    opacity: 0.5;
+                    opacity: 0.6;
+                    height: 35px;
+                    width: 100%;
                 }
                 /* Next Slide */
                 
