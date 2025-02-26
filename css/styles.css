@@ -119,6 +119,14 @@
             outline: none;
             margin-top: 1em;
         }
+        
+        #slider-controls {
+            background-color: transparent;
+        }
+        
+        #slider-controls:hover {
+            background-color: transparent;
+        }
         /** previous/pause/play/next buttons **/
         
         #previous-button {
@@ -180,7 +188,7 @@
         
         input[type="radio"] {
             position: relative;
-            top: 32%;
+            top: 45%;
             left: 32%;
             bottom: 0;
             z-index: 1000;
@@ -239,19 +247,19 @@
             filter: brightness(95%);
         }
         
-        #s1:checked~#slide1:hover,
-        #s2:checked~#slide2:hover,
-        #s3:checked~#slide3:hover,
-        #s4:checked~#slide4:hover,
-        #s5:checked~#slide5:hover {
+        #s1:checked~#slide1:hover~#slider-controls,
+        #s2:checked~#slide2:hover~#slider-controls,
+        #s3:checked~#slide3:hover~#slider-controls,
+        #s4:checked~#slide4:hover~#slider-controls,
+        #s5:checked~#slide5:hover~#slider-controls {
             transform: scale3d(1.2, 1.2, 1.2);
             transition: all 0.8s ease-in-out;
             filter: brightness(100%);
-            outline: 4px solid hsl(60deg 14.07% 97.41% / 44%);
-            border: 4px solid hsl(156deg 2.92% 66.47% / 68%);
+            outline: 2px solid hsl(60deg 14.07% 97.41% / 44%);
+            border: 1px solid hsl(156deg 2.92% 66.47% / 68%);
             padding: 1px;
             background: hsl(0deg 0% 100%);
-            box-shadow: 0 0 0 8px hsl(0deg 2.05% 26.29%), 0 0 0 20px hsl(60deg 1.32% 2.85%);
+            box-shadow: 0 0 0 8px hsl(0deg 2.05% 26.29%), 0 0 0 6px hsl(60deg 1.32% 3.85%);
         }
         /* Next Slide */
         
@@ -305,7 +313,7 @@
         
         @media screen and (max-width: 768px) {
             .the-whole-thing {
-                /* position: relative; */
+                position: relative;
                 width: 100%;
                 height: auto;
                 margin: auto;
