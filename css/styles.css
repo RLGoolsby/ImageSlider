@@ -108,14 +108,11 @@
             cursor: pointer;
             outline: none;
             margin-top: 1em;
-        }
-        
-        #slider-controls {
             background-color: transparent;
         }
         
-        #slider-controls:hover {
-            background-color: transparent;
+        #slider #slider-controls:hover {
+            background-color: #000;
         }
         /** previous/pause/play/next buttons **/
         
@@ -235,7 +232,6 @@
             box-shadow: 0 3px 17px rgba(0, 0, 0, 0.2), 0 5px 6px rgba(0, 0, 0, 0.2);
             transform: translate3d(0%, 0, 0px);
             filter: brightness(95%);
-            background-color: transparent;
         }
         
         #s1:checked~#slide1:hover,
@@ -252,15 +248,14 @@
             background: hsl(0deg 0% 100%);
             box-shadow: 0 0 0 8px hsl(0deg 2.05% 26.29%), 0 0 0 6px hsl(60deg 1.32% 3.85%);
         }
-        
-        #s1:checked~#slide1:hover~#slider-controls,
+        /* #s1:checked~#slide1:hover~#slider-controls,
         #s2:checked~#slide2:hover~#slider-controls,
         #s3:checked~#slide3:hover~#slider-controls,
         #s4:checked~#slide4:hover~#slider-controls,
         #s5:checked~#slide5:hover~#slider-controls {
             background-color: #000;
             opacity: 0.5;
-        }
+        } */
         /* Next Slide */
         
         #s1:checked~#slide2,
