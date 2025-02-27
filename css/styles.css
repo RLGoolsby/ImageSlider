@@ -324,7 +324,7 @@
                                 justify-content: space-evenly;
                             }
                             input[type="radio"] {
-                                top: 45%;
+                                top: 5%;
                                 left: 0%;
                                 opacity: 1;
                                 display: inline-flex;
@@ -360,8 +360,16 @@
                                 flex-wrap: nowrap;
                                 flex-direction: column;
                             }
-                            #previous-button,
+                            #previous-button {
+                                top: 20%;
+                                left: 20px;
+                                opacity: 0;
+                                color: #fff;
+                                background-color: transparent;
+                            }
                             #next-button {
+                                top: 30%;
+                                right: 20px;
                                 opacity: 0;
                                 color: #fff;
                                 background-color: transparent;
