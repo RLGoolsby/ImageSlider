@@ -384,21 +384,20 @@
                                 align-items: flex-end;
                                 flex-wrap: nowrap;
                                 flex-direction: column;
-                                background-color: #000;
                             }
                             #previous-button,
                             #next-button {
-                                transition: opacity 0.3s;
                                 opacity: 0;
                                 color: #fff;
-                                transform: translate3d(0%, 0, 0px);
+                                transform: scale(0.5);
                                 background-color: hsla(0, 33%, 98%, 0.26);
                             }
                             #next-button:hover,
                             #previous-button:hover {
+                                transition: opacity 0.3s;
                                 color: #fff;
                                 opacity: 1;
-                                transform: scale3d(1.0, 1.0, 1.0);
+                                transform: scale(1.1);
                             }
                             #pause,
                             #play {
