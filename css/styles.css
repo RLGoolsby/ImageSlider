@@ -249,26 +249,6 @@
                             background: hsl(0, 0%, 100%);
                             box-shadow: 0 0 0 8px hsl(0deg 2.05% 26.29%), 0 0 0 6px hsl(60deg 1.32% 3.85%);
                         }
-                        
-                        #s1:checked~#slide1~#slider-controls,
-                        #s2:checked~#slide2~#slider-controls,
-                        #s3:checked~#slide3~#slider-controls,
-                        #s4:checked~#slide4~#slider-controls,
-                        #s5:checked~#slide5~#slider-controls {
-                            background-color: #000;
-                            /* opacity: 0; */
-                        }
-                        
-                        #s1:checked~#slide1:hover~#slider-controls:hover,
-                        #s2:checked~#slide2:hover~#slider-controls:hover,
-                        #s3:checked~#slide3:hover~#slider-controls:hover,
-                        #s4:checked~#slide4:hover~#slider-controls:hover,
-                        #s5:checked~#slide5:hover~#slider-controls:hover {
-                            background-color: #000;
-                            opacity: 0.6;
-                            height: 35px;
-                            width: 100%;
-                        }
                         /* Next Slide */
                         
                         #s1:checked~#slide2,
@@ -336,15 +316,10 @@
                                 width: 100%;
                                 height: auto;
                                 display: inline-flex;
-                                /* margin: 0; */
-                                overflow: hidden;
-                                width: 100%;
-                                height: auto;
-                                display: inline-flex;
                                 flex-wrap: nowrap;
                                 align-content: center;
                                 flex-direction: row;
-                                align-items: center;
+                                align-items: flex-end;
                                 min-height: 100vh;
                                 justify-content: space-evenly;
                             }
