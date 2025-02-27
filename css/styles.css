@@ -254,7 +254,7 @@
                     #s2:checked~#slide2~#slider-controls,
                     #s3:checked~#slide3~#slider-controls,
                     #s4:checked~#slide4~#slider-controls,
-                    #s5:checked~#slide5#slider-controls {
+                    #s5:checked~#slide5~#slider-controls {
                         background-color: #000;
                         /* opacity: 0; */
                     }
