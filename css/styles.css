@@ -386,6 +386,8 @@
                             #s4:checked~#slide4:hover,
                             #s5:checked~#slide5:hover {
                                 background: hsla(0, 0%, 100%, 0);
+                                outline: none;
+                                border: none;
                             }
                             #s1:checked~#slide1:focus-visible,
                             #s2:checked~#slide2:focus-visible,
