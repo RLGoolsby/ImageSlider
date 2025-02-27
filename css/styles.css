@@ -1,7 +1,6 @@
                         /* THIS IS WHERE YOU PUT YOUR CSS CODE*/
                         
                         .the-whole-thing {
-                            position: fixed;
                             width: 100%;
                             margin: auto;
                             background: #000;
@@ -65,7 +64,7 @@
                             max-width: 100%;
                             min-height: 100%;
                             object-fit: cover;
-                            margin: 1em auto;
+                            margin: 1em auto 0em;
                             flex-wrap: wrap;
                             justify-content: space-evenly;
                             align-items: flex-end;
