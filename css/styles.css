@@ -385,10 +385,6 @@
                                 flex-wrap: nowrap;
                                 flex-direction: column;
                                 background-color: #000;
-                                opacity: 0;
-                            }
-                            #slider #slider-controls:hover {
-                                opacity: 0.5;
                             }
                             #previous-button,
                             #next-button {
