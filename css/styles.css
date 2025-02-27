@@ -389,15 +389,16 @@
                             #next-button {
                                 opacity: 0;
                                 color: #fff;
-                                transform: scale(0);
-                                background-color: hsla(0, 33%, 98%, 0.26);
+                                background-color: transparent;
+                                /* background-color: hsla(0, 33%, 98%, 0.26); */
                             }
                             #next-button:hover,
                             #previous-button:hover {
+                                transition: all 0.8s ease-in-out;
                                 color: #fff;
                                 opacity: 1;
                                 transform: scale(1.5);
-                                /* background-color: #00000040; */
+                                background-color: #00000040;
                             }
                             #pause,
                             #play {
