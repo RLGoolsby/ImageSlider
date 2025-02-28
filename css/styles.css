@@ -304,10 +304,11 @@
                             .the-whole-thing {
                                 position: relative;
                                 width: 100%;
-                                height: auto;
+                                height: 100%;
                                 margin: auto;
                                 background: #000;
                                 min-height: 100vh;
+                                padding: 0em 0em 4em 0em;
                             }
                             .artistTitleContainer {
                                 padding: 0em;
@@ -325,7 +326,7 @@
                                 justify-content: space-evenly;
                             }
                             input[type="radio"] {
-                                top: 5%;
+                                top: 0%;
                                 left: 0%;
                                 opacity: 1;
                                 display: inline-flex;
@@ -353,7 +354,7 @@
                                 position: absolute;
                                 margin: auto;
                                 height: 30%;
-                                top: 30%;
+                                top: 0;
                                 left: 0;
                                 right: 0;
                                 cursor: pointer;
@@ -365,18 +366,18 @@
                             }
                             #previous-button {
                                 top: 20%;
-                                left: 20px;
+                                left: 10px;
                                 opacity: 0;
                                 color: #fff;
                                 background-color: transparent;
                             }
                             #next-button {
                                 top: 30%;
-                                right: 20px;
+                                right: 10px;
                                 opacity: 0;
                                 color: #fff;
-                                background-color: transparent;
-                                /* background-color: hsla(0, 33%, 98%, 0.26); */
+                                /* background-color: transparent; */
+                                background-color: hsla(0, 33%, 98%, 0.26);
                             }
                             #next-button:hover,
                             #previous-button:hover {
@@ -384,7 +385,6 @@
                                 color: #fff;
                                 opacity: 1;
                                 transform: scale(1.5);
-                                background-color: #00000040;
                             }
                             #pause,
                             #play {
