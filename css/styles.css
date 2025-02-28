@@ -369,16 +369,16 @@
                                 #previous-button {
                                     opacity: 0;
                                     color: #fff;
-                                    transform: scale(0.0);
                                     background-color: #00000052;
                                 }
                                 #next-button:hover,
                                 #previous-button:hover {
-                                    transition: 0.3s;
                                     color: #fff;
                                     opacity: 1;
                                     transform: scale(1.5);
                                     background-color: #00000052;
+                                    cursor: pointer;
+                                    transition: background-color 2s ease-out;
                                 }
                                 #pause,
                                 #play {
