@@ -7,6 +7,7 @@
                             margin: auto;
                             background: #000;
                             min-height: 100vh;
+                            padding: 0em 0em 4em 0em;
                         }
                         
                         .artistTitleWrapper {
@@ -66,7 +67,7 @@
                             max-width: 100%;
                             min-height: 100%;
                             object-fit: cover;
-                            margin: 1em auto;
+                            margin: 2em auto;
                             flex-wrap: wrap;
                             justify-content: space-evenly;
                             align-items: flex-end;
@@ -308,7 +309,7 @@
                                 margin: auto;
                                 background: #000;
                                 min-height: 100vh;
-                                padding: 0em 0em 4em 0em;
+                                padding: 0em 0em 2em 0em;
                             }
                             .artistTitleContainer {
                                 padding: 0em;
@@ -354,7 +355,7 @@
                                 position: absolute;
                                 margin: auto;
                                 height: 30%;
-                                top: 0;
+                                top: 30%;
                                 left: 0;
                                 right: 0;
                                 cursor: pointer;
@@ -364,24 +365,15 @@
                                 flex-wrap: nowrap;
                                 flex-direction: column;
                             }
+                            #next-button,
                             #previous-button {
-                                top: 20%;
-                                left: 10px;
                                 opacity: 0;
                                 color: #fff;
-                                background-color: transparent;
-                            }
-                            #next-button {
-                                top: 30%;
-                                right: 10px;
-                                opacity: 0;
-                                color: #fff;
-                                /* background-color: transparent; */
                                 background-color: hsla(0, 33%, 98%, 0.26);
                             }
                             #next-button:hover,
                             #previous-button:hover {
-                                transition: all 0.8s ease-in-out;
+                                transition-delay: 0.3s;
                                 color: #fff;
                                 opacity: 1;
                                 transform: scale(1.5);
