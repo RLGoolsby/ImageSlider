@@ -27,22 +27,22 @@
                 </h1>
             </div>
         </section>
+        <main>
+            <section id="slider" aria-roledescription="carousel" aria-label="Image Slider">
+                <input class="imgCheck" type="radio" name="slider" id="s1" aria-hidden="true" />
+                <input class="imgCheck" type="radio" name="slider" id="s2" aria-hidden="true" />
+                <input class="imgCheck" type="radio" name="slider" id="s3" aria-hidden="true" checked />
+                <input class="imgCheck" type="radio" name="slider" id="s4" aria-hidden="true" />
+                <input class="imgCheck" type="radio" name="slider" id="s5" aria-hidden="true" />
 
-        <section id="slider" aria-roledescription="carousel" aria-label="Image Slider">
-            <input class="imgCheck" type="radio" name="slider" id="s1" aria-hidden="true" />
-            <input class="imgCheck" type="radio" name="slider" id="s2" aria-hidden="true" />
-            <input class="imgCheck" type="radio" name="slider" id="s3" aria-hidden="true" checked />
-            <input class="imgCheck" type="radio" name="slider" id="s4" aria-hidden="true" />
-            <input class="imgCheck" type="radio" name="slider" id="s5" aria-hidden="true" />
-
-            <label for="s1" id="slide1" class="slider" tabindex="0" aria-labelledby="slide1-title">
+                <label for="s1" id="slide1" class="slider" tabindex="0" aria-labelledby="slide1-title">
 					<figure class="img-wrapper">
 						<img class="eachimg" src="css/image/IMG_7140.jpeg" alt="Untitled painting" />
 						<figcaption><p class="vs-hidden">Untitled painting</p><span class="sr-only"></span>
 					</figure>
 				</label>
 
-            <label for="s2" id="slide2" class="slider" tabindex="0" aria-labelledby="slide2-title">
+                <label for="s2" id="slide2" class="slider" tabindex="0" aria-labelledby="slide2-title">
 					<figure class="img-wrapper">
 						<img
 							class="eachimg"
@@ -54,7 +54,7 @@
 					</figure>
 				</label>
 
-            <label for="s3" id="slide3" class="slider" tabindex="0" aria-labelledby="slide3-title">
+                <label for="s3" id="slide3" class="slider" tabindex="0" aria-labelledby="slide3-title">
 					<figure class="img-wrapper">
 						<img
 							class="eachimg"
@@ -66,7 +66,7 @@
 					</figure>
 				</label>
 
-            <label for="s4" id="slide4" class="slider" tabindex="0" aria-labelledby="slide4-title">
+                <label for="s4" id="slide4" class="slider" tabindex="0" aria-labelledby="slide4-title">
 					<figure class="img-wrapper">
 						<img
 							class="eachimg"
@@ -77,7 +77,7 @@
 					</figure>
 				</label>
 
-            <label for="s5" id="slide5" class="slider" tabindex="0" aria-labelledby="slide5-title">
+                <label for="s5" id="slide5" class="slider" tabindex="0" aria-labelledby="slide5-title">
 					<figure class="img-wrapper">
 						<img class="eachimg" src="css/image/IMG_7139.jpeg" alt="Rain 1" />
 						<figcaption>
@@ -86,25 +86,26 @@
 					</figure>
 				</label>
 
-            <nav id="slider-controls">
-                <button id="previous-button" title="Previous Slider" tabindex="0" aria-label="Previous Slide">
+                <nav id="slider-controls">
+                    <button id="previous-button" title="Previous Slider" tabindex="0" aria-label="Previous Slide">
 						<i class="fas fa-arrow-left" aria-hidden="true"></i>
 						<span class="vs-hidden">Previous slides</span>
 					</button>
-                <button id="play" title="Play Slider" tabindex="0" aria-label="Play Slider">
+                    <button id="play" title="Play Slider" tabindex="0" aria-label="Play Slider">
 						<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
 						<span class="vs-hidden">Play</span>
 					</button>
-                <button id="pause" title="Pause Slider" tabindex="0" aria-label="Pause Slider">
+                    <button id="pause" title="Pause Slider" tabindex="0" aria-label="Pause Slider">
 						<i class="fa-solid fa-pause" aria-hidden="true"></i>
 						<span class="vs-hidden">Pause</span>
 					</button>
-                <button id="next-button" title="Next Slide" tabindex="0" aria-label="Next Slide">
+                    <button id="next-button" title="Next Slide" tabindex="0" aria-label="Next Slide">
 						<i class="fas fa-arrow-right" aria-hidden="true"></i>
 						<span class="vs-hidden">Next slides</span>
 					</button>
-            </nav>
-        </section>
+                </nav>
+            </section>
+        </main>
     </div>
 </body>
 <!---END DIV 'CONTENT-WRAPPER' -->
