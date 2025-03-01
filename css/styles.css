@@ -78,7 +78,7 @@
                                     width: 370px;
                                     height: 370px;
                                     perspective: 700px;
-                                    transition: transform 400msease;
+                                    transition: transform 400ms ease;
                                     transform-style: preserve-3d;
                                     max-width: 100%;
                                     min-height: 100%;
