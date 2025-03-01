@@ -71,8 +71,8 @@
                                 #slider {
                                     padding: 1em;
                                     position: absolute;
-                                    top: 0%;
-                                    left: 0%;
+                                    top: 0;
+                                    left: 0;
                                     right: 0;
                                     max-width: 100%;
                                     width: 370px;
@@ -81,7 +81,6 @@
                                     transition: transform 400ms ease;
                                     transform-style: preserve-3d;
                                     max-width: 100%;
-                                    min-height: 100%;
                                     object-fit: cover;
                                     margin: auto;
                                 }
@@ -92,7 +91,7 @@
                                     height: 100%;
                                     left: 0;
                                     bottom: 0;
-                                    color: white;
+                                    color: rgb(255, 255, 255);
                                     font-size: 25px;
                                     font-weight: bold;
                                     cursor: pointer;
