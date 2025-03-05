@@ -19,5 +19,6 @@
     "scm.alwaysShowRepositories": true,
     "editor.accessibilityPageSize": 500,
     "html.format.wrapLineLength": 0,
-    "notebook.defaultFormatter": "vscode.html-language-features"
+    "notebook.defaultFormatter": "vscode.html-language-features",
+    "html.format.extraLiners": ""
 }
