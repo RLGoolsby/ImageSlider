@@ -285,7 +285,7 @@
                                     #s5:checked~label #slide2 {
                                         opacity: 0.3;
                                         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-                                        transform: translate3d(-213%, 0, 350px) scale(.8);
+                                        transform: translate3d(-213%, 0, 213px) scale(.8);
                                     }
                                     /* Previous to Previous Slide */
                                     
@@ -296,18 +296,18 @@
                                     #s5:checked~label #slide3 {
                                         opacity: 0.3;
                                         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-                                        transform: translate3d(-213%, 0, -350px) scale(0.8);
+                                        transform: translate3d(213%, 0, -213px) scale(0.8);
                                     }
                                     /* Previous Slide */
                                     
-                                    #s1:checked~#slide5,
-                                    #s2:checked~#slide1,
-                                    #s3:checked~#slide2,
-                                    #s4:checked~#slide3,
-                                    #s5:checked~#slide4 {
+                                    #s1:checked~label #slide5,
+                                    #s2:checked~label #slide1,
+                                    #s3:checked~label #slide2,
+                                    #s4:checked~label #slide3,
+                                    #s5:checked~label #slide4 {
                                         opacity: 0.6;
                                         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-                                        transform: translate3d(-105%, 0, -150px) scale(.9);
+                                        transform: translate3d(107%, 0, -107px) scale(.9);
                                     }
                                     /* @media screen and (max-width: 900px) {
     .the-whole-thing  {
