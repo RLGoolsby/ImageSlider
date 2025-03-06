@@ -252,7 +252,7 @@
                                         #s5:checked~#slide4 {
                                             opacity: 0.6;
                                             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-                                            transform: translate3d(-16%, 0, 16px) scale(.9);
+                                            transform: translate3d(-17%, 0, 16px) scale(.9);
                                         }
                                         /* Active Slide */
                                         
