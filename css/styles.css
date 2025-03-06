@@ -85,7 +85,7 @@
                                             height: 370px;
                                             min-height: 100vh;
                                             perspective: 1300px;
-                                            transition: transform 400msease;
+                                            transition: transform 400ms ease;
                                             transform-style: preserve-3d;
                                         }
                                         
