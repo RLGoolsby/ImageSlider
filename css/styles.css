@@ -124,7 +124,7 @@
                                         
                                         #slider-controls {
                                             position: relative;
-                                            left: 50px;
+                                            top: 50%;
                                             right: 0;
                                             cursor: pointer;
                                             outline: none;
