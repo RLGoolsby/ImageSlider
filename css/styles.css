@@ -96,8 +96,7 @@
                                             justify-content: center;
                                             align-items: center;
                                         }
-                                        
-                                        #slider .slider {
+                                        /* #slider .slider {
                                             position: absolute;
                                             width: 100%;
                                             height: 100%;
@@ -109,6 +108,7 @@
                                             cursor: pointer;
                                             display: inline-flex;
                                         }
+                                         */
                                         
                                         figure.img-wrapper {
                                             margin: 0 !important;
