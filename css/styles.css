@@ -281,7 +281,7 @@
                                             padding: 1px;
                                             background: hsl(0, 0%, 100%);
                                             box-shadow: 0 0 0 8px hsl(0deg 2.05% 26.29%), 0 0 0 6px hsl(60deg 1.32% 3.85%);
-                                            width: 19%;
+                                            /* width: 19%; */
                                         }
                                         /* Next Slide */
                                         
