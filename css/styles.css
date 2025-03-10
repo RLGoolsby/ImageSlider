@@ -308,6 +308,9 @@
                                         .artistTitleContainer {
                                             padding: 0em;
                                         }
+                                        main {
+                                            padding: 0em;
+                                        }
                                         #slider {
                                             overflow: hidden;
                                             width: 100%;
