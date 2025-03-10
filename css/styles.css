@@ -65,7 +65,7 @@
                                             padding: 1em;
                                             margin: auto;
                                             position: relative;
-                                            width: 100%;
+                                            width: 70%;
                                             min-width: 100vw;
                                             /* max-width: 100%; */
                                             height: auto;
@@ -92,8 +92,7 @@
                                             /* font-size: 25px; */
                                             /* font-weight: bold; */
                                             /* cursor: pointer; */
-                                            /* display: inline-flex
-; */
+                                            /* display: inline-flex; */
                                             /* max-width: 100%; */
                                             margin: 0;
                                             /* position: absolute;
