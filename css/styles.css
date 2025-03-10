@@ -55,7 +55,7 @@
                                             background: #000;
                                             margin: auto;
                                             position: relative;
-                                            width: 100%;
+                                            /* width: 100%; */
                                             min-width: 100vw;
                                             min-height: 100vh;
                                             height: auto;
