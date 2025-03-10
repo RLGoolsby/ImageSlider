@@ -108,7 +108,8 @@
                                     
                                     #slider-controls {
                                         position: absolute;
-                                        top: 50%;
+                                        margin: 1em auto;
+                                        top: 100%;
                                         right: 0%;
                                         left: 0%;
                                         bottom: 0;
@@ -176,7 +177,7 @@
                                     
                                     input[type="radio"] {
                                         position: relative;
-                                        top: 32%;
+                                        top: 39%;
                                         left: 32%;
                                         bottom: 0;
                                         z-index: 1000;
@@ -293,11 +294,6 @@
                                         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
                                         transform: translate3d(213%, 0, -350px) scale(.8);
                                     }
-                                    /* @media screen and (max-width: 900px) {
-    .the-whole-thing  {
-        position: fixed;
-    }
-} */
                                     
                                     @media screen and (max-width: 768px) {
                                         .the-whole-thing {
@@ -325,13 +321,11 @@
                                             justify-content: space-evenly;
                                         }
                                         input[type="radio"] {
-                                            top: 0%;
-                                            left: 0%;
+                                            top: 0;
+                                            left: 0;
+                                            bottom: 0;
                                             opacity: 1;
-                                            display: inline-flex;
-                                            flex-direction: row;
-                                            align-content: center;
-                                            justify-content: space-evenly;
+                                            margin: 0em auto 2em;
                                         }
                                         figure.img-wrapper {
                                             margin: 0 !important;
