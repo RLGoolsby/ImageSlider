@@ -65,15 +65,16 @@
                                             padding: 1em;
                                             margin: auto;
                                             position: relative;
+                                            width: 100%;
                                             min-width: 100vw;
-                                            max-width: 100%;
+                                            /* max-width: 100%; */
                                             height: auto;
                                             perspective: 700px;
                                             transition: transform 400ms ease;
                                             transform-style: preserve-3d;
                                             display: inline-flex;
                                             flex-direction: row;
-                                            flex-wrap: wrap;
+                                            flex-wrap: nowrap;
                                             align-content: center;
                                             justify-content: center;
                                             align-items: flex-end;
@@ -132,7 +133,7 @@
                                         
                                         #previous-button {
                                             position: absolute;
-                                            left: 50px;
+                                            left: 15px;
                                             padding: 13px 15px;
                                             border-radius: 50%;
                                             border: 2px solid #fff;
@@ -143,7 +144,7 @@
                                         #pause,
                                         #play {
                                             position: absolute;
-                                            left: 50%;
+                                            left: 52%;
                                             padding: 13px 15px;
                                             border-radius: 50%;
                                             border: 2px solid #fff;
@@ -153,7 +154,7 @@
                                         
                                         #next-button {
                                             position: absolute;
-                                            right: 50px;
+                                            right: 15px;
                                             padding: 13px 15px;
                                             border-radius: 50%;
                                             border: 2px solid #fff;
@@ -194,13 +195,13 @@
                                             cursor: pointer; */
                                             position: relative;
                                             top: 0%;
-                                            left: 50%;
+                                            left: 41%;
                                             right: 0;
                                             bottom: 0;
                                             z-index: 2000;
                                             opacity: 0.3;
                                             cursor: pointer;
-                                            margin: 0% auto;
+                                            margin: 0.5em 0.6em;
                                         }
                                         
                                         input[type="radio"]::before {
