@@ -314,14 +314,12 @@
                                         #slider {
                                             overflow: hidden;
                                             width: 100%;
-                                            height: auto;
                                             display: inline-flex;
-                                            flex-wrap: nowrap;
-                                            align-content: center;
+                                            flex-wrap: wrap;
                                             flex-direction: row;
-                                            align-items: flex-end;
+                                            align-items: flex-start;
                                             min-height: 100vh;
-                                            justify-content: space-evenly;
+                                            justify-content: center;
                                         }
                                         input[type="radio"] {
                                             top: 0;
