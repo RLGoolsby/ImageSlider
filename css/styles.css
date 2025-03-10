@@ -1,413 +1,417 @@
-                                        /* THIS IS WHERE YOU PUT YOUR CSS CODE*/
-                                        
-                                        * {
-                                            box-sizing: border-box;
-                                        }
-                                        
+                                    /* THIS IS WHERE YOU PUT YOUR CSS CODE*/
+                                    
+                                    * {
+                                        box-sizing: border-box;
+                                    }
+                                    
+                                    .the-whole-thing {
+                                        background-color: #000;
+                                        width: 100%;
+                                        height: auto;
+                                        position: relative;
+                                        overflow-x: hidden;
+                                    }
+                                    
+                                    .fa-sr-only,
+                                    .sr-only,
+                                    .vs-hidden {
+                                        position: absolute;
+                                        clip: rect(0 0 0 0);
+                                        clip-path: inset(50%);
+                                        height: 1px;
+                                        overflow: hidden;
+                                        position: absolute;
+                                        white-space: nowrap;
+                                        width: 1px;
+                                    }
+                                    
+                                    .artistTitleWrapper {
+                                        margin: auto;
+                                        padding: 1em;
+                                        background: #050505;
+                                    }
+                                    
+                                    .artistTitleContainer {
+                                        max-width: 100%;
+                                        height: auto;
+                                    }
+                                    
+                                    .artist-title {
+                                        font-size: 50px;
+                                        color: #fbfcfc;
+                                        font-weight: 500;
+                                        width: 100%;
+                                        padding: 0em 0.5em;
+                                    }
+                                    /* Paintbrush Icon*/
+                                    
+                                    .fa-solid.fa-paintbrush {
+                                        font-size: 30px;
+                                        color: #f99b18f7;
+                                        padding: 0em 1.0em 0em 0.2em;
+                                    }
+                                    
+                                    main {
+                                        position: relative;
+                                        box-sizing: border-box;
+                                        height: auto;
+                                        width: 100%;
+                                        overflow: hidden;
+                                        min-height: 100vh;
+                                        background: black;
+                                        padding: 7em 0em;
+                                    }
+                                    
+                                    #slider {
+                                        position: relative;
+                                        width: 370px;
+                                        height: 370px;
+                                        perspective: 1300px;
+                                        transition: transform 400ms ease;
+                                        transform-style: preserve-3d;
+                                        max-width: 100%;
+                                        min-height: 100%;
+                                        object-fit: cover;
+                                        margin: 1em auto;
+                                        flex-wrap: wrap;
+                                        justify-content: space-evenly;
+                                        align-items: flex-end;
+                                        align-content: center;
+                                        flex-direction: row;
+                                    }
+                                    
+                                    #slider .slider {
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        left: 0;
+                                        bottom: 0;
+                                        color: white;
+                                        font-size: 25px;
+                                        font-weight: bold;
+                                        cursor: pointer;
+                                        display: inline-flex;
+                                    }
+                                    
+                                    figure.img-wrapper {
+                                        margin: 0 !important;
+                                        width: 370px;
+                                        height: 370px;
+                                    }
+                                    
+                                    #slider .slider:focus-visible {
+                                        outline: 2px solid #fc762d;
+                                        /* Customize the outline style as needed */
+                                        outline-offset: 2px;
+                                    }
+                                    /* navigation buttons */
+                                    
+                                    #slider-controls {
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 0%;
+                                        left: 0%;
+                                        bottom: 0;
+                                        cursor: pointer;
+                                        outline: none;
+                                        background-color: transparent;
+                                    }
+                                    
+                                    #previous-button {
+                                        position: absolute;
+                                        top: 40%;
+                                        left: 15px;
+                                        padding: 13px 15px;
+                                        border-radius: 50%;
+                                        border: 2px solid #fff;
+                                        background-color: transparent;
+                                        color: #fff;
+                                    }
+                                    
+                                    #pause,
+                                    #play {
+                                        position: absolute;
+                                        top: 40%;
+                                        left: 44%;
+                                        padding: 13px 15px;
+                                        border-radius: 50%;
+                                        border: 2px solid #fff;
+                                        background-color: transparent;
+                                        color: #fff;
+                                    }
+                                    
+                                    #next-button {
+                                        position: absolute;
+                                        top: 40%;
+                                        right: 15px;
+                                        padding: 13px 15px;
+                                        border-radius: 50%;
+                                        border: 2px solid #fff;
+                                        background-color: transparent;
+                                        color: #fff;
+                                    }
+                                    
+                                    #previous-button:hover,
+                                    #next-button:hover,
+                                    #pause:hover,
+                                    #play:hover {
+                                        color: #012d34;
+                                        opacity: 1;
+                                        cursor: pointer;
+                                        background-color: #fffffffe;
+                                    }
+                                    
+                                    #previous-button:focus-visible,
+                                    #next-button:focus-visible,
+                                    #pause:focus-visible,
+                                    #play:focus-visible {
+                                        outline: 2px solid #b403f9;
+                                        /* Customize the outline style as needed */
+                                        outline-offset: 2px;
+                                    }
+                                    
+                                    .slider {
+                                        transition: 0.7s;
+                                    }
+                                    
+                                    input[type="radio"] {
+                                        position: relative;
+                                        top: 32%;
+                                        left: 32%;
+                                        bottom: 0;
+                                        z-index: 1000;
+                                        opacity: 0.3;
+                                        cursor: pointer;
+                                    }
+                                    
+                                    input[type="radio"]::before {
+                                        content: "";
+                                        opacity: 1;
+                                        display: grid;
+                                        border-radius: 100%;
+                                        z-index: 5000;
+                                        width: 15px;
+                                        height: 15px;
+                                        margin: auto;
+                                        transform: scale(0);
+                                        background-color: #fff;
+                                        transition: 120ms transform ease-in-out;
+                                        box-shadow: inset 23px 23px rgb(0, 0, 0, 1);
+                                    }
+                                    
+                                    input[type="radio"]:checked::before {
+                                        transform: scale(1.1);
+                                    }
+                                    
+                                    input[type="radio"]:checked {
+                                        opacity: 1;
+                                    }
+                                    
+                                    input[type="radio"]:focus-visible {
+                                        outline: 2px solid #fc762d;
+                                        /* Customize the outline style as needed */
+                                        outline-offset: 2px;
+                                        padding: 5px;
+                                    }
+                                    
+                                    #play {
+                                        display: none;
+                                    }
+                                    
+                                    img.eachimg {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    /* Previous to Previous Slide */
+                                    
+                                    #s1:checked~#slide4,
+                                    #s2:checked~#slide5,
+                                    #s3:checked~#slide1,
+                                    #s4:checked~#slide2,
+                                    #s5:checked~#slide3 {
+                                        opacity: 0.3;
+                                        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+                                        transform: translate3d(-213%, 0, -350px) scale(0.8);
+                                    }
+                                    /* Previous Slide */
+                                    
+                                    #s1:checked~#slide5,
+                                    #s2:checked~#slide1,
+                                    #s3:checked~#slide2,
+                                    #s4:checked~#slide3,
+                                    #s5:checked~#slide4 {
+                                        opacity: 0.6;
+                                        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+                                        transform: translate3d(-105%, 0, -150px) scale(.9);
+                                    }
+                                    /* Active Slide */
+                                    
+                                    #s1:checked~#slide1,
+                                    #s2:checked~#slide2,
+                                    #s3:checked~#slide3,
+                                    #s4:checked~#slide4,
+                                    #s5:checked~#slide5 {
+                                        opacity: 1;
+                                        box-shadow: 0 3px 17px rgba(0, 0, 0, 0.2), 0 5px 6px rgba(0, 0, 0, 0.2);
+                                        transform: translate3d(0%, 0, 0px);
+                                        filter: brightness(95%);
+                                    }
+                                    
+                                    #s1:checked~#slide1:hover,
+                                    #s2:checked~#slide2:hover,
+                                    #s3:checked~#slide3:hover,
+                                    #s4:checked~#slide4:hover,
+                                    #s5:checked~#slide5:hover {
+                                        transform: scale3d(1.2, 1.2, 1.2);
+                                        transition: all 0.8s ease-in-out;
+                                        filter: brightness(100%);
+                                        outline: 2px solid hsl(60deg 14.07% 97.41% / 44%);
+                                        border: 1px solid hsl(156deg 2.92% 66.47% / 68%);
+                                        padding: 1px;
+                                        background: hsl(0, 0%, 100%);
+                                        box-shadow: 0 0 0 8px hsl(0deg 2.05% 26.29%), 0 0 0 6px hsl(60deg 1.32% 3.85%);
+                                    }
+                                    /* Next Slide */
+                                    
+                                    #s1:checked~#slide2,
+                                    #s2:checked~#slide3,
+                                    #s3:checked~#slide4,
+                                    #s4:checked~#slide5,
+                                    #s5:checked~#slide1 {
+                                        opacity: 0.6;
+                                        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+                                        transform: translate3d(105%, 0, -150px) scale(.9);
+                                    }
+                                    /* Next to Next Slide */
+                                    
+                                    #s1:checked~#slide3,
+                                    #s2:checked~#slide4,
+                                    #s3:checked~#slide5,
+                                    #s4:checked~#slide1,
+                                    #s5:checked~#slide2 {
+                                        opacity: 0.3;
+                                        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+                                        transform: translate3d(213%, 0, -350px) scale(.8);
+                                    }
+                                    /* @media screen and (max-width: 900px) {
+    .the-whole-thing  {
+        position: fixed;
+    }
+} */
+                                    
+                                    @media screen and (max-width: 768px) {
                                         .the-whole-thing {
-                                            background-color: #000;
-                                            width: 100%;
-                                            height: auto;
                                             position: relative;
-                                            overflow-x: hidden;
-                                        }
-                                        
-                                        .fa-sr-only,
-                                        .sr-only,
-                                        .vs-hidden {
-                                            position: absolute;
-                                            clip: rect(0 0 0 0);
-                                            clip-path: inset(50%);
-                                            height: 1px;
-                                            overflow: hidden;
-                                            position: absolute;
-                                            white-space: nowrap;
-                                            width: 1px;
-                                        }
-                                        
-                                        .artistTitleWrapper {
-                                            margin: auto;
-                                            padding: 1em;
-                                            background: #050505;
-                                        }
-                                        
-                                        .artistTitleContainer {
-                                            max-width: 100%;
-                                            height: auto;
-                                        }
-                                        
-                                        .artist-title {
-                                            font-size: 50px;
-                                            color: #fbfcfc;
-                                            font-weight: 500;
-                                            width: 100%;
-                                            padding: 0em 0.5em;
-                                        }
-                                        /* Paintbrush Icon*/
-                                        
-                                        .fa-solid.fa-paintbrush {
-                                            font-size: 30px;
-                                            color: #f99b18f7;
-                                            padding: 0em 1.0em 0em 0.2em;
-                                        }
-                                        
-                                        main {
-                                            background: #000;
-                                            margin: auto;
-                                            position: relative;
-                                            /* width: 100%; */
-                                            min-width: 100vw;
-                                            min-height: 100vh;
-                                            height: auto;
-                                        }
-                                        
-                                        #slider {
-                                            padding: 1em;
-                                            position: absolute;
-                                            top: 0;
-                                            left: 0;
-                                            right: 0;
-                                            width: 100%;
-                                            /* max-width: 100%; */
-                                            min-width: 100vw;
-                                            /* height: 400px; */
-                                            min-height: 100vh;
-                                            perspective: 700px;
-                                            transition: transform 400msease;
-                                            transform-style: preserve-3d;
-                                            transition: transform 400ms ease;
-                                        }
-                                        
-                                        #slider .slider {
-                                            display: inline-flex;
-                                            width: 370px;
-                                            height: 370px;
-                                        }
-                                        
-                                        figure.img-wrapper {
-                                            margin: 0 !important;
-                                            width: 370px;
-                                            height: 370px;
-                                        }
-                                        
-                                        #slider .slider:focus-visible {
-                                            outline: 2px solid #fc762d;
-                                            /* Customize the outline style as needed */
-                                            outline-offset: 2px;
-                                        }
-                                        /* navigation buttons */
-                                        
-                                        #slider-controls {
-                                            position: absolute;
-                                            top: 50%;
-                                            right: 0%;
-                                            left: 0%;
-                                            cursor: pointer;
-                                            outline: none;
-                                            background-color: transparent;
-                                        }
-                                        
-                                        #previous-button {
-                                            position: absolute;
-                                            left: 15px;
-                                            padding: 13px 15px;
-                                            border-radius: 50%;
-                                            border: 2px solid #fff;
-                                            background-color: transparent;
-                                            color: #fff;
-                                        }
-                                        
-                                        #pause,
-                                        #play {
-                                            position: absolute;
-                                            left: 52%;
-                                            padding: 13px 15px;
-                                            border-radius: 50%;
-                                            border: 2px solid #fff;
-                                            background-color: transparent;
-                                            color: #fff;
-                                        }
-                                        
-                                        #next-button {
-                                            position: absolute;
-                                            right: 15px;
-                                            padding: 13px 15px;
-                                            border-radius: 50%;
-                                            border: 2px solid #fff;
-                                            background-color: transparent;
-                                            color: #fff;
-                                        }
-                                        
-                                        #previous-button:hover,
-                                        #next-button:hover,
-                                        #pause:hover,
-                                        #play:hover {
-                                            color: #012d34;
-                                            opacity: 1;
-                                            cursor: pointer;
-                                            background-color: #fffffffe;
-                                        }
-                                        
-                                        #previous-button:focus-visible,
-                                        #next-button:focus-visible,
-                                        #pause:focus-visible,
-                                        #play:focus-visible {
-                                            outline: 2px solid #b403f9;
-                                            /* Customize the outline style as needed */
-                                            outline-offset: 2px;
-                                        }
-                                        
-                                        .slider {
-                                            transition: 0.7s;
-                                        }
-                                        
-                                        input[type="radio"] {
-                                            /* position: relative;
-                                            top: 50%;
-                                            left: 48%;
-                                            bottom: 0;
-                                            z-index: 2000;
-                                            opacity: 0.3;
-                                            cursor: pointer; */
-                                            position: relative;
-                                            top: 0%;
-                                            left: 41%;
-                                            right: 0;
-                                            bottom: 0;
-                                            z-index: 2000;
-                                            opacity: 0.3;
-                                            cursor: pointer;
-                                            margin: 0.5em 0.6em;
-                                        }
-                                        
-                                        input[type="radio"]::before {
-                                            content: "";
-                                            opacity: 1;
-                                            display: grid;
-                                            border-radius: 100%;
-                                            z-index: 5000;
-                                            width: 15px;
-                                            height: 15px;
-                                            margin: auto;
-                                            transform: scale(0);
-                                            background-color: #fff;
-                                            transition: 120ms transform ease-in-out;
-                                            box-shadow: inset 23px 23px rgb(0, 0, 0, 1);
-                                        }
-                                        
-                                        input[type="radio"]:checked::before {
-                                            transform: scale(1.1);
-                                        }
-                                        
-                                        input[type="radio"]:checked {
-                                            opacity: 1;
-                                        }
-                                        
-                                        input[type="radio"]:focus-visible {
-                                            outline: 2px solid #fc762d;
-                                            /* Customize the outline style as needed */
-                                            outline-offset: 2px;
-                                            padding: 5px;
-                                        }
-                                        
-                                        #play {
-                                            display: none;
-                                        }
-                                        
-                                        img.eachimg {
                                             width: 100%;
                                             height: 100%;
+                                            margin: auto;
+                                            background-color: #000;
+                                            min-height: 100vh;
+                                            padding: 0em 0em 2em 0em;
                                         }
-                                        /* Previous to Previous Slide */
-                                        
-                                        #s1:checked~#slide4,
-                                        #s2:checked~#slide5,
-                                        #s3:checked~#slide1,
-                                        #s4:checked~#slide2,
-                                        #s5:checked~#slide3 {
-                                            opacity: 0.3;
-                                            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-                                            transform: translate3d(27%, 0, -27px) scale(0.8);
+                                        .artistTitleContainer {
+                                            padding: 0em;
                                         }
-                                        /* Previous Slide */
-                                        
-                                        #s1:checked~#slide5,
-                                        #s2:checked~#slide1,
-                                        #s3:checked~#slide2,
-                                        #s4:checked~#slide3,
-                                        #s5:checked~#slide4 {
-                                            opacity: 0.6;
-                                            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-                                            transform: translate3d(10%, 0, -10px) scale(.9);
+                                        #slider {
+                                            overflow: hidden;
+                                            width: 100%;
+                                            height: auto;
+                                            display: inline-flex;
+                                            flex-wrap: nowrap;
+                                            align-content: center;
+                                            flex-direction: row;
+                                            align-items: flex-end;
+                                            min-height: 100vh;
+                                            justify-content: space-evenly;
                                         }
-                                        /* Active Slide */
-                                        
-                                        #s1:checked~#slide1,
-                                        #s2:checked~#slide2,
-                                        #s3:checked~#slide3,
-                                        #s4:checked~#slide4,
-                                        #s5:checked~#slide5 {
+                                        input[type="radio"] {
+                                            top: 0%;
+                                            left: 0%;
                                             opacity: 1;
-                                            box-shadow: 0 3px 17px rgba(0, 0, 0, 0.2), 0 5px 6px rgba(0, 0, 0, 0.2);
-                                            transform: translate3d(0%, 0, 0px);
-                                            filter: brightness(95%);
+                                            display: inline-flex;
+                                            flex-direction: row;
+                                            align-content: center;
+                                            justify-content: space-evenly;
                                         }
-                                        
+                                        figure.img-wrapper {
+                                            margin: 0 !important;
+                                            width: 100%;
+                                            height: auto;
+                                            max-width: 100%;
+                                        }
+                                        img.eachimg {
+                                            height: auto;
+                                            max-width: 100%;
+                                        }
+                                        .artist-title {
+                                            font-weight: 500;
+                                            margin: auto;
+                                            text-align: center;
+                                        }
+                                        #slider-controls {
+                                            display: inline-flex;
+                                            position: absolute;
+                                            margin: auto;
+                                            height: 30%;
+                                            top: 30%;
+                                            left: 0;
+                                            right: 0;
+                                            cursor: pointer;
+                                            outline: none;
+                                            justify-content: center;
+                                            align-items: flex-end;
+                                            flex-wrap: nowrap;
+                                            flex-direction: column;
+                                        }
+                                        #next-button {
+                                            position: absolute;
+                                            right: 20px;
+                                        }
+                                        #previous-button {
+                                            position: absolute;
+                                            left: 20px;
+                                        }
+                                        #next-button,
+                                        #previous-button {
+                                            opacity: 0;
+                                            color: #fff;
+                                            background-color: #00000052;
+                                        }
+                                        #next-button:hover,
+                                        #previous-button:hover {
+                                            color: #fff;
+                                            opacity: 1;
+                                            transform: scale(1.5);
+                                            background-color: #00000052;
+                                            cursor: pointer;
+                                            transition: background-color 2s ease-out;
+                                        }
+                                        #pause,
+                                        #play {
+                                            opacity: 0;
+                                            display: none;
+                                        }
+                                        #pause:hover,
+                                        #play:hover {
+                                            opacity: 0;
+                                            display: none;
+                                        }
                                         #s1:checked~#slide1:hover,
                                         #s2:checked~#slide2:hover,
                                         #s3:checked~#slide3:hover,
                                         #s4:checked~#slide4:hover,
                                         #s5:checked~#slide5:hover {
-                                            transform: scale3d(1.2, 1.2, 1.2);
-                                            transition: all 0.8s ease-in-out;
-                                            filter: brightness(100%);
-                                            outline: 2px solid hsl(60deg 14.07% 97.41% / 44%);
-                                            border: 1px solid hsl(156deg 2.92% 66.47% / 68%);
-                                            padding: 1px;
-                                            background: hsl(0, 0%, 100%);
-                                            box-shadow: 0 0 0 8px hsl(0deg 2.05% 26.29%), 0 0 0 6px hsl(60deg 1.32% 3.85%);
+                                            background: hsla(0, 0%, 100%, 0);
+                                            outline: none;
+                                            border: none;
                                         }
-                                        /* Next Slide */
-                                        
-                                        #s1:checked~#slide2,
-                                        #s2:checked~#slide3,
-                                        #s3:checked~#slide4,
-                                        #s4:checked~#slide5,
-                                        #s5:checked~#slide1 {
-                                            opacity: 0.6;
-                                            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-                                            transform: translate3d(-10%, 0, 10px) scale(.9);
+                                        #s1:checked~#slide1:focus-visible,
+                                        #s2:checked~#slide2:focus-visible,
+                                        #s3:checked~#slide3:focus-visible,
+                                        #s4:checked~#slide4:focus-visible,
+                                        #s5:checked~#slide5:focus-visible {
+                                            outline: 3px solid #fc762d;
+                                            /* Customize the outline style as needed */
+                                            outline-offset: 2px;
                                         }
-                                        /* Next to Next Slide */
-                                        
-                                        #s1:checked~#slide3,
-                                        #s2:checked~#slide4,
-                                        #s3:checked~#slide5,
-                                        #s4:checked~#slide1,
-                                        #s5:checked~#slide2 {
-                                            opacity: 0.3;
-                                            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-                                            transform: translate3d(-27%, 0, 27px) scale(.8);
-                                        }
-                                        /* @media screen and (max-width: 900px) {
-    .the-whole-thing  {
-        position: fixed;
-    }
-} */
-                                        
-                                        @media screen and (max-width: 768px) {
-                                            .the-whole-thing {
-                                                position: relative;
-                                                width: 100%;
-                                                height: 100%;
-                                                margin: auto;
-                                                background-color: #000;
-                                                min-height: 100vh;
-                                                padding: 0em 0em 2em 0em;
-                                            }
-                                            .artistTitleContainer {
-                                                padding: 0em;
-                                            }
-                                            #slider {
-                                                overflow: hidden;
-                                                width: 100%;
-                                                height: auto;
-                                                display: inline-flex;
-                                                flex-wrap: nowrap;
-                                                align-content: center;
-                                                flex-direction: row;
-                                                align-items: flex-end;
-                                                min-height: 100vh;
-                                                justify-content: space-evenly;
-                                            }
-                                            input[type="radio"] {
-                                                top: 0%;
-                                                left: 0%;
-                                                opacity: 1;
-                                                display: inline-flex;
-                                                flex-direction: row;
-                                                align-content: center;
-                                                justify-content: space-evenly;
-                                            }
-                                            figure.img-wrapper {
-                                                margin: 0 !important;
-                                                width: 100%;
-                                                height: auto;
-                                                max-width: 100%;
-                                            }
-                                            img.eachimg {
-                                                height: auto;
-                                                max-width: 100%;
-                                            }
-                                            .artist-title {
-                                                font-weight: 500;
-                                                margin: auto;
-                                                text-align: center;
-                                            }
-                                            #slider-controls {
-                                                display: inline-flex;
-                                                position: absolute;
-                                                margin: auto;
-                                                height: 30%;
-                                                top: 30%;
-                                                left: 0;
-                                                right: 0;
-                                                cursor: pointer;
-                                                outline: none;
-                                                justify-content: center;
-                                                align-items: flex-end;
-                                                flex-wrap: nowrap;
-                                                flex-direction: column;
-                                            }
-                                            #next-button {
-                                                position: absolute;
-                                                right: 20px;
-                                            }
-                                            #previous-button {
-                                                position: absolute;
-                                                left: 20px;
-                                            }
-                                            #next-button,
-                                            #previous-button {
-                                                opacity: 0;
-                                                color: #fff;
-                                                background-color: #00000052;
-                                            }
-                                            #next-button:hover,
-                                            #previous-button:hover {
-                                                color: #fff;
-                                                opacity: 1;
-                                                transform: scale(1.5);
-                                                background-color: #00000052;
-                                                cursor: pointer;
-                                                transition: background-color 2s ease-out;
-                                            }
-                                            #pause,
-                                            #play {
-                                                opacity: 0;
-                                                display: none;
-                                            }
-                                            #pause:hover,
-                                            #play:hover {
-                                                opacity: 0;
-                                                display: none;
-                                            }
-                                            #s1:checked~#slide1:hover,
-                                            #s2:checked~#slide2:hover,
-                                            #s3:checked~#slide3:hover,
-                                            #s4:checked~#slide4:hover,
-                                            #s5:checked~#slide5:hover {
-                                                background: hsla(0, 0%, 100%, 0);
-                                                outline: none;
-                                                border: none;
-                                            }
-                                            #s1:checked~#slide1:focus-visible,
-                                            #s2:checked~#slide2:focus-visible,
-                                            #s3:checked~#slide3:focus-visible,
-                                            #s4:checked~#slide4:focus-visible,
-                                            #s5:checked~#slide5:focus-visible {
-                                                outline: 3px solid #fc762d;
-                                                /* Customize the outline style as needed */
-                                                outline-offset: 2px;
-                                            }
-                                        }
+                                    }
