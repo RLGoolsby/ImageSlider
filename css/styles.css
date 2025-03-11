@@ -318,6 +318,12 @@
                                             .artistTitleContainer {
                                                 padding: 0em;
                                             }
+                                            .fa-solid.fa-paintbrush {
+                                                padding: 0em;
+                                            }
+                                            .artist-title {
+                                                padding: 0em;
+                                            }
                                             main {
                                                 padding: 0em;
                                             }
@@ -358,7 +364,7 @@
                                                 position: absolute;
                                                 margin: auto;
                                                 height: 30%;
-                                                top: 30%;
+                                                top: 25%;
                                                 left: 0;
                                                 right: 0;
                                                 cursor: pointer;
@@ -370,11 +376,11 @@
                                             }
                                             #next-button {
                                                 position: absolute;
-                                                right: 20px;
+                                                right: 25px;
                                             }
                                             #previous-button {
                                                 position: absolute;
-                                                left: 20px;
+                                                left: 25px;
                                             }
                                             #next-button,
                                             #previous-button {
