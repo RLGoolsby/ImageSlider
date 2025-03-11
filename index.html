@@ -1,115 +1,155 @@
 <!DOCTYPE html>
+<!-- Declares HTML5 document -->
 <html lang="en">
+<!-- Root element with language set to English -->
 
 <head>
     <meta charset="utf-8" />
+    <!-- Sets character encoding to UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes page responsive -->
 
+    <!-- Load Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
+
+    <!-- Load Font Awesome icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
+    <!-- Load Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <!-- add for google fonts -->
 
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <!-- Link external stylesheet -->
     <title>image slider</title>
+    <!-- Page title -->
 </head>
 
 <body>
     <div class="the-whole-thing">
+        <!-- Main wrapper for the entire content -->
         <section class="artistTitleWrapper">
+            <!-- Section containing the artist title -->
             <div class="artistTitleContainer">
+                <!-- Container for styling artist title -->
                 <h1 class="artist-title">
+                    <!-- Main heading with artist name -->
                     Luna Ray
-                    <i class="fa-solid fa-paintbrush fa-xs" aria-hidden="true"></i>The Artist
+                    <i class="fa-solid fa-paintbrush fa-xs" aria-hidden="true"></i>
+                    <!-- Paintbrush icon -->
+                    The Artist
                     <span class="fa-sr-only">The Fontawesome paintbrush icon</span>
+                    <!-- Screen reader description -->
                 </h1>
             </div>
         </section>
+
         <main>
+            <!-- Main content section -->
             <section id="slider" aria-roledescription="carousel" aria-label="Image Slider">
+                <!-- Image slider section -->
+                <!-- Radio buttons for slider navigation -->
                 <input class="imgCheck" type="radio" name="slider" id="s1" aria-hidden="true" />
                 <input class="imgCheck" type="radio" name="slider" id="s2" aria-hidden="true" />
                 <input class="imgCheck" type="radio" name="slider" id="s3" aria-hidden="true" checked />
                 <input class="imgCheck" type="radio" name="slider" id="s4" aria-hidden="true" />
                 <input class="imgCheck" type="radio" name="slider" id="s5" aria-hidden="true" />
 
+                <!-- Image slides -->
                 <label for="s1" id="slide1" class="slider" tabindex="0" aria-labelledby="slide1-title">
-					<figure class="img-wrapper">
-						<img class="eachimg" src="css/image/IMG_7140.jpeg" alt="Untitled painting" />
-						<figcaption><p class="vs-hidden">Untitled painting</p><span class="sr-only"></span>
-					</figure>
-				</label>
+						<figure class="img-wrapper">
+							<!-- Groups image with caption -->
+							<img
+								class="eachimg"
+								src="css/image/IMG_7140.jpeg"
+								alt="Untitled painting" />
+							<!-- Image -->
+							<figcaption>
+								<p class="vs-hidden">Untitled painting</p>
+								<span class="sr-only"></span>
+							</figcaption>
+							<!-- Hidden caption -->
+						</figure>
+					</label>
 
                 <label for="s2" id="slide2" class="slider" tabindex="0" aria-labelledby="slide2-title">
-					<figure class="img-wrapper">
-						<img
-							class="eachimg"
-							src="css/image/IMG_7142.jpeg"
-							alt="Cicada Evening" />
-						<figcaption>
-							<p class="vs-hidden">Cicada Evening</p><span class="sr-only"></span>
-						</figcaption>
-					</figure>
-				</label>
+						<figure class="img-wrapper">
+							<img
+								class="eachimg"
+								src="css/image/IMG_7142.jpeg"
+								alt="Cicada Evening" />
+							<figcaption>
+								<p class="vs-hidden">Cicada Evening</p>
+								<span class="sr-only"></span>
+							</figcaption>
+						</figure>
+					</label>
 
                 <label for="s3" id="slide3" class="slider" tabindex="0" aria-labelledby="slide3-title">
-					<figure class="img-wrapper">
-						<img
-							class="eachimg"
-							src="css/image/IMG_7173.JPG"
-							alt="Spaces in between" />
-						<figcaption>
-							<p class="vs-hidden">Spaces in between</p><span class="sr-only"></span>
-						</figcaption>
-					</figure>
-				</label>
+						<figure class="img-wrapper">
+							<img
+								class="eachimg"
+								src="css/image/IMG_7173.JPG"
+								alt="Spaces in between" />
+							<figcaption>
+								<p class="vs-hidden">Spaces in between</p>
+								<span class="sr-only"></span>
+							</figcaption>
+						</figure>
+					</label>
 
                 <label for="s4" id="slide4" class="slider" tabindex="0" aria-labelledby="slide4-title">
-					<figure class="img-wrapper">
-						<img
-							class="eachimg"
-							src="css/image/IMG_7138.jpeg"
-							alt="Rising Up" />
-							<figcaption><p class="vs-hidden">Rising Up</p><span class="sr-only"></span>
-						</figcaption>
-					</figure>
-				</label>
+						<figure class="img-wrapper">
+							<img
+								class="eachimg"
+								src="css/image/IMG_7138.jpeg"
+								alt="Rising Up" />
+							<figcaption>
+								<p class="vs-hidden">Rising Up</p>
+								<span class="sr-only"></span>
+							</figcaption>
+						</figure>
+					</label>
 
                 <label for="s5" id="slide5" class="slider" tabindex="0" aria-labelledby="slide5-title">
-					<figure class="img-wrapper">
-						<img class="eachimg" src="css/image/IMG_7139.jpeg" alt="Rain 1" />
-						<figcaption>
-					<p class="vs-hidden">Rain 1</p><span class="sr-only"></span>
-						</figcaption>
-					</figure>
-				</label>
+						<figure class="img-wrapper">
+							<img class="eachimg" src="css/image/IMG_7139.jpeg" alt="Rain 1" />
+							<figcaption>
+								<p class="vs-hidden">Rain 1</p>
+								<span class="sr-only"></span>
+							</figcaption>
+						</figure>
+					</label>
 
+                <!-- Slider controls -->
                 <nav id="slider-controls">
                     <button id="previous-button" title="Previous Slider" tabindex="0" aria-label="Previous Slide">
-						<i class="fas fa-arrow-left" aria-hidden="true"></i>
-						<span class="vs-hidden">Previous slides</span>
-					</button>
+							<i class="fas fa-arrow-left" aria-hidden="true"></i>
+							<!-- Left arrow icon -->
+							<span class="vs-hidden">Previous slides</span>
+						</button>
                     <button id="play" title="Play Slider" tabindex="0" aria-label="Play Slider">
-						<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-						<span class="vs-hidden">Play</span>
-					</button>
+							<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+							<!-- Play icon -->
+							<span class="vs-hidden">Play</span>
+						</button>
                     <button id="pause" title="Pause Slider" tabindex="0" aria-label="Pause Slider">
-						<i class="fa-solid fa-pause" aria-hidden="true"></i>
-						<span class="vs-hidden">Pause</span>
-					</button>
+							<i class="fa-solid fa-pause" aria-hidden="true"></i>
+							<!-- Pause icon -->
+							<span class="vs-hidden">Pause</span>
+						</button>
                     <button id="next-button" title="Next Slide" tabindex="0" aria-label="Next Slide">
-						<i class="fas fa-arrow-right" aria-hidden="true"></i>
-						<span class="vs-hidden">Next slides</span>
-					</button>
+							<i class="fas fa-arrow-right" aria-hidden="true"></i>
+							<!-- Right arrow icon -->
+							<span class="vs-hidden">Next slides</span>
+						</button>
                 </nav>
             </section>
         </main>
     </div>
 </body>
-<!---END DIV 'CONTENT-WRAPPER' -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js "></script>
 
-<script src="js/scripts.js "></script>
+<!-- Load external scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
 
 </html>
