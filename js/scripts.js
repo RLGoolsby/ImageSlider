@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    var imageContainer = $('#slider');
+    var images = imageContainer.find('img');
+    var startX;
     var counter = 1;
     var numberOfImages = $(".imgCheck").length;
     var interval;
@@ -96,7 +99,37 @@ $(document).ready(function() {
             }
         }
     });
+    // Swipe functionality for touch devices
+    imageContainer.on('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+    imageContainer.on('touchmove', (e) => {
+        if (!startX) return;
+        var currentX = e.touches[0].clientX;
+        var diffX = currentX - startX;
+        // Apply a visual effect during the swipe (optional)
+        imageContainer.style.transform = `translateX(${diffX}px)`;
+    });
+    imageContainer.on('touchend', (e) => {
+        if (!startX) return;
 
+        var endX = e.changedTouches[0].clientX;
+        var diffX = endX - startX;
+
+        // Reset the visual effect
+        imageContainer.style.transform = 'translateX(0)';
+        startX = null;
+
+        var threshold = 50; // Adjust as needed
+        if (Math.abs(diffX) > threshold) {
+            if (diffX > 0) {
+                counter = Math.max(0, counter - 1); // Swipe right
+            } else {
+                counter = Math.min(images.length - 1, counter + 1); // Swipe left
+            }
+            updateImage();
+        }
+    });
     // Pause slider on mouseover and resume on mouseleave
     $("#slider").on("mouseover", function() {
         stopSlider();
