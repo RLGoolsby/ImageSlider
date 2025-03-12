@@ -398,7 +398,7 @@
                                                 opacity: 0;
                                                 display: none;
                                             }
-                                            /* #s1:checked~#slide1:hover,
+                                            #s1:checked~#slide1:hover,
                                             #s2:checked~#slide2:hover,
                                             #s3:checked~#slide3:hover,
                                             #s4:checked~#slide4:hover,
@@ -406,7 +406,7 @@
                                                 background: hsla(0, 0%, 100%, 0);
                                                 outline: none;
                                                 border: none;
-                                            } */
+                                            }
                                             #s1:checked~#slide1:focus-visible,
                                             #s2:checked~#slide2:focus-visible,
                                             #s3:checked~#slide3:focus-visible,
