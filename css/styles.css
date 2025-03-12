@@ -338,11 +338,7 @@
                                                 justify-content: center;
                                             }
                                             input[type="radio"] {
-                                                top: 0;
-                                                left: 0;
-                                                bottom: 0;
-                                                opacity: 1;
-                                                margin: 0em auto 2em;
+                                                display: none;
                                             }
                                             figure.img-wrapper {
                                                 margin: 0 !important;
@@ -359,7 +355,7 @@
                                                 margin: auto;
                                                 text-align: center;
                                             }
-                                            #slider-controls {
+                                            /* #slider-controls {
                                                 display: inline-flex;
                                                 position: absolute;
                                                 margin: auto;
@@ -373,29 +369,24 @@
                                                 align-items: flex-end;
                                                 flex-wrap: nowrap;
                                                 flex-direction: column;
-                                            }
+                                            } */
                                             #next-button {
-                                                position: absolute;
-                                                right: 25px;
+                                                opacity: 0;
+                                                display: none;
                                             }
                                             #previous-button {
-                                                position: absolute;
-                                                left: 25px;
+                                                opacity: 0;
+                                                display: none;
                                             }
                                             #next-button,
                                             #previous-button {
                                                 opacity: 0;
-                                                color: #fff;
-                                                background-color: #00000052;
+                                                display: none;
                                             }
                                             #next-button:hover,
                                             #previous-button:hover {
-                                                color: #fff;
-                                                opacity: 1;
-                                                transform: scale(1.5);
-                                                background-color: #00000052;
-                                                cursor: pointer;
-                                                transition: background-color 2s ease-out;
+                                                opacity: 0;
+                                                display: none;
                                             }
                                             #pause,
                                             #play {
@@ -407,7 +398,7 @@
                                                 opacity: 0;
                                                 display: none;
                                             }
-                                            #s1:checked~#slide1:hover,
+                                            /* #s1:checked~#slide1:hover,
                                             #s2:checked~#slide2:hover,
                                             #s3:checked~#slide3:hover,
                                             #s4:checked~#slide4:hover,
@@ -415,7 +406,7 @@
                                                 background: hsla(0, 0%, 100%, 0);
                                                 outline: none;
                                                 border: none;
-                                            }
+                                            } */
                                             #s1:checked~#slide1:focus-visible,
                                             #s2:checked~#slide2:focus-visible,
                                             #s3:checked~#slide3:focus-visible,
