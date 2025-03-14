@@ -32,8 +32,6 @@ $(document).ready(function() {
     startSlider(0);
     announceSlideChange(counter);
 
-
-
     // Next button functionality
     $("#next-button").on("click", function(e) {
         e.preventDefault();
@@ -110,4 +108,60 @@ $(document).ready(function() {
     // Initial state of play/pause buttons
     $('#play').hide();
     $('#pause').show();
+
+    // Swipe detection function
+    function swipedetect(el, callback) {
+        var touchsurface = el[0],
+            swipedir,
+            startX,
+            startY,
+            distX,
+            distY,
+            threshold = 75,
+            restraint = 100,
+            allowedTime = 300,
+            elapsedTime,
+            startTime,
+            handleswipe = callback || function(swipedir) {};
+
+        touchsurface.addEventListener("touchstart", function(e) {
+            var touchobj = e.changedTouches[0];
+            swipedir = "none";
+            startX = touchobj.pageX;
+            startY = touchobj.pageY;
+            startTime = new Date().getTime();
+        }, false);
+
+        touchsurface.addEventListener("touchmove", function(e) {
+            e.preventDefault();
+        }, false);
+
+        touchsurface.addEventListener("touchend", function(e) {
+            var touchobj = e.changedTouches[0];
+            distX = touchobj.pageX - startX;
+            distY = touchobj.pageY - startY;
+            elapsedTime = new Date().getTime() - startTime;
+
+            if (elapsedTime <= allowedTime) {
+                if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                    swipedir = (distX < 0) ? "left" : "right";
+                } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
+                    swipedir = (distY < 0) ? "up" : "down";
+                }
+            }
+
+            handleswipe(swipedir);
+        }, false);
+    }
+
+    // Enable swipe detection only on mobile view (max-width: 768px)
+    if ($(window).width() <= 768) {
+        swipedetect($("#slider"), function(swipedir) {
+            if (swipedir === "left") {
+                $("#next-button").click();
+            } else if (swipedir === "right") {
+                $("#previous-button").click();
+            }
+        });
+    }
 });
