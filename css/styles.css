@@ -92,19 +92,16 @@
                                             height: 100%;
                                             left: 0;
                                             bottom: 0;
-                                            /* color: white; */
-                                            /* font-size: 25px;
-                                            font-weight: bold; */
                                             cursor: pointer;
                                             display: inline-flex;
                                         }
                                         
                                         .slider {
-                                            /* transition: 0.7s; */
+                                            transition: transform 0.7s ease;
                                             display: block;
                                             background-size: cover;
                                             box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-                                            transition: transform 960ms ease;
+                                            /* transition: transform 960ms ease; */
                                             filter: grayscale(90%);
                                         }
                                         
@@ -281,11 +278,10 @@
                                             transform: scale3d(1.2, 1.2, 1.2);
                                             transition: all 0.8s ease-in-out;
                                             filter: brightness(100%);
-                                            outline: 2px solid hsl(60deg 14.07% 97.41% / 44%);
-                                            border: 1px solid hsl(156deg 2.92% 66.47% / 68%);
-                                            padding: 1px;
-                                            background: hsl(0, 0%, 100%);
-                                            box-shadow: 0 0 0 8px hsl(0deg 2.05% 26.29%), 0 0 0 6px hsl(60deg 1.32% 3.85%);
+                                            outline: 1px solid hsl(60deg 14.07% 97.41% / 32%);
+                                            box-shadow: 0 0 20px 20px #2f2f2f;
+                                            background-color: crimson;
+                                            transition: all 1s;
                                         }
                                         /* Next Slide - slide4*/
                                         
