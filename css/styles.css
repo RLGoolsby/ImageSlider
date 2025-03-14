@@ -100,11 +100,11 @@
                                         }
                                         
                                         .slider {
-                                            transition: 0.7s;
+                                            /* transition: 0.7s; */
                                             display: block;
                                             background-size: cover;
                                             box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-                                            transition: transform 500ms ease-in;
+                                            transition: transform 960ms ease;
                                             filter: grayscale(90%);
                                         }
                                         
