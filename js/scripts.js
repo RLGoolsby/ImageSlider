@@ -164,4 +164,6 @@ $(document).ready(function() {
             }
         });
     }
+    var el = document.querySelector(".pinch-zoom");
+    new PinchZoom.default(el, {});
 });

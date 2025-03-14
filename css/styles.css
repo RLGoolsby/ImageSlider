@@ -280,7 +280,7 @@
                                             filter: brightness(100%);
                                             outline: 1px solid hsl(60deg 14.07% 97.41% / 32%);
                                             box-shadow: 0 0 20px 20px #2f2f2f;
-                                            background-color: crimson;
+                                            background-color: rgb(2, 2, 2);
                                             transition: all 1s;
                                         }
                                         /* Next Slide - slide4*/
@@ -399,7 +399,11 @@
                                                 opacity: 0;
                                                 display: none;
                                             }
-                                            #s1:checked~#slide1:hover,
+                                            .pinch-zoom {
+                                                height: 100vh;
+                                                width: 100%;
+                                            }
+                                            /* #s1:checked~#slide1:hover,
                                             #s2:checked~#slide2:hover,
                                             #s3:checked~#slide3:hover,
                                             #s4:checked~#slide4:hover,
@@ -407,7 +411,7 @@
                                                 background: hsla(0, 0%, 100%, 0);
                                                 outline: none;
                                                 border: none;
-                                            }
+                                            } */
                                             #s1:checked~#slide1:focus-visible,
                                             #s2:checked~#slide2:focus-visible,
                                             #s3:checked~#slide3:focus-visible,
