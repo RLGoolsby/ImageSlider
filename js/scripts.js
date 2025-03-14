@@ -124,7 +124,7 @@ $(document).ready(function() {
             startTime,
             handleswipe = callback || function(swipedir) {};
 
-        touchsurface.addEventListener("touchstart", function(e) {
+        touchsurface.on("touchstart", function(e) {
             var touchobj = e.changedTouches[0];
             swipedir = "none";
             startX = touchobj.pageX;
@@ -132,11 +132,11 @@ $(document).ready(function() {
             startTime = new Date().getTime();
         }, false);
 
-        touchsurface.addEventListener("touchmove", function(e) {
+        touchsurface.on("touchmove", function(e) {
             e.preventDefault();
         }, false);
 
-        touchsurface.addEventListener("touchend", function(e) {
+        touchsurface.on("touchend", function(e) {
             var touchobj = e.changedTouches[0];
             distX = touchobj.pageX - startX;
             distY = touchobj.pageY - startY;
