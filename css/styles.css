@@ -61,7 +61,7 @@
                                             box-sizing: border-box;
                                             height: auto;
                                             width: 100%;
-                                            overflow: hidden;
+                                            /* overflow: hidden; */
                                             min-height: 100vh;
                                             background: black;
                                             padding: 0em;
@@ -78,7 +78,7 @@
                                             max-width: 100%;
                                             min-height: 100%;
                                             object-fit: cover;
-                                            margin: 1em auto;
+                                            margin: 2.5em auto 1em;
                                             flex-wrap: wrap;
                                             justify-content: space-evenly;
                                             align-items: flex-end;
@@ -119,15 +119,16 @@
                                         /* navigation buttons */
                                         
                                         #slider-controls {
-                                            position: absolute;
-                                            margin: 1em auto;
-                                            top: 100%;
+                                            position: relative;
+                                            margin: auto;
+                                            top: 0%;
                                             right: 0%;
                                             left: 0%;
                                             bottom: 0;
                                             cursor: pointer;
                                             outline: none;
                                             background-color: transparent;
+                                            width: 80%;
                                         }
                                         
                                         #previous-button {
@@ -145,7 +146,7 @@
                                         #play {
                                             position: absolute;
                                             top: 40%;
-                                            left: 44%;
+                                            left: 48.5%;
                                             padding: 13px 15px;
                                             border-radius: 50%;
                                             border: 2px solid #fff;
@@ -186,12 +187,13 @@
                                         
                                         input[type="radio"] {
                                             position: relative;
-                                            top: 39%;
-                                            left: 32%;
+                                            top: 50%;
+                                            left: 24%;
                                             bottom: 0;
-                                            z-index: 1000;
+                                            z-index: 10000;
                                             opacity: 0.3;
                                             cursor: pointer;
+                                            margin: auto 1em;
                                         }
                                         
                                         input[type="radio"]::before {
