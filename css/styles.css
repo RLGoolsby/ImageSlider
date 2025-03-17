@@ -64,7 +64,7 @@
                                             overflow: hidden;
                                             min-height: 100vh;
                                             background: black;
-                                            padding: 7em 0em;
+                                            padding: 0em;
                                         }
                                         /* Slider */
                                         
@@ -102,7 +102,7 @@
                                             background-size: cover;
                                             box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
                                             /* transition: transform 960ms ease; */
-                                            filter: grayscale(90%);
+                                            filter: grayscale(20%);
                                         }
                                         
                                         figure.img-wrapper {
