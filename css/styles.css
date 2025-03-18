@@ -98,7 +98,7 @@
                                         }
                                         
                                         .slider {
-                                            transition: transform 0.7s ease;
+                                            transition: transform 1s ease;
                                             display: block;
                                             background-size: cover;
                                             box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
@@ -309,12 +309,12 @@
                                         #s3:checked~#slide3:hover,
                                         #s4:checked~#slide4:hover,
                                         #s5:checked~#slide5:hover {
-                                            transform: scale3d(1, 1, 1);
+                                            transform: scale3d(1.2, 1.2, 1.2);
                                             filter: brightness(100%);
                                             outline: 1px solid hsl(60deg 14.07% 97.41% / 32%);
                                             box-shadow: 0 0 20px 20px #2f2f2f;
                                             background-color: rgb(2, 2, 2);
-                                            transition: all 1s ease;
+                                            /* transition: all 1s ease; */
                                             margin: 0em auto 2em;
                                         }
                                         /* Next Slide - slide4*/
