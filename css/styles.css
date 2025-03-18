@@ -105,6 +105,24 @@
                                             /* transition: transform 960ms ease; */
                                             filter: grayscale(20%);
                                         }
+                                        
+                                        .caption {
+                                            opacity: 0;
+                                            transform: translate3d(-50px, 0, 0);
+                                            cursor: pointer;
+                                            transition: 0.25s all ease-in-out;
+                                            color: #fff;
+                                            font-size: 30px;
+                                        }
+                                        
+                                        .caption:hover {
+                                            opacity: 1;
+                                            transform: translate3d(0, 0, 0);
+                                            /* transform: translateX(100%); */
+                                            /* opacity: 0.7; */
+                                            transition: 1s ease;
+                                            background: rgb(78, 79, 79, 0.7);
+                                        }
                                         /*                                         
                                         .details-window {
                                             height: 180px;
