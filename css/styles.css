@@ -309,8 +309,7 @@
                                         #s3:checked~#slide3:hover,
                                         #s4:checked~#slide4:hover,
                                         #s5:checked~#slide5:hover {
-                                            transform: scale3d(1.2, 1.2, 1.2);
-                                            /* transition: all 0.8s ease-in-out; */
+                                            transform: scale3d(1, 1, 1);
                                             filter: brightness(100%);
                                             outline: 1px solid hsl(60deg 14.07% 97.41% / 32%);
                                             box-shadow: 0 0 20px 20px #2f2f2f;
