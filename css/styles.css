@@ -447,9 +447,10 @@
                                             #s3:checked~#slide3:hover,
                                             #s4:checked~#slide4:hover,
                                             #s5:checked~#slide5:hover {
-                                                background: hsla(0, 0%, 100%, 0);
-                                                outline: none;
-                                                border: none;
+                                                outline: 0px solid hsl(0, 0%, 2%);
+                                                box-shadow: 0 0 20px 20px #000;
+                                                background-color: rgb(0, 0, 0);
+                                                margin: auto;
                                             }
                                             #s1:checked~#slide1:focus-visible,
                                             #s2:checked~#slide2:focus-visible,
