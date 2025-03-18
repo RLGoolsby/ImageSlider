@@ -160,6 +160,7 @@
                                             height: 50px;
                                             display: flex;
                                             justify-content: space-between;
+                                            margin: 2em 0em;
                                         }
                                         
                                         #previous-button {
