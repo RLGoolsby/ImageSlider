@@ -395,21 +395,14 @@
                                                 margin: auto;
                                                 text-align: center;
                                             }
-                                            /* #slider-controls {
-                                                display: inline-flex;
-                                                position: absolute;
-                                                margin: auto;
-                                                height: 30%;
-                                                top: 25%;
-                                                left: 0;
-                                                right: 0;
-                                                cursor: pointer;
-                                                outline: none;
-                                                justify-content: center;
-                                                align-items: flex-end;
-                                                flex-wrap: nowrap;
-                                                flex-direction: column;
-                                            } */
+                                            .slider {
+                                                transition: transform 1s ease;
+                                                display: block;
+                                                background-size: cover;
+                                                box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+                                                /* transition: transform 960ms ease; */
+                                                filter: grayscale(0%);
+                                            }
                                             #next-button {
                                                 opacity: 0;
                                                 display: none;
