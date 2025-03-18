@@ -150,21 +150,21 @@
                                         /* navigation buttons */
                                         
                                         #slider-controls {
-                                            position: relative;
-                                            margin: auto;
-                                            top: 0%;
-                                            right: 0%;
-                                            left: 0%;
-                                            bottom: 0;
                                             cursor: pointer;
                                             outline: none;
                                             background-color: transparent;
-                                            width: 40%;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 10%;
+                                            width: 80%;
+                                            height: 50px;
+                                            display: flex;
+                                            justify-content: space-between;
                                         }
                                         
                                         #previous-button {
                                             position: absolute;
-                                            top: 40%;
+                                            /* top: 40%; */
                                             left: 15px;
                                             padding: 13px 15px;
                                             border-radius: 50%;
@@ -176,7 +176,7 @@
                                         #pause,
                                         #play {
                                             position: absolute;
-                                            top: 40%;
+                                            /* top: 40%; */
                                             left: 46.5%;
                                             padding: 13px 15px;
                                             border-radius: 50%;
@@ -187,7 +187,7 @@
                                         
                                         #next-button {
                                             position: absolute;
-                                            top: 40%;
+                                            /* top: 40%; */
                                             right: 15px;
                                             padding: 13px 15px;
                                             border-radius: 50%;
