@@ -131,10 +131,9 @@
                                         transition: 1s all ease;
                                         color: #040404;
                                         font-family: 'Lato', sans-serif;
-                                        padding: 0.2em;
                                         font-size: 25px;
                                         height: 100%;
-                                        width: 100%;
+                                        width: 90%;
                                         font-weight: 500;
                                         box-sizing: border-box;
                                         -moz-user-select: none;
@@ -156,7 +155,7 @@
                                         user-select: none;
                                         transition: color 1s ease;
                                         opacity: 0;
-                                        display: inline-block;
+                                        /* display: inline-block; */
                                         background-color: 0;
                                         transform: translate3d(-0px, 0, 0);
                                         cursor: pointer;
@@ -165,28 +164,14 @@
                                         font-family: 'Lato', sans-serif;
                                         /* padding: 0.2em; */
                                         font-size: 25px;
-                                        height: 100%;
-                                        width: 60%;
+                                        /* height: 100%; */
+                                        /* width: 60%; */
                                         font-weight: 500;
                                         box-sizing: border-box;
                                         -moz-user-select: none;
-                                        padding: 10px 4px;
+                                        padding: 4px;
                                         text-decoration: none;
                                         -ms-user-select: none;
-                                        -webkit-touch-callout: none;
-                                        -webkit-tap-highlight-color: transparent;
-                                        white-space: nowrap;
-                                        overflow: hidden;
-                                        box-sizing: border-box;
-                                        -moz-user-select: none;
-                                        -webkit-transition: color 1s ease;
-                                        position: relative;
-                                        z-index: 2;
-                                        -moz-box-sizing: border-box;
-                                        -webkit-box-sizing: border-box;
-                                        -webkit-user-select: none;
-                                        user-select: none;
-                                        transition: color 1s ease;
                                     }
                                     
                                     .caption:after {
@@ -195,7 +180,7 @@
                                         -ms-transition: all 1s ease 1s;
                                         -o-transition: all 1s ease 1s;
                                         transition: all 1s ease 1s;
-                                        width: 3px;
+                                        width: 1px;
                                         bottom: 0;
                                         left: 0
                                     }
@@ -205,7 +190,7 @@
                                         content: "";
                                         position: absolute;
                                         z-index: -1;
-                                        height: 3px
+                                        height: 1px
                                     }
                                     
                                     .caption:focus:after,
@@ -227,16 +212,14 @@
                                         -moz-transition: color 1s ease;
                                         -ms-transition: color 1s ease;
                                         -o-transition: color 1s ease;
-                                        transition: all 1s ease 1s;
-                                        /* position: absolute; */
+                                        transition: all 1s ease;
                                         opacity: 1;
                                         top: 0%;
-                                        left: -2%;
-                                        transform: translateX(2%);
+                                        left: -25%;
+                                        transform: translateX(25%);
                                         transition: 1s ease;
                                         background: rgb(78, 79, 79, 0.2);
-                                        min-width: 100%;
-                                        margin: 0;
+                                        /* min-width: 60%; */
                                     }
                                     /* .caption:hover {
                                         display: inline-table;
@@ -252,7 +235,7 @@
                                     } */
                                     
                                     .caption:before {
-                                        width: 3px;
+                                        width: 1px;
                                         top: 0;
                                         right: 0;
                                     }
@@ -266,7 +249,7 @@
                                         -ms-transition: all 1s ease 0s;
                                         -o-transition: all 1s ease 0s;
                                         transition: all 1s ease 0s;
-                                        width: 3px;
+                                        width: 1px;
                                         height: 100%;
                                     }
                                     /*                                         
