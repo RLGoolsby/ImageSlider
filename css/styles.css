@@ -218,9 +218,9 @@
                                         -o-transition: color 1s ease;
                                         transition: all 1s ease;
                                         opacity: 1;
-                                        top: 0%;
-                                        left: -25%;
-                                        transform: translateX(25%);
+                                        top: -2%;
+                                        left: -1%;
+                                        transform: translateY(64%);
                                         transition: 1s ease;
                                         background: rgb(78, 79, 79, 0.2);
                                         /* min-width: 60%; */
