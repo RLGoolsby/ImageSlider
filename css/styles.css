@@ -147,14 +147,14 @@
                                         transition: 1s all ease;
                                         color: #040404;
                                         font-family: 'Lato', sans-serif;
-                                        padding: 0.2em;
+                                        /* padding: 0.2em; */
                                         font-size: 25px;
                                         height: 100%;
                                         width: 60%;
                                         font-weight: 500;
                                         box-sizing: border-box;
                                         -moz-user-select: none;
-                                        padding: 24px 4px;
+                                        padding: 10px 4px;
                                         text-decoration: none;
                                         -ms-user-select: none;
                                         -webkit-touch-callout: none;
@@ -212,11 +212,11 @@
                                         -ms-transition: color 1s ease;
                                         -o-transition: color 1s ease;
                                         transition: all 1s ease 1s;
-                                        position: absolute;
+                                        /* position: absolute; */
                                         opacity: 1;
                                         top: 0%;
-                                        left: -25%;
-                                        transform: translateX(25%);
+                                        left: -2%;
+                                        transform: translateX(2%);
                                         transition: 1s ease;
                                         background: rgb(78, 79, 79, 0.2);
                                         min-width: 100%;
