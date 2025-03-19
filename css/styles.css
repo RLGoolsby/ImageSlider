@@ -138,7 +138,39 @@
                                         -webkit-box-sizing: border-box;
                                         -webkit-user-select: none;
                                         user-select: none;
-                                        transition: color 1s ease
+                                        transition: color 1s ease;
+                                        opacity: 0;
+                                        display: inline-block;
+                                        background-color: 0;
+                                        transform: translate3d(-0px, 0, 0);
+                                        cursor: pointer;
+                                        transition: 1s all ease;
+                                        color: #040404;
+                                        font-family: 'Lato', sans-serif;
+                                        padding: 0.2em;
+                                        font-size: 25px;
+                                        height: 100%;
+                                        width: 60%;
+                                        font-weight: 500;
+                                        box-sizing: border-box;
+                                        -moz-user-select: none;
+                                        padding: 24px 4px;
+                                        text-decoration: none;
+                                        -ms-user-select: none;
+                                        -webkit-touch-callout: none;
+                                        -webkit-tap-highlight-color: transparent;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        box-sizing: border-box;
+                                        -moz-user-select: none;
+                                        -webkit-transition: color 1s ease;
+                                        position: relative;
+                                        z-index: 2;
+                                        -moz-box-sizing: border-box;
+                                        -webkit-box-sizing: border-box;
+                                        -webkit-user-select: none;
+                                        user-select: none;
+                                        transition: color 1s ease;
                                     }
                                     
                                     .caption:after {
