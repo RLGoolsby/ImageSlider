@@ -218,7 +218,7 @@
                                         -o-transition: color 1s ease;
                                         transition: all 1s ease;
                                         opacity: 1;
-                                        top: -2%;
+                                        top: 2%;
                                         left: -1%;
                                         transform: translateY(64%);
                                         transition: 1s ease;
