@@ -332,11 +332,11 @@
                                     }
                                     /* Active Slide - slide3*/
                                     
-                                    #s1:checked~#slide1~.caption,
-                                    #s2:checked~#slide2~.caption,
-                                    #s3:checked~#slide3~.caption,
-                                    #s4:checked~#slide4~.caption,
-                                    #s5:checked~#slide5~.caption {
+                                    #s1:checked~#slide1,
+                                    #s2:checked~#slide2,
+                                    #s3:checked~#slide3,
+                                    #s4:checked~#slide4,
+                                    #s5:checked~#slide5 {
                                         opacity: 1;
                                         box-shadow: 0 3px 17px rgba(0, 0, 0, 0.2), 0 5px 6px rgba(0, 0, 0, 0.2);
                                         transform: translate3d(0%, 0, 0px);
@@ -345,11 +345,11 @@
                                     }
                                     /* Active Slide Hover */
                                     
-                                    #s1:checked~#slide1~.caption:hover,
-                                    #s2:checked~#slide2~.caption:hover,
-                                    #s3:checked~#slide3~.caption:hover,
-                                    #s4:checked~#slide4~.caption:hover,
-                                    #s5:checked~#slide5~.caption:hover {
+                                    #s1:checked~#slide1:hover,
+                                    #s2:checked~#slide2:hover,
+                                    #s3:checked~#slide3:hover,
+                                    #s4:checked~#slide4:hover,
+                                    #s5:checked~#slide5:hover {
                                         transform: scale3d(1.2, 1.2, 1.2);
                                         filter: brightness(100%);
                                         outline: 1px solid hsl(60deg 14.07% 97.41% / 32%);
