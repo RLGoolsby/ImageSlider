@@ -107,6 +107,22 @@
                                     }
                                     
                                     .caption {
+                                        position: relative;
+                                        animation: content;
+                                        animation-duration: 3s;
+                                        animation-fill-mode: forwards;
+                                    }
+                                    
+                                    @keyframes caption {
+                                        0% {
+                                            left: -1000px;
+                                        }
+                                        100% {
+                                            left: 0;
+                                        }
+                                    }
+                                    
+                                    .caption {
                                         opacity: 0;
                                         display: inline-block;
                                         background-color: 0;
