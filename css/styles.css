@@ -122,7 +122,7 @@
                                         }
                                     }
                                     
-                                    .caption {
+                                    figure .img-wrapper~.caption {
                                         opacity: 0;
                                         display: inline-block;
                                         background-color: 0;
@@ -206,8 +206,8 @@
                                         height: 3px;
                                     }
                                     
-                                    .caption:focus,
-                                    .caption:hover {
+                                    figure .img-wrapper~.caption:focus,
+                                    figure .img-wrapper~.caption:hover {
                                         -webkit-transition: color 1s ease;
                                         -moz-transition: color 1s ease;
                                         -ms-transition: color 1s ease;
@@ -252,36 +252,6 @@
                                         width: 1px;
                                         height: 100%;
                                     }
-                                    /*                                         
-                                        .details-window {
-                                            height: 180px;
-                                            width: 250px;
-                                            opacity: 0;
-                                            background: white;
-                                            position: absolute;
-                                        } */
-                                    /* p {
-                                            width: 60%;
-                                            margin: 0 auto;
-                                            text-align: center;
-                                            padding-top: 15%;
-                                            font-weight: bold;
-                                            font-variant: small-caps;
-                                        } */
-                                    /* .left {
-                                            bottom: 0%;
-                                            left: -100%;
-                                        }
-                                        
-                                        .four {
-                                            background: #00DDFF;
-                                        }
-                                        
-                                        .four:hover .left {
-                                            transform: translateX(100%);
-                                            opacity: 0.7;
-                                            transition: 1s ease;
-                                        } */
                                     
                                     figure.img-wrapper {
                                         margin: 0 !important;
