@@ -212,18 +212,20 @@
                                     
                                     .caption:focus,
                                     .caption:hover {
+                                        animation-iteration-count: 1;
                                         -webkit-transition: color 1s ease;
                                         -moz-transition: color 1s ease;
                                         -ms-transition: color 1s ease;
                                         -o-transition: color 1s ease;
-                                        transition: all 1s ease;
+                                        transition: color 1s ease;
                                         opacity: 1;
                                         top: -2%;
                                         left: -1%;
                                         transform: translateY(2%);
                                         transition: 1s ease;
-                                        background: rgb(78, 79, 79, 0.2);
+                                        /* background: rgb(78, 79, 79, 0.2); */
                                         /* min-width: 60%; */
+                                        animation-duration: 3s;
                                     }
                                     /* .caption:hover {
                                         display: inline-table;
@@ -254,7 +256,7 @@
                                         -o-transition: all 1s ease 0s;
                                         transition: all 1s ease 0s;
                                         width: 1px;
-                                        height: 100%;
+                                        height: 20%;
                                     }
                                     
                                     figure.img-wrapper {
