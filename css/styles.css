@@ -122,8 +122,7 @@
                                             left: 0;
                                         }
                                     } */
-                                    
-                                    @keyframes fadeOut {
+                                    /* @keyframes fadeOut {
                                         0% {
                                             opacity: 1;
                                         }
@@ -133,7 +132,7 @@
                                         100% {
                                             opacity: 0;
                                         }
-                                    }
+                                    } */
                                     
                                     .caption {
                                         opacity: 0;
