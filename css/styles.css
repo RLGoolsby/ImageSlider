@@ -128,7 +128,7 @@
                                             opacity: 1;
                                         }
                                         99% {
-                                            opacity: 0.01;
+                                            opacity: 0.5;
                                         }
                                         100% {
                                             opacity: 0;
