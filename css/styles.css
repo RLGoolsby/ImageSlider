@@ -109,16 +109,29 @@
                                     .caption {
                                         position: relative;
                                         animation: content;
+                                        animation-delay: 3s;
                                         animation-duration: 3s;
                                         animation-fill-mode: forwards;
+                                        animation-name: fadeOut;
                                     }
-                                    
-                                    @keyframes caption {
+                                    /* @keyframes caption {
                                         0% {
                                             left: -1000px;
                                         }
                                         100% {
                                             left: 0;
+                                        }
+                                    } */
+                                    
+                                    @keyframes fadeOut {
+                                        0% {
+                                            opacity: 2;
+                                        }
+                                        99% {
+                                            opacity: 0.01;
+                                        }
+                                        100% {
+                                            opacity: 0;
                                         }
                                     }
                                     
@@ -243,7 +256,7 @@
                                     .caption:before {
                                         width: 1px;
                                         top: 0;
-                                        right: 0;
+                                        right: 20px;
                                     }
                                     
                                     .caption:focus:before,
@@ -256,7 +269,7 @@
                                         -o-transition: all 1s ease 0s;
                                         transition: all 1s ease 0s;
                                         width: 1px;
-                                        height: 20%;
+                                        height: 30%;
                                     }
                                     
                                     figure.img-wrapper {
