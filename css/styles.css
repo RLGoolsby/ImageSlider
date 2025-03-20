@@ -109,7 +109,7 @@
                                     .caption {
                                         position: relative;
                                         animation: content;
-                                        animation-delay: 3s;
+                                        animation-delay: 1s;
                                         animation-duration: 3s;
                                         animation-fill-mode: forwards;
                                         animation-name: fadeOut;
@@ -125,7 +125,7 @@
                                     
                                     @keyframes fadeOut {
                                         0% {
-                                            opacity: 2;
+                                            opacity: 1;
                                         }
                                         99% {
                                             opacity: 0.01;
@@ -139,7 +139,7 @@
                                         opacity: 0;
                                         position: relative;
                                         animation: content;
-                                        animation-duration: 3s;
+                                        animation-duration: 1s;
                                         animation-fill-mode: forwards;
                                         display: inline-block;
                                         background-color: 0;
@@ -220,7 +220,7 @@
                                         background-color: #060606;
                                         width: 100%;
                                         height: 1px;
-                                        box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.62);
+                                        /* box-shadow: 4px 6px 0px 0px rgba(0, 0, 0, 0.62); */
                                     }
                                     
                                     .caption:focus,
@@ -238,7 +238,7 @@
                                         transition: 1s ease;
                                         /* background: rgb(78, 79, 79, 0.2); */
                                         /* min-width: 60%; */
-                                        animation-duration: 3s;
+                                        animation-duration: 1s;
                                     }
                                     /* .caption:hover {
                                         display: inline-table;
