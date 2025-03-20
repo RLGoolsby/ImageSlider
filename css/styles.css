@@ -110,7 +110,7 @@
                                         position: relative;
                                         animation: content;
                                         animation-delay: 1s;
-                                        animation-duration: 3s;
+                                        animation-duration: 1s;
                                         animation-fill-mode: forwards;
                                         animation-name: fadeOut;
                                     }
@@ -239,6 +239,7 @@
                                         /* background: rgb(78, 79, 79, 0.2); */
                                         /* min-width: 60%; */
                                         animation-duration: 1s;
+                                        animation-name: fadeOut;
                                     }
                                     /* .caption:hover {
                                         display: inline-table;
