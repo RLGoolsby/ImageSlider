@@ -197,7 +197,7 @@
                                         -o-transition: all 1s ease 1s;
                                         transition: all 1s ease 1s;
                                         width: 1px;
-                                        bottom: 0;
+                                        bottom: 85%;
                                         left: 0
                                     }
                                     
