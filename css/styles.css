@@ -107,41 +107,19 @@
                                     }
                                     
                                     .caption {
-                                        position: relative;
-                                        animation: content;
-                                        animation-delay: 3s;
-                                        animation-duration: 3s;
-                                        animation-fill-mode: forwards;
-                                        animation-name: fadeOut;
+                                        width: 100%;
+                                        animation: fadeout-anim 15s linear forwards;
                                     }
-                                    /* @keyframes caption {
-                                        0% {
-                                            left: -1000px;
-                                        }
-                                        100% {
-                                            left: 0;
-                                        }
-                                    } */
-                                    /* @keyframes fadeOut {
-                                        0% {
-                                            opacity: 1;
-                                        }
-                                        99% {
-                                            opacity: 0.5;
-                                        }
+                                    
+                                    @keyframes fadeout-anim {
                                         100% {
                                             opacity: 0;
                                         }
-                                    } */
+                                    }
                                     
                                     .caption {
                                         opacity: 0;
-                                        position: relative;
-                                        animation: content;
-                                        animation-duration: 3s;
-                                        animation-fill-mode: forwards;
                                         display: inline-block;
-                                        background-color: 0;
                                         transform: translate3d(-0px, 0, 0);
                                         cursor: pointer;
                                         transition: 3s all ease;
@@ -152,41 +130,17 @@
                                         width: 90%;
                                         font-weight: 500;
                                         box-sizing: border-box;
-                                        -moz-user-select: none;
-                                        padding: 10px 15px;
                                         text-decoration: none;
-                                        -ms-user-select: none;
                                         -webkit-touch-callout: none;
                                         -webkit-tap-highlight-color: transparent;
                                         white-space: nowrap;
                                         overflow: hidden;
-                                        box-sizing: border-box;
-                                        -moz-user-select: none;
                                         -webkit-transition: color 1s ease;
-                                        position: relative;
-                                        z-index: 2;
-                                        -moz-box-sizing: border-box;
-                                        -webkit-box-sizing: border-box;
-                                        -webkit-user-select: none;
                                         user-select: none;
                                         transition: color 1s ease;
-                                        opacity: 0;
-                                        /* display: inline-block; */
-                                        background-color: 0;
-                                        transform: translate3d(-0px, 0, 0);
                                         cursor: pointer;
-                                        transition: 3s all ease;
-                                        color: #040404;
-                                        font-family: 'Lato', sans-serif;
-                                        /* padding: 0.2em; */
                                         font-size: 25px;
-                                        /* height: 100%; */
-                                        /* width: 60%; */
                                         font-weight: 500;
-                                        box-sizing: border-box;
-                                        -moz-user-select: none;
-                                        text-decoration: none;
-                                        -ms-user-select: none;
                                     }
                                     
                                     .caption:after {
@@ -196,8 +150,9 @@
                                         -o-transition: all 1s ease 1s;
                                         transition: all 1s ease 1s;
                                         width: 1px;
-                                        bottom: 85%;
-                                        left: 0
+                                        height: 30%;
+                                        top: 0;
+                                        left: 0;
                                     }
                                     
                                     .caption:after,
@@ -235,9 +190,7 @@
                                         left: -1%;
                                         transform: translateY(2%);
                                         transition: 1s ease;
-                                        /* background: rgb(78, 79, 79, 0.2); */
-                                        /* min-width: 60%; */
-                                        animation-duration: 1s;
+                                        animation-duration: 3s;
                                         animation-name: fadeOut;
                                     }
                                     /* .caption:hover {
