@@ -104,7 +104,7 @@
                                     }
 
                                     .slider {
-                                        transition: transform 1s ease;
+                                        transition: transform 3s ease;
                                         display: block;
                                         background-size: cover;
                                         box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
@@ -216,6 +216,7 @@
     display: inline-block;
     transform: translate3d(0px, 0, 0);
     cursor: pointer;
+    transition: 3s all ease;
     transition: opacity 3s ease; /* Smooth fade out */
     color: #040404;
     font-family: 'Lato', sans-serif;
@@ -243,9 +244,9 @@
 
                                     /* Styling for the transition effect */
                                     .caption:after {
-                                        transition: all 1s ease 1s;
+                                        transition: all 3s ease 3s;
                                         width: 1px;
-                                        height: 30%;
+                                        /* height: 30%; */
                                         top: 10%;
                                         left: 0;
                                     }
