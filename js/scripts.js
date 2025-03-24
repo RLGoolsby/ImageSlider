@@ -87,27 +87,25 @@ $(document).ready(function () {
         }
     });
 
-// Hover effect for captions based on checked radio button
-function hoverEffect() {
-    $(".slide").hover(
-        function () {
-            var $this = $(this);
-            // Check if the slide is the active one based on :checked radio button
-            if ($("#" + $this.attr('id') + " input[type='radio']:checked").length) {
-                $this.find(".caption").css("opacity", "1"); // Show caption on hover
+    // Hover effect for captions
+    function hoverEffect() {
+        $(".slide").hover(
+            function () {
+                var $this = $(this);
+                if ($this.hasClass("active")) {
+                    $this.find(".caption").css("opacity", "1"); // Show caption when active slide is hovered
+                }
+            },
+            function () {
+                var $this = $(this);
+                if ($this.hasClass("active")) {
+                    setTimeout(function () {
+                        $this.find(".caption").addClass("fadeOut"); // Fade out after a delay
+                    }, 3000);
+                }
             }
-        },
-        function () {
-            var $this = $(this);
-            // Check if the slide is the active one based on :checked radio button
-            if ($("#" + $this.attr('id') + " input[type='radio']:checked").length) {
-                setTimeout(function () {
-                    $this.find(".caption").addClass("fadeOut"); // Fade out after a delay
-                }, 3000);
-            }
-        }
-    );
-}
+        );
+    }
 
     // Next/Previous buttons functionality
     $("#next-button").on("click", function (e) {
