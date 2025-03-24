@@ -212,12 +212,13 @@
                                     } */
                                     .caption {
                                         width: 100%;
-                                        opacity: 1;
-                                        /* Ensure caption is visible when active */
+                                        opacity: 0;
+                                        /* Start with caption hidden */
                                         display: inline-block;
                                         transform: translate3d(0px, 0, 0);
                                         cursor: pointer;
-                                        transition: 3s all ease;
+                                        transition: opacity 2s ease, color 1s ease;
+                                        /* Combine transitions */
                                         color: #040404;
                                         font-family: 'Lato', sans-serif;
                                         font-size: 25px;
@@ -228,8 +229,8 @@
                                         white-space: nowrap;
                                         overflow: hidden;
                                         user-select: none;
-                                        transition: color 1s ease;
                                     }
+                                
 
                                     /* Apply fadeout animation when the class is added */
                                     .fadeOut {
@@ -252,24 +253,45 @@
                                         left: 0;
                                     }
 
-                                    /* Hide caption by default on all slides */
+                                    /* Initially, hide captions on all slides */
                                     .slide .caption {
-                                        display: none;
+                                        opacity: 0;
+                                        transition: opacity 2s ease;
+                                        /* Smooth transition for opacity */
+                                        visibility: hidden;
+                                        /* Hide caption by default */
                                     }
 
-                                    /* Show caption for active slide */
+                                    /* Only show caption on active slide */
                                     #s1:checked~#slide1 .caption,
                                     #s2:checked~#slide2 .caption,
                                     #s3:checked~#slide3 .caption,
                                     #s4:checked~#slide4 .caption,
                                     #s5:checked~#slide5 .caption {
-                                        display: block;
+                                        opacity: 1;
+                                        visibility: visible;
+                                        /* Show caption on active slide */
                                     }
 
-                                    /* Show caption when hovered */
-                                    .slide:hover .caption {
-                                        display: block;
+                                    /* Show caption on hover over the active slide */
+                                    #s1:checked~#slide1:hover .caption,
+                                    #s2:checked~#slide2:hover .caption,
+                                    #s3:checked~#slide3:hover .caption,
+                                    #s4:checked~#slide4:hover .caption,
+                                    #s5:checked~#slide5:hover .caption {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        /* Ensure caption is shown when hovering over active slide */
                                     }
+
+
+                                    /* Fade out caption after 3 seconds of hover (jQuery handles this part) */
+                                    .caption.fadeOut {
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        /* Hide the caption once the fadeOut class is applied */
+                                    }
+
 
                                     figure.img-wrapper {
                                         margin: 0 !important;
