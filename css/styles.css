@@ -108,7 +108,7 @@
                                     
                                     .caption {
                                         width: 100%;
-                                        animation: fadeout-anim 15s linear forwards;
+                                        animation: fadeout-anim 25s linear forwards;
                                     }
                                     
                                     @keyframes fadeout-anim {
@@ -127,15 +127,12 @@
                                         font-family: 'Lato', sans-serif;
                                         font-size: 25px;
                                         height: 100%;
-                                        width: 90%;
+                                        /* width: 90%; */
                                         font-weight: 500;
                                         box-sizing: border-box;
                                         text-decoration: none;
-                                        -webkit-touch-callout: none;
-                                        -webkit-tap-highlight-color: transparent;
                                         white-space: nowrap;
                                         overflow: hidden;
-                                        -webkit-transition: color 1s ease;
                                         user-select: none;
                                         transition: color 1s ease;
                                         cursor: pointer;
@@ -144,10 +141,6 @@
                                     }
                                     
                                     .caption:after {
-                                        -webkit-transition: all 1s ease 1s;
-                                        -moz-transition: all 1s ease 1s;
-                                        -ms-transition: all 1s ease 1s;
-                                        -o-transition: all 1s ease 1s;
                                         transition: all 1s ease 1s;
                                         width: 1px;
                                         height: 30%;
@@ -165,10 +158,6 @@
                                     
                                     .caption:focus:after,
                                     .caption:hover:after {
-                                        -webkit-transition: all 1s ease 1s;
-                                        -moz-transition: all 1s ease 1s;
-                                        -ms-transition: all 1s ease 1s;
-                                        -o-transition: all 1s ease 1s;
                                         transition: all 1s ease 1s;
                                         outline: 0;
                                         background-color: #060606;
@@ -180,16 +169,12 @@
                                     .caption:focus,
                                     .caption:hover {
                                         animation-iteration-count: 1;
-                                        -webkit-transition: color 1s ease;
-                                        -moz-transition: color 1s ease;
-                                        -ms-transition: color 1s ease;
-                                        -o-transition: color 1s ease;
                                         transition: color 1s ease;
                                         opacity: 1;
                                         top: -2%;
                                         left: -1%;
                                         transform: translateY(2%);
-                                        transition: 1s ease;
+                                        /* transition: 1s ease; */
                                         animation-duration: 3s;
                                         animation-name: fadeOut;
                                     }
@@ -216,11 +201,7 @@
                                     .caption:hover:before {
                                         outline: 0;
                                         background-color: #020202;
-                                        -webkit-transition: all 1s ease 0s;
-                                        -moz-transition: all 1s ease 0s;
-                                        -ms-transition: all 1s ease 0s;
-                                        -o-transition: all 1s ease 0s;
-                                        transition: all 1s ease 0s;
+                                        transition: all 3s ease 0s;
                                         width: 1px;
                                         height: 30%;
                                     }
