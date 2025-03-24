@@ -248,8 +248,27 @@
                                         transition: all 1s ease 1s;
                                         width: 1px;
                                         height: 30%;
-                                            top: 10%;
+                                        top: 10%;
                                         left: 0;
+                                    }
+
+                                    /* Hide caption by default on all slides */
+                                    .slide .caption {
+                                        display: none;
+                                    }
+
+                                    /* Show caption for active slide */
+                                    #s1:checked~#slide1 .caption,
+                                    #s2:checked~#slide2 .caption,
+                                    #s3:checked~#slide3 .caption,
+                                    #s4:checked~#slide4 .caption,
+                                    #s5:checked~#slide5 .caption {
+                                        display: block;
+                                    }
+
+                                    /* Show caption when hovered */
+                                    .slide:hover .caption {
+                                        display: block;
                                     }
 
                                     figure.img-wrapper {
@@ -438,8 +457,7 @@
                                         margin: 0em auto 2em;
                                     }
 
-                                    /* Active Slide Hover */
-
+                                    /* Active Slide Hover: Only the active slide gets hover effects */
                                     #s1:checked~#slide1:hover,
                                     #s2:checked~#slide2:hover,
                                     #s3:checked~#slide3:hover,
