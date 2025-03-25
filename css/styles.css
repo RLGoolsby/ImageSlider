@@ -113,24 +113,24 @@
                                         margin: auto;
                                     }
 
-
-
-
-                                    /* Fade-out animation */
+                                    /* Initially hide captions */
                                     .caption {
                                         opacity: 0;
+                                        /* Hidden by default */
                                         transition: opacity 0.5s ease-in-out;
-                         
+                                        /* Smooth fade-in effect */
                                     }
 
-                                    .caption.visible {
-                                        opacity: 1;
+                                    /* Fade-out animation */
+                                    .fadeOut {
+                                        animation: fadeout-anim 3s linear forwards;
                                     }
 
-                                   .fadeOut {
-                                        opacity: 0;
-                                        transition: opacity 1s ease-out;
-                                        /* Add transition effect for fade-out */
+                                    /* Keyframe animation for fade-out */
+                                    @keyframes fadeout-anim {
+                                        100% {
+                                            opacity: 0;
+                                        }
                                     }
 
                                     /* .caption {
