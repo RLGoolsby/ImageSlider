@@ -1,42 +1,108 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var counter = 1;
     var numberOfImages = $(".imgCheck").length;
     var interval;
-    var isPaused = false; // Track if the slider is paused
-    var autoSlideTime = 5000; // Auto-slide every 5s
-    var startX, swipeThreshold = 50; // Variables for swipe detection
+    var isPaused = false; // To track whether the slider is paused
 
-    // ✅ **Function to Start Auto-Slide**
+    // Function to start the interval for auto-sliding
     function startSlider() {
-        if (!isPaused) {
-            interval = setInterval(function () {
-                counter++;
-                if (counter > numberOfImages) {
-                    counter = 1;
-                }
-                $("#s" + counter).prop("checked", true);
-                updateCaption(); // Update caption
-                announceSlideChange(counter);
-            }, autoSlideTime);
-        }
+        interval = setInterval(function() {
+            $("#s" + counter).prop("checked", true);
+            counter++;
+            if (counter > numberOfImages) {
+                counter = 1;
+            }
+            announceSlideChange(counter);
+        }, 5000);
     }
 
-    // ✅ **Function to Stop Auto-Slide**
     function stopSlider() {
         clearInterval(interval);
     }
 
-    // ✅ **Function to Announce Slide Change for Screen Readers**
+    // buttons
+    var $sliderControl = $(".slider-control");
+
+    // slides informations
+    var $slides = $(".slider"),
+        slidesLength = $slides.length;
+
+    // slides array (in reversed order)
+    var slidesArr = $slides.toArray().reverse();
+
+    // slide current
+    var slideCurrent = 0;
+
+    // Function to announce the slide change to screen reader users
     function announceSlideChange(counter) {
         $("#slider").attr("aria-live", "polite");
         $("#slider").attr("aria-atomic", "true");
         $("#slider").attr("aria-relevant", "additions text");
-        $("#slider").find(".sr-only").text("Slide " + counter + " of " + numberOfImages);
+        $("#slider").find(".sr-only").text("Slide " + counter + " of " + slidesLength);
     }
+
+    $sliderControl.on("click", function(e) {
+        var $target = $(e.target);
+
+        // get next button
+        if ($target.hasClass("next")) {
+            var $next = $target,
+                $prev = $next.prev(),
+                $nextSlide = $(slidesArr[slideCurrent + 1]),
+                $slide = $(slidesArr[slideCurrent]);
+
+            $slide.addClass("fadeOut").removeClass("caption");
+            $nextSlide.addClass("caption");
+            announceSlideChange(slideCurrent + 1);
+
+            slideCurrent++;
+
+            if (slideCurrent > 0) {
+                $prev.removeClass("disabled");
+            }
+            if (slideCurrent === slidesLength - 1) {
+                $next.addClass("disabled");
+            }
+        }
+
+        // get prev button
+        if ($target.hasClass("prev")) {
+            slideCurrent--;
+
+            var $prev = $target,
+                $next = $prev.next(),
+                $prevSlide = $(slidesArr[slideCurrent + 1]),
+                $slide = $(slidesArr[slideCurrent]);
+
+            $prevSlide.removeClass("caption");
+            $slide.removeClass("fadeOut").addClass("caption");
+            announceSlideChange(slideCurrent + 1);
+
+            if (slideCurrent === slidesLength - 2) {
+                $next.removeClass("disabled");
+            }
+            if (slideCurrent === 0) {
+                $prev.addClass("disabled");
+            }
+        }
+    });
+
+   // Add hover effect to fade out text after a few seconds for active slide
+    $(".slide.active").hover(
+        function() {
+            $(this).find(".caption").css("opacity", "1"); // Show caption on hover
+        },
+        function() {
+            var $this = $(this);
+            setTimeout(function() {
+                $this.find(".caption").addClass("fadeOut"); // Fade out caption after hover ends
+            }, 3000);
+        }
+    );
 
 // ✅ **Function to Show Caption for Checked Image**
 function updateCaption() {
-    $(".caption").removeClass("visible fadeOut"); // Hide all captions
+    $(".caption").removeClass("fadeOut"); // Hide all captions
     $(".imgCheck:checked").each(function () {
         var slide = $(this).closest(".slider");
         slide.find(".caption").addClass("visible"); // Show caption for checked slide
@@ -46,41 +112,9 @@ function updateCaption() {
     });
 }
 
-    // ✅ **Swipe Detection Function**
-    function enableSwipe() {
-        if ($(window).width() <= 768) { // Mobile-only swipe
-            $(document).on("touchstart", function (e) {
-                startX = e.changedTouches[0].pageX;
-            });
 
-            $(document).on("touchend", function (e) {
-                let endX = e.changedTouches[0].pageX;
-                let swipeDistance = startX - endX;
-
-                if (Math.abs(swipeDistance) > swipeThreshold) {
-                    stopSlider(); // Pause auto-slide
-                    isPaused = true;
-
-                    if (swipeDistance > 0) {
-                        $("#next-button").click(); // Swipe left → next
-                    } else {
-                        $("#previous-button").click(); // Swipe right → previous
-                    }
-
-                    // Restart auto-slide after inactivity
-                    setTimeout(() => {
-                        isPaused = false;
-                        startSlider();
-                    }, autoSlideTime);
-                }
-            });
-        } else {
-            $(document).off("touchstart touchend"); // Remove swipe on desktop
-        }
-    }
-
-    // ✅ **Event Listeners for Buttons**
-    $("#next-button").on("click", function (e) {
+    // Next button functionality
+    $("#next-button").on("click", function(e) {
         e.preventDefault();
         stopSlider();
         counter++;
@@ -88,12 +122,14 @@ function updateCaption() {
             counter = 1;
         }
         $("#s" + counter).prop("checked", true);
-        updateCaption(); // Update caption
         announceSlideChange(counter);
-        if (!isPaused) startSlider();
+        if (!isPaused) {
+            startSlider();
+        }
     });
 
-    $("#previous-button").on("click", function (e) {
+    // Previous button functionality
+    $("#previous-button").on("click", function(e) {
         e.preventDefault();
         stopSlider();
         counter--;
@@ -101,39 +137,289 @@ function updateCaption() {
             counter = numberOfImages;
         }
         $("#s" + counter).prop("checked", true);
-        updateCaption(); // Update caption
         announceSlideChange(counter);
-        if (!isPaused) startSlider();
+        if (!isPaused) {
+            startSlider();
+        }
     });
 
-    // ✅ **Update Caption When Slide Changes**
-    $(".imgCheck").on("change", function () {
-        updateCaption();
-    });
-
-    // ✅ **Play / Pause Functionality**
-    $('#pause').on('click', function () {
+    // Pause button functionality
+    $('#pause').on('click', function() {
         stopSlider();
-        isPaused = true;
+        isPaused = true; // Update pause state
         $(this).hide();
         $('#play').show();
     });
 
-    $('#play').on('click', function () {
-        isPaused = false;
+    // Play button functionality
+    $('#play').on('click', function() {
+        isPaused = false; // Update pause state
         startSlider();
         $(this).hide();
         $('#pause').show();
     });
 
-    // ✅ **Pause Auto-Sliding on Hover**
-    $("#slider").on("mouseover", stopSlider).on("mouseleave", function () {
-        if (!isPaused) startSlider();
+    // Pause/play slider on keyup (spacebar)
+    $(document).on("keyup", function(e) {
+        if (e.key === " " || e.key === "Spacebar") {
+            e.preventDefault();
+            isPaused = !isPaused;
+            if (isPaused) {
+                stopSlider();
+                $('#pause').hide();
+                $('#play').show();
+            } else {
+                startSlider();
+                $('#play').hide();
+                $('#pause').show();
+            }
+        }
     });
 
-    // ✅ **Start Everything**
-    startSlider();
-    enableSwipe();
-    $(window).resize(enableSwipe);
-    updateCaption(); // Ensure correct caption is shown on page load
+    // Pause slider on mouseover and resume on mouseleave
+    $("#slider").on("mouseover", function() {
+        stopSlider();
+    }).on("mouseleave", function(e) {
+        e.preventDefault();
+        if (!isPaused) {
+            startSlider();
+        }
+    });
+
+    // Initial state of play/pause buttons
+    $('#play').hide();
+    $('#pause').show();
+
+    // Swipe detection function
+    function swipedetect(el, callback) {
+        var touchsurface = el[0],
+            swipedir,
+            startX,
+            startY,
+            distX,
+            distY,
+            threshold = 75,
+            restraint = 100,
+            allowedTime = 300,
+            elapsedTime,
+            startTime,
+            handleswipe = callback || function(swipedir) {};
+
+        touchsurface.addEventListener("touchstart", function(e) {
+            var touchobj = e.changedTouches[0];
+            swipedir = "none";
+            startX = touchobj.pageX;
+            startY = touchobj.pageY;
+            startTime = new Date().getTime();
+        }, false);
+
+        touchsurface.addEventListener("touchmove", function(e) {
+            e.preventDefault();
+        }, false);
+
+        touchsurface.addEventListener("touchend", function(e) {
+            var touchobj = e.changedTouches[0];
+            distX = touchobj.pageX - startX;
+            distY = touchobj.pageY - startY;
+            elapsedTime = new Date().getTime() - startTime;
+
+            if (elapsedTime <= allowedTime) {
+                if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+                    swipedir = (distX < 0) ? "left" : "right";
+                } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
+                    swipedir = (distY < 0) ? "up" : "down";
+                }
+            }
+
+            handleswipe(swipedir);
+        }, false);
+    }
+
+    // Enable swipe detection only on mobile view (max-width: 768px)
+    if ($(window).width() <= 768) {
+        swipedetect($("#slider"), function(swipedir) {
+            if (swipedir === "left") {
+                $("#next-button").click();
+            } else if (swipedir === "right") {
+                $("#previous-button").click();
+            }
+        });
+    }
+
 });
+
+
+
+
+// $(document).ready(function() {
+//     var counter = 1;
+//     var numberOfImages = $(".imgCheck").length;
+//     var interval;
+//     var isPaused = false; // To track whether the slider is paused
+
+    // Function to start the interval for auto-sliding
+    // function startSlider() {
+    //     interval = setInterval(function() {
+    //         $("#s" + counter).prop("checked", true);
+    //         counter++;
+    //         if (counter > numberOfImages) {
+    //             counter = 1;
+    //         }
+    //         announceSlideChange(counter);
+    //     }, 5000);
+    // }
+
+    // function stopSlider() {
+    //     clearInterval(interval);
+    // }
+
+    // Function to announce the slide change to screen reader users
+    // function announceSlideChange(counter) {
+    //     $("#slider").attr("aria-live", "polite");
+    //     $("#slider").attr("aria-atomic", "true");
+    //     $("#slider").attr("aria-relevant", "additions text");
+    //     $("#slider").find(".sr-only").text("Slide " + counter + " of " + numberOfImages);
+    // }
+
+    // Start the slider initially
+    // startSlider(0);
+    // announceSlideChange(counter);
+
+    // Start the slider initially
+    // startSlider();
+    // announceSlideChange(counter);
+
+    // Next button functionality
+    // $("#next-button").on("click", function(e) {
+    //     e.preventDefault();
+    //     stopSlider();
+    //     counter++;
+    //     if (counter > numberOfImages) {
+    //         counter = 1;
+    //     }
+    //     $("#s" + counter).prop("checked", true);
+    //     announceSlideChange(counter);
+    //     if (!isPaused) {
+    //         startSlider();
+    //     }
+    // });
+
+    // Previous button functionality
+    // $("#previous-button").on("click", function(e) {
+    //     e.preventDefault();
+    //     stopSlider();
+    //     counter--;
+    //     if (counter < 1) {
+    //         counter = numberOfImages;
+    //     }
+    //     $("#s" + counter).prop("checked", true);
+    //     announceSlideChange(counter);
+    //     if (!isPaused) {
+    //         startSlider();
+    //     }
+    // });
+
+    // Pause button functionality
+    // $('#pause').on('click', function() {
+    //     stopSlider();
+    //     isPaused = true; // Update pause state
+    //     $(this).hide();
+    //     $('#play').show();
+    // });
+
+    // Play button functionality
+    // $('#play').on('click', function() {
+    //     isPaused = false; // Update pause state
+    //     startSlider();
+    //     $(this).hide();
+    //     $('#pause').show();
+    // });
+
+    // Pause/play slider on keyup (spacebar)
+    // $(document).on("keyup", function(e) {
+    //     if (e.key === " " || e.key === "Spacebar") {
+    //         e.preventDefault();
+    //         isPaused = !isPaused;
+    //         if (isPaused) {
+    //             stopSlider();
+    //             $('#pause').hide();
+    //             $('#play').show();
+    //         } else {
+    //             startSlider();
+    //             $('#play').hide();
+    //             $('#pause').show();
+    //         }
+    //     }
+    // });
+
+    // Pause slider on mouseover and resume on mouseleave
+    // $("#slider").on("mouseover", function() {
+    //     stopSlider();
+    // }).on("mouseleave", function(e) {
+    //     e.preventDefault();
+    //     if (!isPaused) {
+    //         startSlider();
+    //     }
+    // });
+
+    // Initial state of play/pause buttons
+    // $('#play').hide();
+    // $('#pause').show();
+
+    // Swipe detection function
+    // function swipedetect(el, callback) {
+    //     var touchsurface = el[0],
+    //         swipedir,
+    //         startX,
+    //         startY,
+    //         distX,
+    //         distY,
+    //         threshold = 75,
+    //         restraint = 100,
+    //         allowedTime = 300,
+    //         elapsedTime,
+    //         startTime,
+    //         handleswipe = callback || function(swipedir) {};
+
+    //     touchsurface.addEventListener("touchstart", function(e) {
+    //         var touchobj = e.changedTouches[0];
+    //         swipedir = "none";
+    //         startX = touchobj.pageX;
+    //         startY = touchobj.pageY;
+    //         startTime = new Date().getTime();
+    //     }, false);
+
+    //     touchsurface.addEventListener("touchmove", function(e) {
+    //         e.preventDefault();
+    //     }, false);
+
+    //     touchsurface.addEventListener("touchend", function(e) {
+    //         var touchobj = e.changedTouches[0];
+    //         distX = touchobj.pageX - startX;
+    //         distY = touchobj.pageY - startY;
+    //         elapsedTime = new Date().getTime() - startTime;
+
+    //         if (elapsedTime <= allowedTime) {
+    //             if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+    //                 swipedir = (distX < 0) ? "left" : "right";
+    //             } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) {
+    //                 swipedir = (distY < 0) ? "up" : "down";
+    //             }
+    //         }
+
+    //         handleswipe(swipedir);
+    //     }, false);
+    // }
+
+    // Enable swipe detection only on mobile view (max-width: 768px)
+//     if ($(window).width() <= 768) {
+//         swipedetect($("#slider"), function(swipedir) {
+//             if (swipedir === "left") {
+//                 $("#next-button").click();
+//             } else if (swipedir === "right") {
+//                 $("#previous-button").click();
+//             }
+//         });
+//     }
+
+// });

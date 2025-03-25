@@ -84,7 +84,7 @@
                                         max-width: 100%;
                                         min-height: 100%;
                                         object-fit: cover;
-                                        margin: 2.5em auto 1em;
+                                        margin: auto;
                                         flex-wrap: wrap;
                                         justify-content: space-evenly;
                                         align-items: flex-end;
@@ -110,27 +110,30 @@
                                         box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
                                         /* transition: transform 960ms ease; */
                                         filter: grayscale(20%);
+                                        margin: auto;
                                     }
 
-                             
-                                
+
+
 
                                     /* Fade-out animation */
-                              .caption {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.caption.visible {
-    opacity: 1;
-}
-
-.caption.fadeOut {
-    opacity: 0;
-    transition: opacity 1s ease-out; /* Add transition effect for fade-out */
-}
-
                                     .caption {
+                                        opacity: 0;
+                                        transition: opacity 0.5s ease-in-out;
+                         
+                                    }
+
+                                    .caption.visible {
+                                        opacity: 1;
+                                    }
+
+                                   .fadeOut {
+                                        opacity: 0;
+                                        transition: opacity 1s ease-out;
+                                        /* Add transition effect for fade-out */
+                                    }
+
+                                    /* .caption {
                                         display: inline-block;
                                         transform: translate3d(-0px, 0, 0);
                                         cursor: pointer;
@@ -144,7 +147,7 @@
                                         white-space: nowrap;
                                         overflow: hidden;
                                         user-select: none;
-                                    }
+                                    } */
 
                                     /* .caption:after {
                                         transition: all 1s ease 1s;
@@ -245,14 +248,14 @@
                                     } */
 
                                     /* Only show caption on active slide */
-                                    /* #s1:checked~#slide1 .caption,
+                                    #s1:checked~#slide1 .caption,
                                     #s2:checked~#slide2 .caption,
                                     #s3:checked~#slide3 .caption,
                                     #s4:checked~#slide4 .caption,
                                     #s5:checked~#slide5 .caption {
                                         opacity: 1;
                                         visibility: visible;
-                                    } */
+                                    }
 
                                     /* Show caption on hover over the active slide */
                                     /* #s1:checked~#slide1:hover .caption,
