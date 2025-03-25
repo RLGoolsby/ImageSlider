@@ -34,17 +34,17 @@ $(document).ready(function () {
         $("#slider").find(".sr-only").text("Slide " + counter + " of " + numberOfImages);
     }
 
-    // ✅ **Function to Show Caption for Checked Image**
-    function updateCaption() {
-        $(".caption").removeClass("visible fadeOut"); // Hide all captions
-        $(".imgCheck:checked").each(function () {
-            var slide = $(this).closest(".slide");
-            slide.find(".caption").addClass("visible"); // Show caption for checked slide
-            setTimeout(function () {
-                slide.find(".caption").addClass("fadeOut"); // Fade out after 3s
-            }, 3000);
-        });
-    }
+// ✅ **Function to Show Caption for Checked Image**
+function updateCaption() {
+    $(".caption").removeClass("visible fadeOut"); // Hide all captions
+    $(".imgCheck:checked").each(function () {
+        var slide = $(this).closest(".slide");
+        slide.find(".caption").addClass("visible"); // Show caption for checked slide
+        setTimeout(function () {
+            slide.find(".caption").addClass("fadeOut"); // Fade out after 3s
+        }, 3000); // 3 seconds
+    });
+}
 
     // ✅ **Swipe Detection Function**
     function enableSwipe() {
