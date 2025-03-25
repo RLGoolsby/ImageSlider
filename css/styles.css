@@ -116,22 +116,21 @@
                                 
 
                                     /* Fade-out animation */
-                                    .fadeOut {
-                                        animation: fadeout-anim 3s linear forwards;
-                                    }
+                              .caption {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
-                                    /* Keyframe animation for fade-out */
-                                    @keyframes fadeout-anim {
-                                        100% {
-                                            opacity: 0;
-                                        }
-                                    }
+.caption.visible {
+    opacity: 1;
+}
+
+.caption.fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-out; /* Add transition effect for fade-out */
+}
 
                                     .caption {
-                                        opacity: 0;
-                                            /* Initially hide captions */
-                                        transition: opacity 0.5s ease-in-out;
-                                        /* Smooth fade-in effect */
                                         display: inline-block;
                                         transform: translate3d(-0px, 0, 0);
                                         cursor: pointer;
@@ -246,14 +245,14 @@
                                     } */
 
                                     /* Only show caption on active slide */
-                                    #s1:checked~#slide1 .caption,
+                                    /* #s1:checked~#slide1 .caption,
                                     #s2:checked~#slide2 .caption,
                                     #s3:checked~#slide3 .caption,
                                     #s4:checked~#slide4 .caption,
                                     #s5:checked~#slide5 .caption {
                                         opacity: 1;
                                         visibility: visible;
-                                    }
+                                    } */
 
                                     /* Show caption on hover over the active slide */
                                     /* #s1:checked~#slide1:hover .caption,
