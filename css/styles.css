@@ -112,57 +112,58 @@
                                         filter: grayscale(20%);
                                     }
 
-                                     .caption {
-                                        width: 100%;
-                                        animation: fadeout-anim 25s linear forwards;
+                             
+                                
+
+                                    /* Fade-out animation */
+                                    .fadeOut {
+                                        animation: fadeout-anim 3s linear forwards;
                                     }
-                                    
+
+                                    /* Keyframe animation for fade-out */
                                     @keyframes fadeout-anim {
                                         100% {
                                             opacity: 0;
                                         }
                                     }
-                                    
+
                                     .caption {
                                         opacity: 0;
+                                            /* Initially hide captions */
+                                        transition: opacity 0.5s ease-in-out;
+                                        /* Smooth fade-in effect */
                                         display: inline-block;
                                         transform: translate3d(-0px, 0, 0);
                                         cursor: pointer;
-                                        transition: 3s all ease;
                                         color: #040404;
                                         font-family: 'Lato', sans-serif;
                                         font-size: 25px;
-                                        height: 100%; 
-                                        /* width: 90%; */
-                                    font-weight: 500;
+                                        height: 100%;
+                                        font-weight: 500;
                                         box-sizing: border-box;
                                         text-decoration: none;
                                         white-space: nowrap;
                                         overflow: hidden;
                                         user-select: none;
-                                        transition: color 1s ease;
-                                        cursor: pointer;
-                                        font-size: 25px;
-                                        font-weight: 500;
                                     }
-                                    
-                                    .caption:after {
+
+                                    /* .caption:after {
                                         transition: all 1s ease 1s;
                                         width: 1px;
                                         height: 30%;
                                         top: 0;
                                         left: 0;
-                                    }
+                                    } */
 
-                                    .caption:after,
+                                    /* .caption:after,
                                     .caption:before {
                                         content: "";
                                         position: absolute;
                                         z-index: -1;
                                         height: 1px
-                                    }
-                                    
-                                    .caption:focus:after,
+                                    } */
+
+                                    /* .caption:focus:after,
                                     .caption:hover:after {
                                         transition: all 1s ease 1s;
                                         outline: 0;
@@ -170,11 +171,10 @@
                                         width: 100%;
                                         height: 1px;
 
-                                    }
-                                    
-                                    .caption:focus,
+                                    } */
+
+                                    /* .caption:focus,
                                     .caption:hover {
-                                        animation-iteration-count: 1;
                                         transition: color 1s ease;
                                         opacity: 1;
                                         top: -2%;
@@ -182,8 +182,9 @@
                                         transform: translateY(2%);
                                         animation-duration: 3s;
                                         animation-name: fadeOut;
-                                    } 
-                                    .caption:hover {
+                                    } */
+
+                                    /* .caption:hover {
                                         display: inline-table;
                                         position: absolute;
                                         opacity: 1;
@@ -194,31 +195,30 @@
                                         background: rgb(78, 79, 79, 0.2);
                                         min-width: 100%;
                                         margin: 0;
-                                    }
+                                    } */
 
-                                    .caption:before {
+                                    /* .caption:before {
                                         width: 1px;
                                         top: 0;
                                         right: 20px;
-                                    }
-                                    
-                                    .caption:focus:before,
+                                    } */
+
+                                    /* .caption:focus:before,
                                     .caption:hover:before {
                                         outline: 0;
                                         background-color: #020202;
                                         transition: all 3s ease 0s;
                                         width: 1px;
                                         height: 30%;
-                                    }
-                                    .caption {
+                                    } */
+
+                                    /* .caption {
                                         width: 100%;
                                         opacity: 0;
-                                        /* Start with caption hidden */
                                         display: inline-block;
                                         transform: translate3d(0px, 0, 0);
                                         cursor: pointer;
                                         transition: translate 1s ease;
-                                        /* Combine transitions */
                                         color: #040404;
                                         font-family: 'Lato', sans-serif;
                                         font-size: 25px;
@@ -227,40 +227,23 @@
                                         box-sizing: border-box;
                                         text-decoration: none;
                                         white-space: nowrap;
-                                        /* overflow: hidden; */
                                         user-select: none;
-                                    }
-                                
-
-                                    /* Apply fadeout animation when the class is added */
-                                    .fadeOut {
-                                        animation: fadeout-anim 3s linear forwards;
-                                    }
-
-                                    /* Keyframe animation */
-                                    @keyframes fadeout-anim {
-                                        100% {
-                                            opacity: 0;
-                                        }
-                                    }
+                                    } */
 
                                     /* Styling for the transition effect */
-                                    .caption:after {
+                                    /* .caption:after {
                                         transition: all 1s ease 1s;
                                         width: 1px;
                                         height: 30%;
                                         top: 10%;
                                         left: 0;
-                                    }
+                                    } */
 
-                                    /* Initially, hide captions on all slides */
-                                    .slide .caption {
+                                    /* .slide .caption {
                                         opacity: 0;
                                         transition: opacity 2s ease;
-                                        /* Smooth transition for opacity */
                                         visibility: hidden;
-                                        /* Hide caption by default */
-                                    }
+                                    } */
 
                                     /* Only show caption on active slide */
                                     #s1:checked~#slide1 .caption,
@@ -270,27 +253,24 @@
                                     #s5:checked~#slide5 .caption {
                                         opacity: 1;
                                         visibility: visible;
-                                        /* Show caption on active slide */
                                     }
 
                                     /* Show caption on hover over the active slide */
-                                    #s1:checked~#slide1:hover .caption,
+                                    /* #s1:checked~#slide1:hover .caption,
                                     #s2:checked~#slide2:hover .caption,
                                     #s3:checked~#slide3:hover .caption,
                                     #s4:checked~#slide4:hover .caption,
                                     #s5:checked~#slide5:hover .caption {
                                         opacity: 1;
                                         visibility: visible;
-                                        /* Ensure caption is shown when hovering over active slide */
-                                    }
+                                    } */
 
 
                                     /* Fade out caption after 3 seconds of hover (jQuery handles this part) */
-                                    .caption.fadeOut {
+                                    /* .caption.fadeOut {
                                         opacity: 0;
-                                        visibility: hidden;
-                                        /* Hide the caption once the fadeOut class is applied */
-                                    }
+                                        visibility: hidden;                          
+                                    } */
 
 
                                     figure.img-wrapper {
