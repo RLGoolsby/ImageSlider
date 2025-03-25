@@ -38,7 +38,7 @@ $(document).ready(function () {
 function updateCaption() {
     $(".caption").removeClass("visible fadeOut"); // Hide all captions
     $(".imgCheck:checked").each(function () {
-        var slide = $(this).closest(".slide");
+        var slide = $(this).closest(".slider");
         slide.find(".caption").addClass("visible"); // Show caption for checked slide
         setTimeout(function () {
             slide.find(".caption").addClass("fadeOut"); // Fade out after 3s
