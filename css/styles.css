@@ -76,62 +76,64 @@
 
                                     #slider {
                                         position: relative;
-                                        width: 370px;
-                                        height: 370px;
-                                        perspective: 1000px;
-                                        transition: transform 400ms ease;
-                                        transform-style: preserve-3d;
-                                        max-width: 100%;
-                                        min-height: 100%;
-                                        object-fit: cover;
-                                        margin: auto;
-                                        flex-wrap: wrap;
-                                        justify-content: space-evenly;
-                                        align-items: flex-end;
-                                        align-content: center;
-                                        flex-direction: row;
-                                        /* overflow: hidden; */
+                                          display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    width: 370px;
+    height: 370px;
+    perspective: 1300px;
+    transition: transform 400ms ease;
+    transform-style: preserve-3d;
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+ 
                                     }
 
-                                    #slider .slider {
+                                    /* #slider .slider {
                                         position: absolute;
                                         width: 100%;
                                         height: 100%;
                                         left: 0;
                                         bottom: 0;
                                         cursor: pointer;
-                                        display: inline-flex;
-                                    }
+                                        
+                                    } */
 
                                     .slider {
-                                        transition: transform 1s ease;
+                                            position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+                                        transition: all 1s ease;
                                         display: block;
                                         background-size: cover;
                                         box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
                                         /* transition: transform 960ms ease; */
                                         filter: grayscale(20%);
-                                        margin: auto;
+
                                     }
 
-                                    /* Initially hide captions */
-                                    .caption {
-                                        opacity: 0;
-                                        /* Hidden by default */
-                                        transition: opacity 0.5s ease-in-out;
-                                        /* Smooth fade-in effect */
-                                    }
+                                  /* Initially hide captions */
+.caption {
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
 
-                                    /* Fade-out animation */
-                                    .fadeOut {
-                                        animation: fadeout-anim 3s linear forwards;
-                                    }
+/* Fade-out animation */
+.fadeOut {
+    animation: fadeout-anim 3s linear forwards;
+}
 
-                                    /* Keyframe animation for fade-out */
-                                    @keyframes fadeout-anim {
-                                        100% {
-                                            opacity: 0;
-                                        }
-                                    }
+/* Keyframe animation for fade-out */
+@keyframes fadeout-anim {
+    100% {
+        opacity: 0;
+    }
+}
 
                                     /* .caption {
                                         display: inline-block;
@@ -248,14 +250,14 @@
                                     } */
 
                                     /* Only show caption on active slide */
-                                    #s1:checked~#slide1 .caption,
+                                    /* #s1:checked~#slide1 .caption,
                                     #s2:checked~#slide2 .caption,
                                     #s3:checked~#slide3 .caption,
                                     #s4:checked~#slide4 .caption,
                                     #s5:checked~#slide5 .caption {
                                         opacity: 1;
                                         visibility: visible;
-                                    }
+                                    } */
 
                                     /* Show caption on hover over the active slide */
                                     /* #s1:checked~#slide1:hover .caption,
@@ -303,22 +305,24 @@
 
                                     #slider-controls {
                                         cursor: pointer;
-                                        outline: none;
-                                        background-color: transparent;
-                                        position: absolute;
-                                        top: 55%;
-                                        left: 5%;
-                                        width: 90%;
-                                        height: 50px;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        margin: 2em 0em;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    top: 55%;
+    left: 0%;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin: 2em 0em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
                                     }
 
                                     #previous-button {
                                         position: absolute;
-                                        /* top: 40%; */
-                                        left: 15px;
+                                        left: 50%;
+    transform: translateX(-50%);
                                         padding: 13px 15px;
                                         border-radius: 50%;
                                         border: 2px solid #fff;
@@ -329,7 +333,7 @@
                                     #pause,
                                     #play {
                                         position: absolute;
-                                        /* top: 40%; */
+
                                         left: 49%;
                                         padding: 13px 15px;
                                         border-radius: 50%;
@@ -341,7 +345,7 @@
                                     #next-button {
                                         position: absolute;
                                         /* top: 40%; */
-                                        right: 15px;
+                                        right: 30%;
                                         padding: 13px 15px;
                                         border-radius: 50%;
                                         border: 2px solid #fff;
@@ -372,13 +376,12 @@
 
                                     input[type="radio"] {
                                         position: relative;
-                                        top: 37%;
-                                        left: 24%;
-                                        bottom: 0;
-                                        z-index: 10000;
-                                        opacity: 0.3;
-                                        cursor: pointer;
-                                        margin: auto 1em;
+    top: 40%;
+    left: 0%;
+    bottom: 0;
+    z-index: 10000;
+    opacity: 0.3;
+    cursor: pointer;
                                     }
 
                                     input[type="radio"]::before {
@@ -432,7 +435,7 @@
                                     #s5:checked~#slide3 {
                                         opacity: 0.3;
                                         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-                                        transform: translate3d(-213%, 0, -350px) scale(0.8);
+                                        transform: translate3d(-213%, 0, -341px) scale(0.7);
                                     }
 
                                     /* Previous Slide - slide2*/
@@ -444,7 +447,7 @@
                                     #s5:checked~#slide4 {
                                         opacity: 0.6;
                                         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-                                        transform: translate3d(-105%, 0, -150px) scale(.9);
+                                            transform: translate3d(-105%, 0, -92px) scale(.9);
                                     }
 
                                     /* Active Slide - slide3*/
@@ -456,9 +459,8 @@
                                     #s5:checked~#slide5 {
                                         opacity: 1;
                                         box-shadow: 0 3px 17px rgba(0, 0, 0, 0.2), 0 5px 6px rgba(0, 0, 0, 0.2);
-                                        transform: translate3d(0%, 0, 0px);
+                                        transform: translate3d(0%, 0, 0px)scale(1);
                                         filter: brightness(95%);
-                                        margin: 0em auto 2em;
                                     }
 
                                     /* Active Slide Hover: Only the active slide gets hover effects */
@@ -473,7 +475,6 @@
                                         box-shadow: 0 0 20px 20px #2f2f2f;
                                         background-color: rgb(2, 2, 2);
                                         transition: all 1s ease;
-                                        margin: auto;
                                     }
 
                                     /* Next Slide - slide4*/
@@ -485,10 +486,10 @@
                                     #s5:checked~#slide1 {
                                         opacity: 0.6;
                                         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-                                        transform: translate3d(105%, 0, -150px) scale(.9);
+                                            transform: translate3d(105%, 0, -90px) scale(.9);
                                     }
 
-                                    /* Next to Next Slide - slide6*/
+                                    /* Next to Next Slide - slide5*/
 
                                     #s1:checked~#slide3,
                                     #s2:checked~#slide4,
@@ -497,7 +498,7 @@
                                     #s5:checked~#slide2 {
                                         opacity: 0.3;
                                         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-                                        transform: translate3d(213%, 0, -350px) scale(.8);
+                                        transform: translate3d(213%, 0, -341px) scale(0.7);
                                     }
 
                                     @media screen and (max-width: 768px) {

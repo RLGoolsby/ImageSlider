@@ -87,30 +87,33 @@ $(document).ready(function() {
         }
     });
 
-   // Add hover effect to fade out text after a few seconds for active slide
-    $(".slide.active").hover(
-        function() {
-            $(this).find(".caption").css("opacity", "1"); // Show caption on hover
-        },
-        function() {
-            var $this = $(this);
-            setTimeout(function() {
-                $this.find(".caption").addClass("fadeOut"); // Fade out caption after hover ends
-            }, 3000);
-        }
-    );
+   function updateCaption() {
+    // First, reset all captions
+    $(".caption").css("opacity", "0").removeClass("fadeOut");
 
-// ✅ **Function to Show Caption for Checked Image**
-function updateCaption() {
-    $(".caption").removeClass("fadeOut"); // Hide all captions
-    $(".imgCheck:checked").each(function () {
-        var slide = $(this).closest(".slider");
-        slide.find(".caption").addClass("visible"); // Show caption for checked slide
+    // Find the checked radio button and get its associated slide
+    var $activeSlide = $(".imgCheck:checked").closest(".slide");
+
+    // Show the caption for the active slide
+    if ($activeSlide.length) {
+        $activeSlide.find(".caption").css("opacity", "1");
+
+        // Set a timeout to fade out the caption after 3 seconds
         setTimeout(function () {
-            slide.find(".caption").addClass("fadeOut"); // Fade out after 3s
-        }, 3000); // 3 seconds
-    });
+            $activeSlide.find(".caption").addClass("fadeOut");
+        }, 3000);
+    }
 }
+
+// Run the function on page load to ensure the initial checked slide has its caption displayed
+$(document).ready(function () {
+    updateCaption();
+
+    // Listen for changes in the radio buttons (slide changes)
+    $(".imgCheck").on("change", function () {
+        updateCaption();
+    });
+});
 
 
     // Next button functionality
