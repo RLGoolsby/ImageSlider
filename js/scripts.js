@@ -92,7 +92,7 @@ $(document).ready(function() {
     $(".caption").css("opacity", "0").removeClass("fadeOut");
 
     // Find the checked radio button and get its associated slide
-    var $activeSlide = $(".imgCheck:checked").closest(".slide");
+    var $activeSlide = $(".imgCheck:checked").closest(".slider");
 
     // Show the caption for the active slide
     if ($activeSlide.length) {
