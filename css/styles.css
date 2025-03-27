@@ -117,7 +117,7 @@
 
                                     /* Initially hide captions */
                                     .caption {
-                                        opacity: 0;
+                                        /* opacity: 0; */
                                         /* Hidden by default */
                                         transition: opacity 0.5s ease-in-out;
                                         /* Smooth fade-in effect */
