@@ -114,25 +114,39 @@
                                         filter: grayscale(20%);
                                     }
 
-                                    /* Initially hide captions */
                                     .caption {
-                                        /* opacity: 0; */
-                                        /* Hidden by default */
-                                        transition: opacity 0.5s ease-in-out;
-                                        /* Smooth fade-in effect */
+                                        opacity: 0;
+                                        transition: opacity 1s ease-in-out;
                                     }
+
+                                    .caption.visible {
+                                        opacity: 1;
+                                    }
+
+                                    .caption.fadeOut {
+                                        opacity: 0;
+                                        transition: opacity 1s ease-out;
+                                    }
+
+                                    /* Initially hide captions */
+                                    /* .caption { */
+                                    /* opacity: 0; */
+                                    /* Hidden by default */
+                                    /* transition: opacity 0.5s ease-in-out; */
+                                    /* Smooth fade-in effect */
+                                    /* } */
 
                                     /* Fade-out animation */
-                                    .fadeOut {
+                                    /* .fadeOut {
                                         animation: fadeout-anim 3s linear forwards;
-                                    }
+                                    } */
 
                                     /* Keyframe animation for fade-out */
-                                    @keyframes fadeout-anim {
+                                    /* @keyframes fadeout-anim {
                                         100% {
                                             opacity: 0;
                                         }
-                                    }
+                                    } */
 
                                     /* .caption {
                                         display: inline-block;
