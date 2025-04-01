@@ -3,22 +3,19 @@ $(document).ready(function () {
     var numberOfImages = $(".imgCheck").length;
     var interval;
     var isPaused = false; // Track if the slider is paused
-    var autoSlideTime = 5000; // Auto-slide every 5s
     var startX, swipeThreshold = 50; // Variables for swipe detection
 
     // ✅ **Function to start auto-slide**
     function startSlider() {
-        if (!isPaused) {
-            interval = setInterval(function () {
-                counter++;
-                if (counter > numberOfImages) {
-                    counter = 1;
-                }
-                $("#s" + counter).prop("checked", true);
-                announceSlideChange(counter);
-                updateCaption(); // Update caption when slide changes
-            }, autoSlideTime);
-        }
+        interval = setInterval(function () {
+            $("#s" + counter).prop("checked", true);
+            counter++;
+            if (counter > numberOfImages) {
+                counter = 1;
+            }
+            announceSlideChange(counter);
+            updateCaption(); // Update caption when slide changes
+        }, 5000); // 5 seconds interval
     }
 
     // ✅ **Function to stop auto-slide**
@@ -101,12 +98,37 @@ $(document).ready(function () {
         $('#pause').show();
     });
 
-    // ✅ **Pause Auto-Sliding on Hover**
-    $("#slider").on("mouseover", stopSlider).on("mouseleave", function () {
-        if (!isPaused) startSlider();
+    $(document).on("keyup", function (e) {
+        if (e.key === "" || e.key === "Spacebar") {
+            e.preventDefault();
+            isPaused = !isPaused;
+            if (isPaused) {
+                stopSlider();
+                $('#play').$show();
+                $('#pause').$hide();
+            } else {
+                startSlider();
+                $('#play').hide();
+                $('#pause').show();
+            }
+        }
     });
 
-    // ✅ **Enable Swipe for Mobile**
+
+    //**Pause Auto-Sliding on Hover**
+    $("#slider").on("mouseover", function () {
+        stopSlider();
+    })
+        .on("mouseleave", function (e) {
+            e.preventDefault();
+            if (!isPaused) { startSlider() };
+        });
+        
+        //Initial State of Play/Pause Button
+        $('#play').hide();
+        $('#pause').show();
+
+    //Enable Swipe for Mobile
     function enableSwipe() {
         if ($(window).width() <= 768) { // Mobile-only swipe
             $(document).on("touchstart", function (e) {
