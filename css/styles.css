@@ -103,6 +103,7 @@
                                         /* transition: transform 960ms ease; */
                                         filter: grayscale(20%);
                                     }
+
                                     .slider:focus-visible {
                                         outline: 2px solid #fc762d;
                                         /* Customize the outline style as needed */
@@ -110,46 +111,47 @@
                                     }
 
                                     /* ✅ Default: Hide captions */
-.caption {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
+                                    .caption {
+                                        position: absolute;
+                                        bottom: 15%;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        background: rgba(0, 0, 0, 0.7);
+                                        color: white;
+                                        padding: 10px 15px;
+                                        border-radius: 5px;
+                                        font-size: 1.5rem;
+                                        text-align: center;
+                                        opacity: 0;
+                                        transition: opacity 1s ease-in-out;
+                                    }
 
-/* ✅ Only show captions for the active slide */
-#s1:checked ~ #slide1 .caption,
-#s2:checked ~ #slide2 .caption,
-#s3:checked ~ #slide3 .caption,
-#s4:checked ~ #slide4 .caption,
-#s5:checked ~ #slide5 .caption {
-    opacity: 0; /* Default: Hidden */
-    transition: opacity 1s ease-in-out;
-}
+                                    /* ✅ Only show captions for the active slide */
+                                    #s1:checked~#slide1 .caption,
+                                    #s2:checked~#slide2 .caption,
+                                    #s3:checked~#slide3 .caption,
+                                    #s4:checked~#slide4 .caption,
+                                    #s5:checked~#slide5 .caption {
+                                        opacity: 0;
+                                        /* Default: Hidden */
+                                        transition: opacity 1s ease-in-out;
+                                    }
 
-/* ✅ Show captions when hovering over the active slide */
-#s1:checked ~ #slide1:hover .caption,
-#s2:checked ~ #slide2:hover .caption,
-#s3:checked ~ #slide3:hover .caption,
-#s4:checked ~ #slide4:hover .caption,
-#s5:checked ~ #slide5:hover .caption {
-    opacity: 1;
-    visibility: visible;
-}
+                                    /* ✅ Show captions when hovering over the active slide */
+                                    #s1:checked~#slide1:hover .caption,
+                                    #s2:checked~#slide2:hover .caption,
+                                    #s3:checked~#slide3:hover .caption,
+                                    #s4:checked~#slide4:hover .caption,
+                                    #s5:checked~#slide5:hover .caption {
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
 
-/* ✅ Fade-out effect (added via JavaScript) */
-.caption.fadeOut {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
+                                    /* ✅ Fade-out effect (added via JavaScript) */
+                                    .caption.fadeOut {
+                                        opacity: 0;
+                                        transition: opacity 1s ease-out;
+                                    }
 
 
 
@@ -321,7 +323,7 @@
                                     #s5:checked~#slide4 {
                                         opacity: 0.6;
                                         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-                                        transform: translate3d(-105%, 0, -92px) scale(.9);
+                                        transform: translate3d(-102%, 0, -92px) scale(.9);
                                     }
 
                                     /* Active Slide - slide3*/
@@ -360,7 +362,7 @@
                                     #s5:checked~#slide1 {
                                         opacity: 0.6;
                                         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
-                                        transform: translate3d(105%, 0, -90px) scale(.9);
+                                        transform: translate3d(102%, 0, -90px) scale(.9);
                                     }
 
                                     /* Next to Next Slide - slide5*/
