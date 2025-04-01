@@ -91,16 +91,6 @@
 
                                     }
 
-                                    /* #slider .slider {
-                                        position: absolute;
-                                        width: 100%;
-                                        height: 100%;
-                                        left: 0;
-                                        bottom: 0;
-                                        cursor: pointer;
-                                        
-                                    } */
-
                                     .slider {
                                         position: absolute;
                                         cursor: pointer;
@@ -113,181 +103,54 @@
                                         /* transition: transform 960ms ease; */
                                         filter: grayscale(20%);
                                     }
-
-                                    .caption {
-                                        opacity: 0;
-                                        transition: opacity 1s ease-in-out;
+                                    .slider:focus-visible {
+                                        outline: 2px solid #fc762d;
+                                        /* Customize the outline style as needed */
+                                        outline-offset: 2px;
                                     }
 
-                                    .caption.visible {
-                                        opacity: 1;
-                                    }
+                                    /* ✅ Default: Hide captions */
+.caption {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
 
-                                    .caption.fadeOut {
-                                        opacity: 0;
-                                        transition: opacity 1s ease-out;
-                                    }
+/* ✅ Only show captions for the active slide */
+#s1:checked ~ #slide1 .caption,
+#s2:checked ~ #slide2 .caption,
+#s3:checked ~ #slide3 .caption,
+#s4:checked ~ #slide4 .caption,
+#s5:checked ~ #slide5 .caption {
+    opacity: 0; /* Default: Hidden */
+    transition: opacity 1s ease-in-out;
+}
 
-                                    /* Initially hide captions */
-                                    /* .caption { */
-                                    /* opacity: 0; */
-                                    /* Hidden by default */
-                                    /* transition: opacity 0.5s ease-in-out; */
-                                    /* Smooth fade-in effect */
-                                    /* } */
+/* ✅ Show captions when hovering over the active slide */
+#s1:checked ~ #slide1:hover .caption,
+#s2:checked ~ #slide2:hover .caption,
+#s3:checked ~ #slide3:hover .caption,
+#s4:checked ~ #slide4:hover .caption,
+#s5:checked ~ #slide5:hover .caption {
+    opacity: 1;
+    visibility: visible;
+}
 
-                                    /* Fade-out animation */
-                                    /* .fadeOut {
-                                        animation: fadeout-anim 3s linear forwards;
-                                    } */
+/* ✅ Fade-out effect (added via JavaScript) */
+.caption.fadeOut {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
 
-                                    /* Keyframe animation for fade-out */
-                                    /* @keyframes fadeout-anim {
-                                        100% {
-                                            opacity: 0;
-                                        }
-                                    } */
-
-                                    /* .caption {
-                                        display: inline-block;
-                                        transform: translate3d(-0px, 0, 0);
-                                        cursor: pointer;
-                                        color: #040404;
-                                        font-family: 'Lato', sans-serif;
-                                        font-size: 25px;
-                                        height: 100%;
-                                        font-weight: 500;
-                                        box-sizing: border-box;
-                                        text-decoration: none;
-                                        white-space: nowrap;
-                                        overflow: hidden;
-                                        user-select: none;
-                                    } */
-
-                                    /* .caption:after {
-                                        transition: all 1s ease 1s;
-                                        width: 1px;
-                                        height: 30%;
-                                        top: 0;
-                                        left: 0;
-                                    } */
-
-                                    /* .caption:after,
-                                    .caption:before {
-                                        content: "";
-                                        position: absolute;
-                                        z-index: -1;
-                                        height: 1px
-                                    } */
-
-                                    /* .caption:focus:after,
-                                    .caption:hover:after {
-                                        transition: all 1s ease 1s;
-                                        outline: 0;
-                                        background-color: #060606;
-                                        width: 100%;
-                                        height: 1px;
-
-                                    } */
-
-                                    /* .caption:focus,
-                                    .caption:hover {
-                                        transition: color 1s ease;
-                                        opacity: 1;
-                                        top: -2%;
-                                        left: -1%;
-                                        transform: translateY(2%);
-                                        animation-duration: 3s;
-                                        animation-name: fadeOut;
-                                    } */
-
-                                    /* .caption:hover {
-                                        display: inline-table;
-                                        position: absolute;
-                                        opacity: 1;
-                                        top: 0%;
-                                        left: -25%;
-                                        transform: translateX(25%);
-                                        transition: 1s ease;
-                                        background: rgb(78, 79, 79, 0.2);
-                                        min-width: 100%;
-                                        margin: 0;
-                                    } */
-
-                                    /* .caption:before {
-                                        width: 1px;
-                                        top: 0;
-                                        right: 20px;
-                                    } */
-
-                                    /* .caption:focus:before,
-                                    .caption:hover:before {
-                                        outline: 0;
-                                        background-color: #020202;
-                                        transition: all 3s ease 0s;
-                                        width: 1px;
-                                        height: 30%;
-                                    } */
-
-                                    /* .caption {
-                                        width: 100%;
-                                        opacity: 0;
-                                        display: inline-block;
-                                        transform: translate3d(0px, 0, 0);
-                                        cursor: pointer;
-                                        transition: translate 1s ease;
-                                        color: #040404;
-                                        font-family: 'Lato', sans-serif;
-                                        font-size: 25px;
-                                        height: 100%;
-                                        font-weight: 500;
-                                        box-sizing: border-box;
-                                        text-decoration: none;
-                                        white-space: nowrap;
-                                        user-select: none;
-                                    } */
-
-                                    /* Styling for the transition effect */
-                                    /* .caption:after {
-                                        transition: all 1s ease 1s;
-                                        width: 1px;
-                                        height: 30%;
-                                        top: 10%;
-                                        left: 0;
-                                    } */
-
-                                    /* .slide .caption {
-                                        opacity: 0;
-                                        transition: opacity 2s ease;
-                                        visibility: hidden;
-                                    } */
-
-                                    /* Only show caption on active slide */
-                                    /* #s1:checked~#slide1 .caption,
-                                    #s2:checked~#slide2 .caption,
-                                    #s3:checked~#slide3 .caption,
-                                    #s4:checked~#slide4 .caption,
-                                    #s5:checked~#slide5 .caption {
-                                        opacity: 1;
-                                        visibility: visible;
-                                    } */
-
-                                    /* Show caption on hover over the active slide */
-                                    /* #s1:checked~#slide1:hover .caption,
-                                    #s2:checked~#slide2:hover .caption,
-                                    #s3:checked~#slide3:hover .caption,
-                                    #s4:checked~#slide4:hover .caption,
-                                    #s5:checked~#slide5:hover .caption {
-                                        opacity: 1;
-                                        visibility: visible;
-                                    } */
-
-
-                                    /* Fade out caption after 3 seconds of hover (jQuery handles this part) */
-                                    /* .caption.fadeOut {
-                                        opacity: 0;
-                                        visibility: hidden;                          
-                                    } */
 
 
                                     figure.img-wrapper {
@@ -346,7 +209,6 @@
                                     #pause,
                                     #play {
                                         position: absolute;
-
                                         left: 49%;
                                         padding: 13px 15px;
                                         border-radius: 50%;
@@ -357,7 +219,6 @@
 
                                     #next-button {
                                         position: absolute;
-                                        /* top: 40%; */
                                         right: 30%;
                                         padding: 13px 15px;
                                         border-radius: 50%;
