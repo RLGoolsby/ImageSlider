@@ -383,7 +383,7 @@
                                     @media screen and (max-width: 768px) {
 
                                         .artistTitleWrapper {
-                                            margin: auto;
+                                            margin: 2% auto 0em;
                                             padding: 2em 0em;
                                         }
 
