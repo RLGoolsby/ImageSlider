@@ -213,7 +213,8 @@
                                     #pause,
                                     #play {
                                         position: absolute;
-                                        left: 49%;
+                                        left: 50%;
+                                        transform: translateX(-50%);
                                         padding: 13px 15px;
                                         border-radius: 50%;
                                         border: 2px solid #fff;
@@ -380,23 +381,10 @@
                                     }
 
                                     @media screen and (max-width: 768px) {
-                                        .the-whole-thing {
-                                            position: relative;
-                                            width: 100%;
-                                            height: 100%;
-                                            margin: auto;
-                                            background-color: #000;
-                                            min-height: 100vh;
-                                            /* padding: 0em 0em 2em 0em; */
-                                        }
 
                                         .artistTitleWrapper {
-                                            margin: 2em auto;
-                                            padding: 2em 1em;
-                                        }
-
-                                        .artistTitleContainer {
-                                            padding: 0em;
+                                            margin: auto;
+                                            padding: 2em 0em;
                                         }
 
                                         .fa-solid.fa-paintbrush {
@@ -404,7 +392,9 @@
                                         }
 
                                         .artist-title {
-                                            padding: 0em;
+                                            padding: 0em 0.5em;
+                                            font-family: Lato, sans-serif;
+                                            letter-spacing: 1.5px;
                                         }
 
                                         main {
@@ -489,10 +479,13 @@
                                             display: none;
                                         }
 
-                                        /* .pinch-zoom {
-                                                height: 100vh;
-                                                width: 100%;
-                                            } */
+                                        .caption {
+                                            top: -1%;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                        }
+
+
                                         #s1:checked~#slide1:hover,
                                         #s2:checked~#slide2:hover,
                                         #s3:checked~#slide3:hover,
