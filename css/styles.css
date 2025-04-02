@@ -392,9 +392,10 @@
                                         }
 
                                         .artist-title {
-                                            padding: 0em 0.5em;
+                                            padding: 0em 0.2em;
                                             font-family: Lato, sans-serif;
                                             letter-spacing: 1.5px;
+                                            font-size: 48px;
                                         }
 
                                         main {
