@@ -119,12 +119,12 @@
                                         font-family: Lato;
                                         top: -8%;
                                         left: 10%;
-                                        transform: translateX(-10%);
+                                        /* transform: translateX(-10%); */
                                         background: #00000000;
                                         color: hsl(177.86deg 27.45% 80%);
                                         font-size: 1em;
                                         opacity: 0;
-                                        transition: opacity 1s ease-in-out;
+                                        /* transition: opacity 1s ease-in-out; */
                                         margin: auto;
                                         font-weight: 500;
                                         letter-spacing: 1.4px;
@@ -138,7 +138,7 @@
                                     #s5:checked~#slide5 .caption {
                                         opacity: 0;
                                         /* Default: Hidden */
-                                        /* transition: opacity 1s ease-in-out; */
+                                        transition: opacity 1s ease-in-out;
                                         animation: myAnim 2s ease-in-out 0s 1 normal backwards;
 
                                     }
@@ -169,7 +169,7 @@
                                     .caption.fadeOut {
                                         opacity: 0;
 
-                                        /* transition: opacity 1s ease-out; */
+                                        transition: opacity 1s ease-out;
                                         animation: exit 2s ease-in-out 0s 1 normal backwards;
                                     }
 
