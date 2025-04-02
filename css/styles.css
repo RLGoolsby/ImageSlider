@@ -138,20 +138,14 @@
                                     #s5:checked~#slide5 .caption {
                                         opacity: 0;
                                         /* Default: Hidden */
-                                        transition: opacity 1s ease-in-out;
-                                        animation: myAnim 2s ease-in-out;
+                                        /* transition: opacity 1s ease-in-out; */
+                                        animation: fadeout-anim 5s linear forwards;
 
                                     }
 
-                                    @keyframes myAnim {
-                                        0% {
-                                            opacity: 0;
-                                            transform: translateX(-50px);
-                                        }
-
+                                    @keyframes fadeout-anim {
                                         100% {
-                                            opacity: 1;
-                                            transform: translateX(0);
+                                            opacity: 0;
                                         }
                                     }
 
@@ -168,15 +162,10 @@
                                     /* ✅ Fade-out effect (added via JavaScript) */
                                     .caption.fadeOut {
                                         opacity: 0;
-                                        /* transition: opacity 1s ease-out; */
-                                        animation: fadeout-anim 5s linear forwards;
+                                        transition: opacity 1s ease-out;
                                     }
 
-                                    @keyframes fadeout-anim {
-                                        100% {
-                                            opacity: 0;
-                                        }
-                                    }
+
 
                                     figure.img-wrapper {
                                         margin: 0 !important;
