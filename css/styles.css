@@ -138,16 +138,9 @@
                                     #s5:checked~#slide5 .caption {
                                         opacity: 0;
                                         /* Default: Hidden */
-                                        /* transition: opacity 1s ease-in-out; */
-                                        animation: fadeout-anim 5s linear forwards;
-
+                                        transition: opacity 1s ease-in;
                                     }
 
-                                    @keyframes fadeout-anim {
-                                        100% {
-                                            opacity: 0;
-                                        }
-                                    }
 
                                     /* ✅ Show captions when hovering over the active slide */
                                     #s1:checked~#slide1:hover .caption,
