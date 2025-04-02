@@ -188,7 +188,7 @@
                                         outline: none;
                                         background-color: transparent;
                                         position: absolute;
-                                        top: 55%;
+                                        top: 100%;
                                         left: 50%;
                                         transform: translateX(-50%);
                                         width: 100%;
