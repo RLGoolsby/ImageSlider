@@ -416,7 +416,7 @@
                                         }
 
                                         input[type="radio"] {
-                                            top: 85%;
+                                            top: 40em;
                                             z-index: 30000;
                                             opacity: 1;
                                             color: aliceblue;
@@ -513,7 +513,7 @@
                                         }
 
                                         .caption {
-                                            top: -6%;
+                                            top: -2em;
                                             left: 50%;
                                             transform: translateX(-50%);
                                             color: hsl(177.86deg 27.45% 80%);
