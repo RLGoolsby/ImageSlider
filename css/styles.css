@@ -59,8 +59,9 @@
 
 .fa-solid.fa-paintbrush {
     font-size: 30px;
-    color: #f99b18f7;
     padding: 0em 1.0em 0em 0.2em;
+    color: #090909;
+    text-shadow: -2px 1px 1px #7dbdae, -1px 3px 1px #eac362, 0px 3px 2px #7dbdae;
 }
 
 /* ============================================
@@ -139,7 +140,7 @@ figcaption {
 .caption {
     position: absolute;
     font-family: Lato;
-    top: -8%;
+    top: -2.5em;
     left: 0%;
     background: #00000000;
     color: hsl(177.86deg 27.45% 80%);
@@ -433,7 +434,7 @@ input[type="radio"]:focus-visible {
     }
 
     .caption {
-        top: -2em;
+        top: -3em;
         left: 50%;
         transform: translateX(-50%);
         color: hsl(177.86deg 27.45% 80%);
