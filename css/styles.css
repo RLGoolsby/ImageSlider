@@ -386,8 +386,8 @@
                                     @media screen and (max-width: 768px) {
 
                                         .artistTitleWrapper {
-                                            margin: 2% auto;
-                                            padding: 3em 0em 4em;
+                                            margin: 1rem auto;
+                                            padding: 2rem 0;
                                         }
 
                                         .fa-solid.fa-paintbrush {
@@ -416,7 +416,7 @@
                                         }
 
                                         input[type="radio"] {
-                                            top: 40em;
+                                            top: 40%;
                                             z-index: 30000;
                                             opacity: 1;
                                             color: aliceblue;
@@ -425,7 +425,7 @@
 
                                         input[type="radio"]::before {
                                             background-color: #baced1;
-                                            box-shadow: none;
+                                            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
                                         }
 
                                         input[type="radio"]:checked::before {
@@ -466,22 +466,8 @@
                                         /* navigation buttons */
 
 
-                                        #next-button {
-                                            opacity: 0;
-                                            display: none;
-                                        }
-
-                                        #previous-button {
-                                            opacity: 0;
-                                            display: none;
-                                        }
-
                                         #next-button,
-                                        #previous-button {
-                                            opacity: 0;
-                                            display: none;
-                                        }
-
+                                        #previous-button,
                                         #next-button:hover,
                                         #previous-button:hover {
                                             opacity: 0;
@@ -539,6 +525,6 @@
                                         #s5:checked~#slide5:focus-visible {
                                             outline: 3px solid #fc762d;
                                             /* Customize the outline style as needed */
-                                            outline-offset: 2px;
+                                            transform: scale3d(1.1, 1.1, 1.1);
                                         }
                                     }
