@@ -5,7 +5,7 @@ $(document).ready(function () {
     var isPaused = false; // Track if the slider is paused
     var startX, swipeThreshold = 50; // Variables for swipe detection
 
-    // ✅ **Function to start auto-slide**
+    // **Function to start auto-slide**
     function startSlider() {
         interval = setInterval(function () {
             $("#s" + counter).prop("checked", true);
@@ -18,12 +18,12 @@ $(document).ready(function () {
         }, 5000); // 5 seconds interval
     }
 
-    // ✅ **Function to stop auto-slide**
+    // **Function to stop auto-slide**
     function stopSlider() {
         clearInterval(interval);
     }
 
-    // ✅ **Function to announce slide change for screen readers**
+    // **Function to announce slide change for screen readers**
     function announceSlideChange(counter) {
         $("#slider").attr("aria-live", "polite");
         $("#slider").attr("aria-atomic", "true");
@@ -31,7 +31,7 @@ $(document).ready(function () {
         $("#slider").find(".sr-only").text("Slide " + counter + " of " + numberOfImages);
     }
 
-    // ✅ **Function to update caption visibility**
+    // **Function to update caption visibility**
     function updateCaption() {
         $(".caption").removeClass("visible fadeOut"); // Reset all captions
 
@@ -56,7 +56,7 @@ $(document).ready(function () {
         }
     }
 
-    // ✅ **Event Listeners for Buttons**
+    // **Event Listeners for Buttons**
     $("#next-button").on("click", function (e) {
         e.preventDefault();
         stopSlider();
@@ -161,10 +161,9 @@ $(document).ready(function () {
         }
     }
 
-    // ✅ **Enable Swipe Detection**
+    // **Enable Swipe Detection**
     function swipedetect(el, callback) {
-        var touchsurface = el[0],
-            swipedir,
+        var swipedir,
             startX,
             startY,
             distX,
@@ -176,20 +175,20 @@ $(document).ready(function () {
             startTime,
             handleswipe = callback || function (swipedir) { };
 
-        touchsurface.addEventListener("touchstart", function (e) {
-            var touchobj = e.changedTouches[0];
+        el.on("touchstart", function (e) {
+            var touchobj = e.originalEvent.changedTouches[0];
             swipedir = "none";
             startX = touchobj.pageX;
             startY = touchobj.pageY;
             startTime = new Date().getTime();
-        }, false);
+        });
 
-        touchsurface.addEventListener("touchmove", function (e) {
+        el.on("touchmove", function (e) {
             e.preventDefault();
-        }, false);
+        });
 
-        touchsurface.addEventListener("touchend", function (e) {
-            var touchobj = e.changedTouches[0];
+        el.on("touchend", function (e) {
+            var touchobj = e.originalEvent.changedTouches[0];
             distX = touchobj.pageX - startX;
             distY = touchobj.pageY - startY;
             elapsedTime = new Date().getTime() - startTime;
@@ -201,10 +200,10 @@ $(document).ready(function () {
             }
 
             handleswipe(swipedir);
-        }, false);
+        });
     }
 
-    // ✅ **Enable swipe detection only on mobile view (max-width: 768px)**
+    // **Enable swipe detection only on mobile view (max-width: 768px)**
     if ($(window).width() <= 768) {
         swipedetect($("#slider"), function (swipedir) {
             if (swipedir === "left") {
@@ -215,51 +214,9 @@ $(document).ready(function () {
         });
     }
 
-    // ✅ **Initializations**
+    // **Initializations**
     startSlider();
     enableSwipe();
     updateCaption();
     $(window).resize(enableSwipe);
 });
-// ✅ **Accessibility Enhancements**
-// - Added aria-live attributes for screen readers
-// - Used role="alert" for immediate announcements
-// - Added aria-atomic and aria-relevant attributes for better context
-// - Included a visually hidden text element for screen readers
-// - Used fadeOut class to hide captions after a timeout
-// - Added swipe detection for mobile devices
-// - Added play/pause functionality
-// - Added hover functionality to show/hide captions
-// - Improved code organization and readability
-// - Used event delegation for dynamic elements
-// - Added touch support for swipe detection
-// - Used CSS transitions for smooth caption fade-out
-// - Ensured captions are hidden when not in use
-// - Added comments for better understanding
-// - Used semantic HTML elements for better accessibility
-// - Added aria-hidden attribute to hide non-visible captions
-// - Used data attributes for better data management
-// - Added a loading spinner for better user experience
-// - Used CSS classes for better styling and organization
-// - Added a fallback for non-JS users
-// - Ensured compatibility with screen readers
-// - Used best practices for JavaScript coding
-// - Added error handling for better debugging
-// - Used strict mode for better performance
-// - Added a fallback for older browsers
-// - Used CSS Grid for better layout management
-// - Added a fallback for non-responsive designs
-// - Used CSS Flexbox for better alignment
-// - Added a fallback for non-flexible designs
-// - Used CSS variables for better theming
-// - Added a fallback for non-variable support
-// - Used CSS animations for better transitions
-// - Added a fallback for non-animation support
-// - Used CSS media queries for better responsiveness
-// - Added a fallback for non-responsive designs
-// - Used CSS transitions for better performance
-// - Added a fallback for non-transition support
-// - Used CSS custom properties for better theming
-// - Added a fallback for non-custom property support
-// - Used CSS pseudo-elements for better styling
-// - Added a fallback for non-pseudo-element support
