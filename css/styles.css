@@ -250,7 +250,7 @@ figcaption {
    ============================================ */
 input[type="radio"] {
     position: relative;
-    top: 14em;
+    top: 12em;
     z-index: 10000;
     opacity: 0.3;
     cursor: pointer;
