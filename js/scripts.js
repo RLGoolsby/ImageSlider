@@ -3,7 +3,7 @@ $(document).ready(function () {
     var numberOfImages = $(".imgCheck").length;
     var interval;
     var isPaused = false; // Track if the slider is paused
-    var startX, swipeThreshold = 50; // Variables for swipe detection
+    var begX, swipeThreshold = 50; // Variables for swipe detection
 
     // **Function to start auto-slide**
     function startSlider() {
@@ -132,12 +132,12 @@ $(document).ready(function () {
     function enableSwipe() {
         if ($(window).width() <= 768) { // Mobile-only swipe
             $(document).on("touchstart", function (e) {
-                startX = e.changedTouches[0].pageX;
+                begX = e.changedTouches[0].pageX;
             });
 
             $(document).on("touchend", function (e) {
                 let endX = e.changedTouches[0].pageX;
-                let swipeDistance = startX - endX;
+                let swipeDistance = begX - endX;
 
                 if (Math.abs(swipeDistance) > swipeThreshold) {
                     stopSlider();
@@ -162,10 +162,10 @@ $(document).ready(function () {
     }
 
     // **Enable Swipe Detection**
-    function swipedetect(el, callback) {
+    function swipeit(el, callback) {
         var swipedir,
-            startX,
-            startY,
+            begX,
+            begY,
             distX,
             distY,
             threshold = 75,
@@ -173,13 +173,13 @@ $(document).ready(function () {
             allowedTime = 300,
             elapsedTime,
             startTime,
-            handleswipe = callback || function (swipedir) { };
+            controlswipe = callback || function (swipedir) { };
 
         el.on("touchstart", function (e) {
-            var touchobj = e.originalEvent.changedTouches[0];
+            var touchimg = e.originalEvent.changedTouches[0];
             swipedir = "none";
-            startX = touchobj.pageX;
-            startY = touchobj.pageY;
+            begX = touchimg.pageX;
+            begY = touchimg.pageY;
             startTime = new Date().getTime();
         });
 
@@ -188,9 +188,9 @@ $(document).ready(function () {
         });
 
         el.on("touchend", function (e) {
-            var touchobj = e.originalEvent.changedTouches[0];
-            distX = touchobj.pageX - startX;
-            distY = touchobj.pageY - startY;
+            var touchimg = e.originalEvent.changedTouches[0];
+            distX = touchimg.pageX - begX;
+            distY = touchimg.pageY - begY;
             elapsedTime = new Date().getTime() - startTime;
 
             if (elapsedTime <= allowedTime) {
@@ -199,13 +199,13 @@ $(document).ready(function () {
                 }
             }
 
-            handleswipe(swipedir);
+            controlswipe(swipedir);
         });
     }
 
     // **Enable swipe detection only on mobile view (max-width: 768px)**
     if ($(window).width() <= 768) {
-        swipedetect($("#slider"), function (swipedir) {
+        swipeit($("#slider"), function (swipedir) {
             if (swipedir === "left") {
                 $("#next-button").click();
             } else if (swipedir === "right") {
