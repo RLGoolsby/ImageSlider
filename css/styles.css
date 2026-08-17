@@ -4,7 +4,22 @@
 * {
     box-sizing: border-box;
 }
+/* ============================================
+   PERFORMANCE HINTS — pair with the rAF-batched slider.js
+   Append to / merge into the existing stylesheet.
+   ============================================ */
 
+/* Promote slides to their own compositor layer since transform/opacity
+   are the only properties that change on slide transitions — this keeps
+   the animation off the main thread. */
+.slider {
+    will-change: transform, opacity;
+}
+
+/* The radio's ::before is also transform-driven; same treatment. */
+input[type="radio"]::before {
+    will-change: transform;
+}
 /* ============================================
    ACCESSIBILITY HELPERS
    ============================================ */
@@ -245,6 +260,23 @@ figcaption {
     transition: all 1s ease;
 }
 
+/* ============================================
+   PERFORMANCE HINTS — pair with the rAF-batched slider.js
+   Append to / merge into the existing stylesheet.
+   ============================================ */
+ 
+/* Promote slides to their own compositor layer since transform/opacity
+   are the only properties that change on slide transitions — this keeps
+   the animation off the main thread. */
+.slider {
+    will-change: transform, opacity;
+}
+ 
+/* The radio's ::before is also transform-driven; same treatment. */
+input[type="radio"]::before {
+    will-change: transform;
+}
+ 
 /* ============================================
    RADIO BUTTONS
    ============================================ */

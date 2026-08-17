@@ -1,333 +1,187 @@
 <!DOCTYPE html>
 <!-- Declares HTML5 document -->
 <html lang="en">
-	<!-- Root element with language set to English -->
+<!-- Root element with language set to English -->
 
-	<head>
-		<meta charset="utf-8" />
-		<!-- Sets character encoding to UTF-8 -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Makes page responsive -->
+<head>
+	<meta charset="utf-8" />
+	<!-- Sets character encoding to UTF-8 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Makes page responsive -->
 
-		<!-- Load Google Fonts -->
-		<link
-			href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
-			rel="stylesheet"
-			type="text/css" />
+	<!-- Load Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" type="text/css" />
 
-		<!-- Load Font Awesome icons -->
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-			rel="stylesheet" />
+	<!-- Load Font Awesome icons -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 
-		<!-- Load Google Material Icons -->
-		<link
-			href="https://fonts.googleapis.com/icon?family=Material+Icons"
-			rel="stylesheet" />
+	<!-- Load Google Material Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
-		<!-- Link external stylesheet -->
-		<title>image slider</title>
-		<!-- Page title -->
-	</head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<!-- Link external stylesheet -->
+	<title>image slider</title>
+	<!-- Page title -->
+</head>
 
-	<body>
-		<div class="the-whole-thing">
-			<!-- Main wrapper for the entire content -->
-			<section class="artistTitleWrapper">
-				<!-- Section containing the artist title -->
-				<div class="artistTitleContainer">
-					<!-- Container for styling artist title -->
-					<h1 class="artist-title">
-						<!-- Main heading with artist name -->
-						Luna Ray
-						<i class="fa-solid fa-paintbrush fa-xs" aria-hidden="true"></i>
-						<!-- Paintbrush icon -->
-						The Artist
-						<span class="fa-sr-only">The Fontawesome paintbrush icon</span>
-						<!-- Screen reader description -->
-					</h1>
-				</div>
+<body>
+	<div class="the-whole-thing">
+		<!-- Main wrapper for the entire content -->
+		<section class="artistTitleWrapper">
+			<!-- Section containing the artist title -->
+			<div class="artistTitleContainer">
+				<!-- Container for styling artist title -->
+				<h1 class="artist-title">
+					<!-- Main heading with artist name -->
+					Luna Ray
+					<i class="fa-solid fa-paintbrush fa-xs" aria-hidden="true"></i>
+					<!-- Paintbrush icon -->
+					The Artist
+					<span class="fa-sr-only">The Fontawesome paintbrush icon</span>
+					<!-- Screen reader description -->
+				</h1>
+			</div>
+		</section>
+
+		<main>
+			<!-- Main content section -->
+			<section id="slider" aria-roledescription="carousel" aria-label="Image Slider">
+				<!-- Image slider section -->
+				<!-- Radio buttons for slider navigation -->
+				<input class="imgCheck" type="radio" name="slider" id="s1" aria-hidden="true" />
+				<!-- Prev Prev slide1 -->
+				<input class="imgCheck" type="radio" name="slider" id="s2" aria-hidden="true" />
+				<!-- Prev slide2 -->
+				<input class="imgCheck" type="radio" name="slider" id="s3" aria-hidden="true" checked />
+				<!-- Active slide3 -->
+				<input class="imgCheck" type="radio" name="slider" id="s4" aria-hidden="true" />
+				<!-- Next slide4 -->
+				<input class="imgCheck" type="radio" name="slider" id="s5" aria-hidden="true" />
+				<!-- Next Next slide5 -->
+
+				<!-- Image slides -->
+				<label for="s1" id="slide1" class="slider" tabindex="0" aria-labelledby="slide1-title">
+					<figure class="img-wrapper">
+						<!-- Groups image with caption -->
+						<picture>
+							<source srcset="css/image/IMG_7140.webp" type="image/webp" loading="lazy" decoding="asynchronous" />
+							<source srcset="css/image/IMG_7140.jpeg" type="image/jpeg" loading="lazy" decoding="asynchronous" />
+							<img class="eachimg" src="css/image/IMG_7140.jpeg" alt="Untitled painting" loading="lazy" decoding="asynchronous" />
+						</picture>
+
+						<!-- Image -->
+						<figcaption>
+							<h2 class="caption" id="slide1-title">Untitled</h2>
+							<!-- Caption -->
+							<p class="vs-hidden">Untitled</p>
+							<!-- Hidden caption -->
+							<span class="sr-only"></span>
+						</figcaption>
+					</figure>
+				</label>
+
+				<label for="s2" id="slide2" class="slider" tabindex="0" aria-labelledby="slide2-title">
+					<figure class="img-wrapper">
+						<picture>
+							<source srcset="css/image/IMG_7142.webp" type="image/webp" loading="lazy" decoding="asynchronous" />
+							<source srcset="css/image/IMG_7142.jpeg" type="image/jpeg" loading="lazy" decoding="asynchronous" />
+							<img class="eachimg" src="css/image/IMG_7142.jpeg" alt="Cicada Evening" loading="lazy" decoding="asynchronous" />
+						</picture>
+
+						<figcaption>
+							<h2 class="caption" id="slide2-title">Cicada Evening</h2>
+							<!-- Caption -->
+							<p class="vs-hidden">Cicada Evening</p>
+							<!-- Hidden caption -->
+							<span class="sr-only"></span>
+						</figcaption>
+					</figure>
+				</label>
+
+				<label for="s3" id="slide3" class="slider" tabindex="0" aria-labelledby="slide3-title">
+					<figure class="img-wrapper">
+						<picture>
+							<source srcset="css/image/IMG_7173.webp" type="image/webp" loading="lazy" decoding="asynchronous" />
+							<source srcset="css/image/IMG_7173.JPG" type="image/JPG" loading="lazy" decoding="asynchronous" />
+							<img class="eachimg" src="css/image/IMG_7173.JPG" alt="Spaces in between" loading="lazy" decoding="asynchronous" />
+						</picture>
+
+						<figcaption>
+							<h2 class="caption" id="slide3-title">Spaces In Between</h2>
+							<!-- Caption -->
+							<p class="vs-hidden">Spaces in between</p>
+							<!-- Hidden caption -->
+							<span class="sr-only"></span>
+						</figcaption>
+					</figure>
+				</label>
+
+				<label for="s4" id="slide4" class="slider" tabindex="0" aria-labelledby="slide4-title">
+					<figure class="img-wrapper">
+						<picture>
+							<source srcset="css/image/IMG_7138.webp" type="image/webp" loading="lazy" decoding="asynchronous" />
+							<source srcset="css/image/IMG_7138.jpeg" type="image/jpeg" loading="lazy" decoding="asynchronous" />
+							<img class="eachimg" src="css/image/IMG_7138.jpeg" alt="Rising Up" loading="lazy" decoding="asynchronous" />
+						</picture>
+
+						<figcaption>
+							<h2 class="caption" id="slide4-title">Rising Up</h2>
+							<!-- Caption -->
+							<p class="vs-hidden">Rising Up</p>
+							<!-- Hidden caption -->
+							<span class="sr-only"></span>
+						</figcaption>
+					</figure>
+				</label>
+
+				<label for="s5" id="slide5" class="slider" tabindex="0" aria-labelledby="slide5-title">
+					<figure class="img-wrapper">
+						<picture>
+							<source srcset="css/image/IMG_7139.webp" type="image/webp" loading="lazy" decoding="asynchronous" />
+							<source srcset="css/image/IMG_7139.jpeg" type="image/jpeg" loading="lazy" decoding="asynchronous" />
+							<img class="eachimg" src="css/image/IMG_7139.jpeg" alt="Rain 1" loading="lazy" decoding="asynchronous" />
+						</picture>
+						<figcaption>
+							<h2 class="caption" id="slide5-title">Rain 1</h2>
+							<!-- Caption -->
+							<p class="vs-hidden">Rain 1</p>
+							<!-- Hidden caption -->
+							<span class="sr-only"></span>
+						</figcaption>
+					</figure>
+				</label>
 			</section>
+			<!-- Slider controls -->
+			<nav id="slider-controls">
+				<button id="previous-button" title="Previous Slider" tabindex="0" aria-label="Previous Slide">
+					<i class="fas fa-arrow-left" aria-hidden="true"></i>
+					<!-- Left arrow icon -->
+					<span class="vs-hidden">Previous slides</span>
+				</button>
+				<button id="play" title="Play Slider" tabindex="0" aria-label="Play Slider">
+					<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+					<!-- Play icon -->
+					<span class="vs-hidden">Play</span>
+				</button>
+				<button id="pause" title="Pause Slider" tabindex="0" aria-label="Pause Slider">
+					<i class="fa-solid fa-pause" aria-hidden="true"></i>
+					<!-- Pause icon -->
+					<span class="vs-hidden">Pause</span>
+				</button>
+				<button id="next-button" title="Next Slide" tabindex="0" aria-label="Next Slide">
+					<i class="fas fa-arrow-right" aria-hidden="true"></i>
+					<!-- Right arrow icon -->
+					<span class="vs-hidden">Next slides</span>
+				</button>
+			</nav>
+		</main>
+	</div>
+</body>
 
-			<main>
-				<!-- Main content section -->
-				<section
-					id="slider"
-					aria-roledescription="carousel"
-					aria-label="Image Slider">
-					<!-- Image slider section -->
-					<!-- Radio buttons for slider navigation -->
-					<input
-						class="imgCheck"
-						type="radio"
-						name="slider"
-						id="s1"
-						aria-hidden="true" />
-					<!-- Prev Prev slide1 -->
-					<input
-						class="imgCheck"
-						type="radio"
-						name="slider"
-						id="s2"
-						aria-hidden="true" />
-					<!-- Prev slide2 -->
-					<input
-						class="imgCheck"
-						type="radio"
-						name="slider"
-						id="s3"
-						aria-hidden="true"
-						checked />
-					<!-- Active slide3 -->
-					<input
-						class="imgCheck"
-						type="radio"
-						name="slider"
-						id="s4"
-						aria-hidden="true" />
-					<!-- Next slide4 -->
-					<input
-						class="imgCheck"
-						type="radio"
-						name="slider"
-						id="s5"
-						aria-hidden="true" />
-					<!-- Next Next slide5 -->
-
-					<!-- Image slides -->
-					<label
-						for="s1"
-						id="slide1"
-						class="slider"
-						tabindex="0"
-						aria-labelledby="slide1-title">
-						<figure class="img-wrapper">
-							<!-- Groups image with caption -->
-							<picture>
-								<source
-									srcset="css/image/IMG_7140.webp"
-									type="image/webp"
-									loading="lazy"
-									decoding="asynchronous" />
-								<source
-									srcset="css/image/IMG_7140.jpeg"
-									type="image/jpeg"
-									loading="lazy"
-									decoding="asynchronous" />
-								<img
-									class="eachimg"
-									src="css/image/IMG_7140.jpeg"
-									alt="Untitled painting"
-									loading="lazy"
-									decoding="asynchronous" />
-							</picture>
-
-							<!-- Image -->
-							<figcaption>
-								<h2 class="caption" id="slide1-title">Untitled</h2>
-								<!-- Caption -->
-								<p class="vs-hidden">Untitled</p>
-								<!-- Hidden caption -->
-								<span class="sr-only"></span>
-							</figcaption>
-						</figure>
-					</label>
-
-					<label
-						for="s2"
-						id="slide2"
-						class="slider"
-						tabindex="0"
-						aria-labelledby="slide2-title">
-						<figure class="img-wrapper">
-							<picture>
-								<source
-									srcset="css/image/IMG_7142.webp"
-									type="image/webp"
-									loading="lazy"
-									decoding="asynchronous" />
-								<source
-									srcset="css/image/IMG_7142.jpeg"
-									type="image/jpeg"
-									loading="lazy"
-									decoding="asynchronous" />
-								<img
-									class="eachimg"
-									src="css/image/IMG_7142.jpeg"
-									alt="Cicada Evening"
-									loading="lazy"
-									decoding="asynchronous" />
-							</picture>
-
-							<figcaption>
-								<h2 class="caption" id="slide2-title">Cicada Evening</h2>
-								<!-- Caption -->
-								<p class="vs-hidden">Cicada Evening</p>
-								<!-- Hidden caption -->
-								<span class="sr-only"></span>
-							</figcaption>
-						</figure>
-					</label>
-
-					<label
-						for="s3"
-						id="slide3"
-						class="slider"
-						tabindex="0"
-						aria-labelledby="slide3-title">
-						<figure class="img-wrapper">
-							<picture>
-								<source
-									srcset="css/image/IMG_7173.webp"
-									type="image/webp"
-									loading="lazy"
-									decoding="asynchronous" />
-								<source
-									srcset="css/image/IMG_7173.JPG"
-									type="image/JPG"
-									loading="lazy"
-									decoding="asynchronous" />
-								<img
-									class="eachimg"
-									src="css/image/IMG_7173.JPG"
-									alt="Spaces in between"
-									loading="lazy"
-									decoding="asynchronous" />
-							</picture>
-
-							<figcaption>
-								<h2 class="caption" id="slide3-title">Spaces In Between</h2>
-								<!-- Caption -->
-								<p class="vs-hidden">Spaces in between</p>
-								<!-- Hidden caption -->
-								<span class="sr-only"></span>
-							</figcaption>
-						</figure>
-					</label>
-
-					<label
-						for="s4"
-						id="slide4"
-						class="slider"
-						tabindex="0"
-						aria-labelledby="slide4-title">
-						<figure class="img-wrapper">
-							<picture>
-								<source
-									srcset="css/image/IMG_7138.webp"
-									type="image/webp"
-									loading="lazy"
-									decoding="asynchronous" />
-								<source
-									srcset="css/image/IMG_7138.jpeg"
-									type="image/jpeg"
-									loading="lazy"
-									decoding="asynchronous" />
-								<img
-									class="eachimg"
-									src="css/image/IMG_7138.jpeg"
-									alt="Rising Up"
-									loading="lazy"
-									decoding="asynchronous" />
-							</picture>
-
-							<figcaption>
-								<h2 class="caption" id="slide4-title">Rising Up</h2>
-								<!-- Caption -->
-								<p class="vs-hidden">Rising Up</p>
-								<!-- Hidden caption -->
-								<span class="sr-only"></span>
-							</figcaption>
-						</figure>
-					</label>
-
-					<label
-						for="s5"
-						id="slide5"
-						class="slider"
-						tabindex="0"
-						aria-labelledby="slide5-title">
-						<figure class="img-wrapper">
-							<picture>
-								<source
-									srcset="css/image/IMG_7139.webp"
-									type="image/webp"
-									loading="lazy"
-									decoding="asynchronous" />
-								<source
-									srcset="css/image/IMG_7139.jpeg"
-									type="image/jpeg"
-									loading="lazy"
-									decoding="asynchronous" />
-								<img
-									class="eachimg"
-									src="css/image/IMG_7139.jpeg"
-									alt="Rain 1"
-									loading="lazy"
-									decoding="asynchronous" />
-							</picture>
-							<figcaption>
-								<h2 class="caption" id="slide5-title">Rain 1</h2>
-								<!-- Caption -->
-								<p class="vs-hidden">Rain 1</p>
-								<!-- Hidden caption -->
-								<span class="sr-only"></span>
-							</figcaption>
-						</figure>
-					</label>
-				</section>
-				<!-- Slider controls -->
-				<nav id="slider-controls">
-					<button
-						id="previous-button"
-						title="Previous Slider"
-						tabindex="0"
-						aria-label="Previous Slide">
-						<i class="fas fa-arrow-left" aria-hidden="true"></i>
-						<!-- Left arrow icon -->
-						<span class="vs-hidden">Previous slides</span>
-					</button>
-					<button
-						id="play"
-						title="Play Slider"
-						tabindex="0"
-						aria-label="Play Slider">
-						<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-						<!-- Play icon -->
-						<span class="vs-hidden">Play</span>
-					</button>
-					<button
-						id="pause"
-						title="Pause Slider"
-						tabindex="0"
-						aria-label="Pause Slider">
-						<i class="fa-solid fa-pause" aria-hidden="true"></i>
-						<!-- Pause icon -->
-						<span class="vs-hidden">Pause</span>
-					</button>
-					<button
-						id="next-button"
-						title="Next Slide"
-						tabindex="0"
-						aria-label="Next Slide">
-						<i class="fas fa-arrow-right" aria-hidden="true"></i>
-						<!-- Right arrow icon -->
-						<span class="vs-hidden">Next slides</span>
-					</button>
-				</nav>
-			</main>
-		</div>
-	</body>
-
-	<!-- Load external scripts -->
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-image-upload/1.2.0/jQuery-image-upload.min.js"
-		integrity="sha512-gjAPD4any3q9ITk7sa4tW8nnLnMWWoRUrghwbD92d5HfGBPEgry+n/6272BNZA/B5/kqD+3xnq7e5or2Jp5PEA=="
-		crossorigin="anonymous"
-		referrerpolicy="no-referrer"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
-	<script src="js/scripts.js"></script>
-	<script src="js/revised/scripts.js"></script>
-	</html>
+<!-- Load external scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-image-upload/1.2.0/jQuery-image-upload.min.js" integrity="sha512-gjAPD4any3q9ITk7sa4tW8nnLnMWWoRUrghwbD92d5HfGBPEgry+n/6272BNZA/B5/kqD+3xnq7e5or2Jp5PEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+<!-- <script src="js/scripts.js"></script> -->
+<script src="js/revised/scripts.js"></script>
+</html>
